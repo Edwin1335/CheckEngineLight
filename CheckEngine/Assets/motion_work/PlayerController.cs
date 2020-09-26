@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<RigidBody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal"); //Built in Unity input field
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
