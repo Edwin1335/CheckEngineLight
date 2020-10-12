@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7bedae0a4619ef1498ebce30259f133c
+guid: fae29434a6e4a6348b8fba11b6f01875
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1297640690816558881
-    second: bad_guy_moving_0
+      213: 1893429750465163494
+    second: box_idle_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -26,6 +26,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -60,6 +61,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -102,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bad_guy_moving_0
+      name: box_idle_0
       rect:
         serializedVersion: 2
         x: 27
@@ -116,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 127a6364555220210800000000000000
-      internalID: 1297640690816558881
+      spriteID: 6e0f1a38350d64a10800000000000000
+      internalID: 1893429750465163494
       vertices: []
       indices: 
       edges: []

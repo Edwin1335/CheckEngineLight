@@ -4,31 +4,30 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private float _moveSpeed;
+    private float _direction;
+    private bool _playerDirection;
 
-    public CharacterController2D controller;
+    private Rigidbody2D _rigidBody;
 
-    public float runSpeed = 40f;
-    float horizontalMove = 0f;
-    bool jump = false;
-    bool crouch = false;
+    private void Awake(){
+        _rigidBody = GetComponent<Rigidbody2D>();
+    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
+    private void Update(){
+        float _dirSign = transform.localScale.x;
+        if ((_direction > 0 && _dirSign < 0) || (_direction < 0 && _dirSign > 0)){
+            transform.localScale *= new Vector2(-1, 1);
         }
+    }
+
+    private void FixedUpdate(){
+        _rigidBody.velocity = new Vector2(_direction * _moveSpeed, _rigidBody.velocity.y);
 
     }
 
-    void FixedUpdate()
-    {
-        // Move our character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
+    public void Move(float _input){
+        _direction = _input;
     }
 }
