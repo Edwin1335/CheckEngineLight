@@ -32,17 +32,26 @@ public class PlayerJump : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _slideJump = GetComponent<PlayerWallJump>();
 
+        //Calculates and stores jump force heigh based on physics gravity and jump strength, which can be defined in Unity Inspector
         _jumpForce = calculateJumpForce(Physics2D.gravity.magnitude, _jumpStrength);
     }
 
     private void FixedUpdate(){
+
+        //Enters jump loop if jump key is pressed
         if (_jumpKeyHeld == true){
+
+            //Passes jump button state and direction to PlayerWallJump script 
+            //(Incomplete, but can slow vertical descent if player is on wall)
             _slideJump.SlideJump(_jumpKeyHeld, _dirInput);
 
+            //If the player is grounded and is not on a wall, they will jump vertically with an applied force
             if (_grounded == true && _wallSlide != true && _isJumping == false){
                 _isJumping = true;
                 _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
             }
+            //If the player is not on the ground but is sliding on a wall, they will jump away from the wall with an applied force
+            //(Currently Incomplete)
             else if (_grounded != true && _wallSlide == true && _isJumping == false){
                 //Debug.Log("Walljump True");
                 Vector2 _jumpVector = new Vector2(-_dirInput, 1);
@@ -51,27 +60,35 @@ public class PlayerJump : MonoBehaviour
             }
         }
 
+        //Performs hitbox detection, indicating if player is on the ground or sliding on a wall
+        //Hitbox detection sensitivity can be changed in Unity Inspector with _raycastFeet
         RaycastHit2D _feet = Physics2D.Raycast(transform.position, Vector2.down, _raycastFeet, _groundLayer);
+        
+        //Detects if player is on the ground and not sliding on a wall
         if (_feet.collider != null && _wallSlide == false){
             _grounded = true;
             _isJumping = false;
         }
+        //Detects if player is not on the ground and is sliding on a wall
         else if (_feet.collider == null && _wallSlide != false){
             _grounded = false;
             _isJumping = false;
         }
+        //Default state is in the air, since the player is always on the ground otherwise.
         else{
             _grounded = false;
             _isJumping = true;
         }
-        slideLooped = false;
+        //slideLooped = false;
     }
 
+    //Performs _jumpForce calculation
     private static float calculateJumpForce(float gravityStrength, float jumpHeight){
         return Mathf.Sqrt(2 * gravityStrength * jumpHeight);
     }
 
     public void Jump(bool _jumpKeyState, bool _isWallSlide, float _input){
+        //Passes Jump Key state, wall sliding state, and directional input from other scripts to this script.
         _jumpKeyHeld = _jumpKeyState;
         _wallSlide = _isWallSlide;
         _dirInput = _input;

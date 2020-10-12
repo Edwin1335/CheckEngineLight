@@ -31,6 +31,7 @@ public class PlayerWallJump : MonoBehaviour
 
     private void Update()
     {
+        //Throws hitbox detection ray in "front" of player instead of downward to allow for wall sliding.
         Vector2 _raycastDirection = new Vector2(_dirInput, 0);
         RaycastHit2D _front = Physics2D.Raycast(transform.position, _raycastDirection, _raycastFront, _groundLayer);
         if (_front.collider != null){
@@ -40,6 +41,8 @@ public class PlayerWallJump : MonoBehaviour
             _touchingFront = false;
         }
 
+        //If player's "front" is against a wall, slow down fall velocity.
+        //Fall velocity can be changed in Unity Inspector with _wallSlidingSpeed parameter
         if (_touchingFront == true && _dirInput != 0){
             _rigidBody.velocity = new Vector2(_rigidBody.velocity.x, Mathf.Clamp(_rigidBody.velocity.y, -_wallSlidingSpeed, float.MaxValue));
             _isSliding = true;
@@ -50,6 +53,7 @@ public class PlayerWallJump : MonoBehaviour
     }
 
     public void SlideJump(bool _jumpKeyState, float _input){
+        //Passes jump key state and direction from other scripts to this script.
         //Debug.Log("Slide Triggered");
         _jumpInput = _jumpKeyState;
         _dirInput = _input;

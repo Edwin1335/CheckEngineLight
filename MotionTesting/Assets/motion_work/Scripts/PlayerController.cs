@@ -33,15 +33,15 @@ public class PlayerController : MonoBehaviour
         _jumpKeyState = Input.GetKey(KeyCode.Z); //Jump
 
         //Jumping
-        //Only true when jump key is pressed, which is then sent to PlayerJump script
+        //Only true when jump key is pressed, which is then sent to jump script
         _jumping.Jump(_jumpKeyState, false, _dirInput);
         
         //Movement
-        //Sends single float value -1, 0, or 1 to PlayerMovement script
+        //Sends single float value -1, 0, or 1 to movement script
         _movement.Move(_dirInput);
 
         //Dash
-        //Only triggers when LeftShift is pressed, which then sends current directional input to PlayerDash script
+        //Only triggers when LeftShift is pressed, which then sends current directional input to dash script
         if (Input.GetKeyDown(KeyCode.LeftShift)){
             _dash.Dash(_dirInput);
         }
