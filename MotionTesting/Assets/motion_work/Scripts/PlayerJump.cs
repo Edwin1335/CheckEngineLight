@@ -36,50 +36,25 @@ public class PlayerJump : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        /*
         if (_jumpKeyHeld == true){
-            if (_grounded == true){
-                _isJumping = true;
-                _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-            }
-        }
-
-        if (_isJumping == true){
-            if(!_jumpKeyHeld && Vector2.Dot(_rigidBody.velocity, Vector2.up) > 0){
-                _rigidBody.AddForce(_counterJumpForce * _rigidBody.mass);
-            }
-        }
-        */
-
-        if (_jumpKeyHeld == true){
-            if (slideLooped == false){
-                slideLooped = true;
-                _slideJump.SlideJump(_jumpKeyHeld, _dirInput);
-                Debug.Log("Slide Loop: " + slideLooped);
-            }
+            _slideJump.SlideJump(_jumpKeyHeld, _dirInput);
 
             if (_grounded == true && _wallSlide != true && _isJumping == false){
-                Debug.Log("Walljump False");
                 _isJumping = true;
                 _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
             }
             else if (_grounded != true && _wallSlide == true && _isJumping == false){
-                Debug.Log("Walljump True");
+                //Debug.Log("Walljump True");
                 Vector2 _jumpVector = new Vector2(-_dirInput, 1);
                 _isJumping = true;
                 _rigidBody.AddForce(_jumpVector * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
             }
-            Debug.Log("Jump Pressed" + ", Grounded: " + _grounded + ", Wall Slide: " + _wallSlide + ", Is Jumping: " + _isJumping + ", Slide Loop: " + slideLooped);
-            _jumpKeyHeld = false;
         }
-        //Debug.Log("Exit Key Loop");
-        //Debug.Log(_wallSlide);
 
         RaycastHit2D _feet = Physics2D.Raycast(transform.position, Vector2.down, _raycastFeet, _groundLayer);
         if (_feet.collider != null && _wallSlide == false){
             _grounded = true;
             _isJumping = false;
-            //Debug.Log("Ground");
         }
         else if (_feet.collider == null && _wallSlide != false){
             _grounded = false;
@@ -88,19 +63,17 @@ public class PlayerJump : MonoBehaviour
         else{
             _grounded = false;
             _isJumping = true;
-            //Debug.Log("Air");
         }
         slideLooped = false;
     }
 
-    public static float calculateJumpForce(float gravityStrength, float jumpHeight){
+    private static float calculateJumpForce(float gravityStrength, float jumpHeight){
         return Mathf.Sqrt(2 * gravityStrength * jumpHeight);
     }
 
     public void Jump(bool _jumpKeyState, bool _isWallSlide, float _input){
         _jumpKeyHeld = _jumpKeyState;
         _wallSlide = _isWallSlide;
-        //Debug.Log(_wallSlide);
         _dirInput = _input;
     }
 }

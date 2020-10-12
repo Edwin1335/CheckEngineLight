@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
         _movement = GetComponent<PlayerMovement>();
         _jumping = GetComponent<PlayerJump>();
         _dash = GetComponent<PlayerDash>();
-        //_wallJump = GetComponent<PlayerWallJump>();
     }
 
     private void Start(){
@@ -29,7 +28,6 @@ public class PlayerController : MonoBehaviour
     {
         _dirInput = Input.GetAxisRaw("Horizontal");
         _jumpKeyState = Input.GetKey(KeyCode.Z);
-
         //Jumping
         _jumping.Jump(_jumpKeyState, false, _dirInput);
         
@@ -37,15 +35,9 @@ public class PlayerController : MonoBehaviour
         _movement.Move(_dirInput);
 
         //Dash
-        //float _horiz = Input.GetAxisRaw("Horizontal");
         if (Input.GetKeyDown(KeyCode.LeftShift)){
-            //Debug.Log(_horiz + ", Shift");
             _dash.Dash(_dirInput);
         }
-
-        //WallJump
-        //float _sliding = Input.GetAxisRaw("Horizontal");
-        //_wallJump.SlideJump(_dirInput, _jumpKeyState);
 
     }
 }

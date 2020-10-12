@@ -26,9 +26,7 @@ public class PlayerDash : MonoBehaviour
         else{
             if (_direction != 0){
                 _dashTime -= Time.deltaTime;
-                //_rigidBody.velocity = new Vector2(_direction * _dashSpeed, _rigidBody.velocity.y);
                 _rigidBody.AddForce(new Vector2(_direction * _dashSpeed, _rigidBody.velocity.y));
-                //Debug.Log("Decreasing: " + _dashTime + ", Direction: " + _direction + ", Velocity: " + _rigidBody.velocity);
             }
         }
     }

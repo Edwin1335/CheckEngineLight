@@ -47,22 +47,11 @@ public class PlayerWallJump : MonoBehaviour
         else{
             _isSliding = false;
         }
-
-        _jumping.Jump(_jumpInput, _isSliding, _dirInput);
-        /*
-        if (_jumpInput == true && _isSliding == true){
-            _isJumping = true;
-            //Debug.Log(_isJumping);
-            _jumping.Jump(_jumpInput, _isJumping, _dirInput);
-        }
-        //Debug.Log(_isSliding + ", " + _touchingFront + ", " + _raycastDirection);
-        */
     }
 
     public void SlideJump(bool _jumpKeyState, float _input){
-        Debug.Log("Slide Triggered");
+        //Debug.Log("Slide Triggered");
         _jumpInput = _jumpKeyState;
         _dirInput = _input;
-        //Debug.Log(_jumpKeyState);
     }
 }
