@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 87567502714938217}
   - component: {fileID: 964511891}
   - component: {fileID: 964511890}
+  - component: {fileID: 212447303709998283}
   m_Layer: 10
   m_Name: Rocky
   m_TagString: Rocky
@@ -35,6 +36,7 @@ Transform:
   - {fileID: 87567502848586861}
   - {fileID: 87567504673088115}
   - {fileID: 87567504628411523}
+  - {fileID: 1170519480708467308}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53,6 +55,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -75,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1685153847
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e914821678ab0ae41ac3fcbec9e8091f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -113,8 +116,8 @@ MonoBehaviour:
   - {fileID: 87567504284459751}
   - {fileID: 87567503213939954}
   m_Bounds:
-    m_Center: {x: -3.858409, y: 1.1904297, z: 0}
-    m_Extent: {x: 5.8027105, y: 5.865135, z: 0}
+    m_Center: {x: -3.8584085, y: 1.1904287, z: 0}
+    m_Extent: {x: 5.802709, y: 5.8651333, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!95 &87567502714938217
@@ -183,6 +186,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.605421, y: 11.73027}
   m_EdgeRadius: 0
+--- !u!114 &212447303709998283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87567502714938213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209baab3dfe2b404db44bf79d1443b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  distance: 0.05
+  goingRight: 1
+  target: {fileID: 0}
+  startDazedTime: 0
 --- !u!1 &87567502759418694
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,3 +510,33 @@ Transform:
   m_Father: {fileID: 87567502714938216}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -87.306}
+--- !u!1 &8825926960334321965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170519480708467308}
+  m_Layer: 10
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1170519480708467308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825926960334321965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.62, y: -4.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 87567502714938216}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

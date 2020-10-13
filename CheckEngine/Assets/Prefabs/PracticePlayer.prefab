@@ -1088,7 +1088,7 @@ MonoBehaviour:
   - {fileID: 846914288}
   - {fileID: 41027292}
   fullHeart: {fileID: 21300000, guid: 7f7507ceb55e7b04ead53b940312909a, type: 3}
-  emptyHeart: {fileID: 21300000, guid: b5bf2722cb199b042a449433590c8d27, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 701b3ad5ea17c814583c6d8789a8e9f6, type: 3}
 --- !u!114 &4680526185176395309
 MonoBehaviour:
   m_ObjectHideFlags: 0
