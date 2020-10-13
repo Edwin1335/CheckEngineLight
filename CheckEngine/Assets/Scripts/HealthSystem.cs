@@ -60,8 +60,6 @@ public class HealthSystem : MonoBehaviour
         //Wait for 2 seconds
         yield return new WaitForSeconds(2);
     }
-
-
     void Damage(int a)
     {
         health = health - a;
