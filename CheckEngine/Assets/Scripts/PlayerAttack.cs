@@ -50,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
                 //_enemiesToDmg[i].GetComponent<TestEnemyScript>().TakeDamage(_finalDmg);
             }
             //Debug.Log(_isDashing);
-            //Debug.Log(_finalDmg);
+            Debug.Log("Damage Output: " + _finalDmg);
         }
         _prevAtkState = _currAtkState;
     }
