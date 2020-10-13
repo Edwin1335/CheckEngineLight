@@ -19,10 +19,14 @@ public class PlayerJump : MonoBehaviour
     private Vector2 _counterJumpForce;
     [SerializeField]
     private float _jumpStrength;
+    [SerializeField]
+    private float _wallJumpForce;
+    private bool _wallFlip;
 
     private bool _wallSlide;
     private float _dirInput;
     private bool slideLooped;
+
 
     private Rigidbody2D _rigidBody;
     private Collider2D _collider;
@@ -45,7 +49,7 @@ public class PlayerJump : MonoBehaviour
 
             //Passes jump button state and direction to PlayerWallJump script 
             //(Incomplete, but can slow vertical descent if player is on wall)
-            _slideJump.SlideJump(_jumpKeyHeld, _dirInput);
+            //_slideJump.SlideJump(_jumpKeyHeld, _dirInput);
 
             //If the player is grounded and is not on a wall, they will jump vertically with an applied force
             if (_grounded == true && _wallSlide != true && _isJumping == false){
@@ -56,9 +60,15 @@ public class PlayerJump : MonoBehaviour
             //(Currently Incomplete)
             else if (_grounded != true && _wallSlide == true && _isJumping == false){
                 //Debug.Log("Walljump True");
-                Vector2 _jumpVector = new Vector2(-_dirInput, 1);
+                //Vector2 _jumpVector = new Vector2(-_dirInput, 0);
                 _isJumping = true;
-                _rigidBody.AddForce(_jumpVector * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
+                //_rigidBody.velocity = new Vector2(_dirInput * -1, _rigidBody.velocity.y);
+                _wallFlip = true;
+                _rigidBody.velocity = new Vector2(_wallJumpForce * -_dirInput, _jumpForce);
+                _dirInput = -_dirInput;
+                //_rigidBody.AddForce(_jumpVector * _jumpForce * _wallJumpForce * _rigidBody.mass, ForceMode2D.Impulse);
+                //Debug.Log(_jumpVector * _jumpForce * _wallJumpForce * _rigidBody.mass + ", " + _rigidBody.velocity);
+                Debug.Log(_rigidBody.velocity);
             }
         }
 
@@ -81,6 +91,11 @@ public class PlayerJump : MonoBehaviour
             _isJumping = true;
         }
         //slideLooped = false;
+
+        if ((_grounded == true && _wallFlip == true) || (_wallSlide == true && _wallFlip == true)){
+            //_rigidBody.velocity = new Vector2(_dirInput * -1, _rigidBody.velocity.y);
+            _wallFlip = false;
+        }
     }
 
     //Performs _jumpForce calculation

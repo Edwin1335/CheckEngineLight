@@ -51,6 +51,7 @@ public class PlayerAttack : MonoBehaviour
             }
             //Debug.Log(_isDashing);
             //Debug.Log(_finalDmg);
+            Debug.Log(_finalDmg);
         }
         _prevAtkState = _currAtkState;
     }
