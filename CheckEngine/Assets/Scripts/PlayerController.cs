@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         //Collect keyboard inputs at the start of each update loop
         _dirInput = Input.GetAxisRaw("Horizontal"); //Left/Right
-        _jumpKeyState = Input.GetKey(KeyCode.Z); //Jump
+        _jumpKeyState = (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Space)); //Jump
         _dashKeyState = Input.GetKey(KeyCode.LeftShift); //Dash
         _atkKeyState = Input.GetKey(KeyCode.X); //Attack
 
