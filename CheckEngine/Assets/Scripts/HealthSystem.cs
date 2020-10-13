@@ -48,7 +48,7 @@ public class HealthSystem : MonoBehaviour
         }
         else if(collision.gameObject.tag == "Rocky")
         {
-            Damage(2);
+            Damage(1);
             Debug.Log("Taking Damage");
         }
         // GetComponent<BoxCollider2D>().enabled = false;
