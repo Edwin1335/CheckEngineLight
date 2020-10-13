@@ -10,11 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private bool _playerDirection;
 
     private Rigidbody2D _rigidBody;
-    Animator _animator;
 
     private void Awake(){
         _rigidBody = GetComponent<Rigidbody2D>();
-        _animator = gameObject.GetComponent<Animator>();
     }
 
     private void Update(){
