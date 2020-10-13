@@ -1,53 +1,36 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public GameObject followObject;
-    public Vector2 followOffset;
-    public float speed = 3f;
-    private Vector2 threshold;
-    private Rigidbody2D rb;
+    public GameObject _player;
+    [SerializeField]
+    private float _offset;
+    private Vector3 _playerPosition;
+    [SerializeField]
+    private float _offsetSmoothing;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        threshold = calculateThreshold();
-        rb = followObject.GetComponent<Rigidbody2D>();
+    private void Start(){
+        Application.targetFrameRate = 300;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    //Attaches camera to player object and moves with them with a slight smoothing
+    private void Update()
     {
-        Vector2 follow = followObject.transform.position;
-        float xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
-        float yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
+        //Collects player position with 3D vector, since camera requires a 3D vector (I think?)
+        _playerPosition = new Vector3(_player.transform.position.x, _player.transform.position.y, transform.position.z);
 
-        Vector3 newPosition = transform.position;
-        if (Mathf.Abs(xDifference) >= threshold.x)
-        {
-            newPosition.x = follow.x;
+        //Applies slight camera offset, which can be defined in Unity Inspector with _offset
+        if (_player.transform.localScale.x > 0f){
+            _playerPosition = new Vector3(_playerPosition.x + _offset, _playerPosition.y + _offset, _playerPosition.z);
         }
-        if (Mathf.Abs(yDifference) >= threshold.y)
-        {
-            newPosition.y = follow.y;
+        else{
+            _playerPosition = new Vector3(_playerPosition.x - _offset, _playerPosition.y - _offset, _playerPosition.z);
         }
-        float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, moveSpeed * Time.deltaTime);
-    }
-    private Vector3 calculateThreshold()
-    {
-        Rect aspect = Camera.main.pixelRect;
-        Vector2 t = new Vector2(Camera.main.orthographicSize * aspect.width / aspect.height, Camera.main.orthographicSize);
-        t.x -= followOffset.x;
-        t.y -= followOffset.y;
-        return t;
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Vector2 border = calculateThreshold();
-        Gizmos.DrawWireCube(transform.position, new Vector3(border.x * 2, border.y * 2, 1));
+
+        //Makes camera follow player using _playerPosition parameter with a slight smoothing.
+        //_offsetSmoothing can be defined in Unity Inspector.
+        transform.position = Vector3.Lerp(transform.position, _playerPosition, _offsetSmoothing * Time.deltaTime);
     }
 }

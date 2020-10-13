@@ -4,31 +4,50 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private float _moveSpeed;
+    private float _direction;
+    private bool _playerDirection;
 
-    public CharacterController2D controller;
+    private Rigidbody2D _rigidBody;
 
-    public float runSpeed = 40f;
-    float horizontalMove = 0f;
-    bool jump = false;
-    bool crouch = false;
+    // Wil be used to animate the player
+    private Animator animator;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Awake()
     {
-
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-        }
+        // Get componenets when scene awakes
+        _rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        // Move our character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
+        float _dirSign = transform.localScale.x;
+        if ((_direction > 0 && _dirSign < 0) || (_direction < 0 && _dirSign > 0))
+        {
+            transform.localScale *= new Vector2(-1, 1);
+        }
+    }
+
+    private void FixedUpdate(){
+        //Applies fixed velocity movement to player
+        //_moveSpeed can be defined in Unity Editor
+        _rigidBody.velocity = new Vector2(_direction * _moveSpeed, _rigidBody.velocity.y);
+        if (_direction != 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+    }
+
+    public void Move(float _input){
+        //Passes directional input from other scripts to this script.
+        _direction = _input;
     }
 }
