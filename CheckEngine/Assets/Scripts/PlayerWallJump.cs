@@ -7,7 +7,9 @@ public class PlayerWallJump : MonoBehaviour
     [SerializeField]
     private LayerMask _groundLayer;
     [SerializeField]
-    private float _raycastFront;
+    private Transform _front;
+    [SerializeField]
+    private float checkRadius;
 
     private bool _touchingFront;
     private bool _isSliding;
@@ -31,6 +33,7 @@ public class PlayerWallJump : MonoBehaviour
 
     private void Update()
     {
+        /*
         //Throws hitbox detection ray in "front" of player instead of downward to allow for wall sliding.
         Vector2 _raycastDirection = new Vector2(_dirInput, 0);
         RaycastHit2D _front = Physics2D.Raycast(transform.position, _raycastDirection, _raycastFront, _groundLayer);
@@ -40,6 +43,9 @@ public class PlayerWallJump : MonoBehaviour
         else{
             _touchingFront = false;
         }
+        */
+
+        _touchingFront = Physics2D.OverlapCircle(_front.position, checkRadius, _groundLayer);
 
         //If player's "front" is against a wall, slow down fall velocity.
         //Fall velocity can be changed in Unity Inspector with _wallSlidingSpeed parameter

@@ -7,6 +7,10 @@ public class PlayerJump : MonoBehaviour
     [SerializeField]
     private LayerMask _groundLayer;
     private bool _grounded;
+    [SerializeField]
+    private Transform _feet;
+    [SerializeField]
+    private float checkRadius;
 
     private float _jumpForce;
     private bool _jumpKeyHeld;
@@ -16,8 +20,6 @@ public class PlayerJump : MonoBehaviour
     [SerializeField]
     private float _jumpStrength;
 
-    [SerializeField]
-    private float _raycastFeet;
     private bool _wallSlide;
     private float _dirInput;
     private bool slideLooped;
@@ -62,16 +64,15 @@ public class PlayerJump : MonoBehaviour
 
         //Performs hitbox detection, indicating if player is on the ground or sliding on a wall
         //Hitbox detection sensitivity can be changed in Unity Inspector with _raycastFeet
-        RaycastHit2D _feet = Physics2D.Raycast(transform.position, Vector2.down, _raycastFeet, _groundLayer);
+        //RaycastHit2D _feet = Physics2D.Raycast(transform.position, Vector2.down, _raycastFeet, _groundLayer);
+        _grounded = Physics2D.OverlapCircle(_feet.position, checkRadius, _groundLayer);
         
         //Detects if player is on the ground and not sliding on a wall
-        if (_feet.collider != null && _wallSlide == false){
-            _grounded = true;
+        if (_grounded == true && _wallSlide == false){
             _isJumping = false;
         }
         //Detects if player is not on the ground and is sliding on a wall
-        else if (_feet.collider == null && _wallSlide != false){
-            _grounded = false;
+        else if (_grounded  == false && _wallSlide != false){
             _isJumping = false;
         }
         //Default state is in the air, since the player is always on the ground otherwise.

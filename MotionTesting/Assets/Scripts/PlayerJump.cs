@@ -20,8 +20,6 @@ public class PlayerJump : MonoBehaviour
     [SerializeField]
     private float _jumpStrength;
 
-    [SerializeField]
-    private float _raycastFeet;
     private bool _wallSlide;
     private float _dirInput;
     private bool slideLooped;

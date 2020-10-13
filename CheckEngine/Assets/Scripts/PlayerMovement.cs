@@ -11,43 +11,23 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rigidBody;
 
-    // Wil be used to animate the player
-    private Animator animator;
-
-
-    private void Awake()
-    {
-        // Get componenets when scene awakes
+    private void Awake(){
         _rigidBody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-
     }
 
-    private void Update()
-    {
+    private void Update(){
         float _dirSign = transform.localScale.x;
-        if ((_direction > 0 && _dirSign < 0) || (_direction < 0 && _dirSign > 0))
-        {
+        if ((_direction > 0 && _dirSign < 0) || (_direction < 0 && _dirSign > 0)){
             transform.localScale *= new Vector2(-1, 1);
         }
     }
 
     private void FixedUpdate(){
-        //Applies fixed velocity movement to player
-        //_moveSpeed can be defined in Unity Editor
         _rigidBody.velocity = new Vector2(_direction * _moveSpeed, _rigidBody.velocity.y);
-        if (_direction != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
+
     }
 
     public void Move(float _input){
-        //Passes directional input from other scripts to this script.
         _direction = _input;
     }
 }

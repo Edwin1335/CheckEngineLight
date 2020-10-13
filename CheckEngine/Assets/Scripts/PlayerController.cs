@@ -10,15 +10,19 @@ public class PlayerController : MonoBehaviour
     private PlayerJump _jumping;
     private PlayerDash _dash;
     //private PlayerWallJump _wallJump;
+    private PlayerAttack _attack;
 
     private float _dirInput;
     private bool _jumpKeyState;
+    private bool _dashKeyState;
+    private bool _atkKeyState;
 
     //Cache currently used scripts to access as components
     private void Awake(){
         _movement = GetComponent<PlayerMovement>();
         _jumping = GetComponent<PlayerJump>();
         _dash = GetComponent<PlayerDash>();
+        _attack = GetComponent<PlayerAttack>();
     }
 
     private void Start(){
@@ -31,6 +35,8 @@ public class PlayerController : MonoBehaviour
         //Collect keyboard inputs at the start of each update loop
         _dirInput = Input.GetAxisRaw("Horizontal"); //Left/Right
         _jumpKeyState = Input.GetKey(KeyCode.Z); //Jump
+        _dashKeyState = Input.GetKey(KeyCode.LeftShift); //Dash
+        _atkKeyState = Input.GetKey(KeyCode.X); //Attack
 
         //Jumping
         //Only true when jump key is pressed, which is then sent to PlayerJump script
@@ -42,9 +48,10 @@ public class PlayerController : MonoBehaviour
 
         //Dash
         //Only triggers when LeftShift is pressed, which then sends current directional input to PlayerDash script
-        if (Input.GetKeyDown(KeyCode.LeftShift)){
-            _dash.Dash(_dirInput);
-        }
+        _dash.Dash(_dashKeyState, _dirInput, _atkKeyState);
+
+        //Attack
+        _attack.Attack(_atkKeyState, _dashKeyState);
 
     }
 }
