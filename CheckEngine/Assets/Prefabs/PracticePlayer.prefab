@@ -1032,10 +1032,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 4
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2.2
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389aef2981f109547af95eca9d14ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1.667
+  _moveSpeed: 8
 --- !u!114 &3426152305993517956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,9 +1131,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _feet: {fileID: 2310390327683861090}
-  checkRadius: 0.01
-  _counterJumpForce: {x: 0, y: 0.833}
-  _jumpStrength: 2.5
+  checkRadius: 0.1
+  _counterJumpForce: {x: 0, y: 5}
+  _jumpStrength: 15
 --- !u!114 &8287831760037798915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,8 +1146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9a9daed6484ab498a1784a62f81b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dashSpeed: 167
-  _startDashTime: 0.2
+  _dashSpeed: 1000
+  _startDashTime: 0.15
 --- !u!114 &7032551579358396154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startTimeBtwAtk: 0
   _atkPos: {fileID: 2750738319168444149}
-  _atkRange: 0.33
+  _atkRange: 0.6
   _isEnemy:
     serializedVersion: 2
     m_Bits: 1024
@@ -1184,7 +1184,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _front: {fileID: 8427305282218803751}
-  checkRadius: 0.01
+  checkRadius: 0.1
   _wallSlidingSpeed: 0.5
 --- !u!1 &6582724256971671740
 GameObject:
