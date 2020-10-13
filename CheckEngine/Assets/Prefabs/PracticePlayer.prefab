@@ -655,7 +655,7 @@ MonoBehaviour:
   checkRadius: 0.1
   _counterJumpForce: {x: 0, y: 5}
   _jumpStrength: 15
-  _wallJumpForce: 0
+  _wallJumpForce: 15
 --- !u!114 &8287831760037798915
 MonoBehaviour:
   m_ObjectHideFlags: 0
