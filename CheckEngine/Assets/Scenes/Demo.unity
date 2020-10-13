@@ -1263,7 +1263,6 @@ PrefabInstance:
     m_Modifications:
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     - target: {fileID: 3426152305993517956, guid: 0c51d1cbe78a7b74d963716fd7f1486b, type: 3}
       propertyPath: _wallJumpForce
       value: 20
@@ -1283,10 +1282,6 @@ PrefabInstance:
     - target: {fileID: 6582724256891616753, guid: 0c51d1cbe78a7b74d963716fd7f1486b,
         type: 3}
 >>>>>>> fa0689eeb72bee6163c9eef1884547609dca6ff7
-=======
-    - target: {fileID: 6582724256891616753, guid: 0c51d1cbe78a7b74d963716fd7f1486b,
-        type: 3}
->>>>>>> parent of 537b35a... merge commit
       propertyPath: m_LocalPosition.x
       value: -10.51
       objectReference: {fileID: 0}
@@ -2486,7 +2481,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
 <<<<<<< HEAD
-<<<<<<< HEAD
     - target: {fileID: 1770053261, guid: 5749bfe636c7e9e458c994b7a8556c8a, type: 3}
       propertyPath: _player
       value: 
@@ -2503,10 +2497,6 @@ PrefabInstance:
     - target: {fileID: 3479316943990464800, guid: 5749bfe636c7e9e458c994b7a8556c8a,
         type: 3}
 >>>>>>> fa0689eeb72bee6163c9eef1884547609dca6ff7
-=======
-    - target: {fileID: 3479316943990464800, guid: 5749bfe636c7e9e458c994b7a8556c8a,
-        type: 3}
->>>>>>> parent of 537b35a... merge commit
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
@@ -3040,11 +3030,8 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> fa0689eeb72bee6163c9eef1884547609dca6ff7
-=======
->>>>>>> parent of 537b35a... merge commit
 --- !u!1001 &2059374906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3052,7 +3039,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
 <<<<<<< HEAD
     - target: {fileID: 3403664225660302401, guid: 56d453005e6e5724984adff16e073007, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3107,8 +3093,6 @@ PrefabInstance:
 =======
 >>>>>>> 061c3ede6d1aa363beda76e42119c679026ada35
 =======
-=======
->>>>>>> parent of 537b35a... merge commit
     - target: {fileID: 3403664225660302401, guid: 56d453005e6e5724984adff16e073007,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3226,10 +3210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d453005e6e5724984adff16e073007, type: 3}
-<<<<<<< HEAD
 >>>>>>> fa0689eeb72bee6163c9eef1884547609dca6ff7
-=======
->>>>>>> parent of 537b35a... merge commit
 --- !u!1 &2119605557
 GameObject:
   m_ObjectHideFlags: 0
