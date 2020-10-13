@@ -41,14 +41,28 @@ public class HealthSystem : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "Enemy1")
+        if (collision.gameObject.tag == "Tabee")
         {
-            Damage();
+            Damage(1);
             Debug.Log("Taking Damage");
         }
+        else if(collision.gameObject.tag == "Rocky")
+        {
+            Damage(2);
+            Debug.Log("Taking Damage");
+        }
+        // GetComponent<BoxCollider2D>().enabled = false;
+        //StartCoroutine(waiter());
+        //GetComponent<BoxCollider2D>().enabled = true;
     }
-    void Damage()
+    IEnumerator waiter()
     {
-        health = health - 1;
+        //Wait for 2 seconds
+        yield return new WaitForSeconds(2);
+    }
+    void Damage(int a)
+    {
+        health = health - a;
+
     }
 }
