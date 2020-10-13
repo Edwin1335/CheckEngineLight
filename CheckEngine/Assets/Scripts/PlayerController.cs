@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement _movement;
     private PlayerJump _jumping;
     private PlayerDash _dash;
-    //private PlayerWallJump _wallJump;
+    private PlayerWallJump _slideJump;
     private PlayerAttack _attack;
 
     private float _dirInput;
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private void Awake(){
         _movement = GetComponent<PlayerMovement>();
         _jumping = GetComponent<PlayerJump>();
+        _slideJump = GetComponent<PlayerWallJump>();
         _dash = GetComponent<PlayerDash>();
         _attack = GetComponent<PlayerAttack>();
     }
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         //Jumping
         //Only true when jump key is pressed, which is then sent to PlayerJump script
         _jumping.Jump(_jumpKeyState, false, _dirInput);
+        _slideJump.SlideJump(_jumpKeyState, _dirInput);
         
         //Movement
         //Sends single float value -1, 0, or 1 to PlayerMovement script
