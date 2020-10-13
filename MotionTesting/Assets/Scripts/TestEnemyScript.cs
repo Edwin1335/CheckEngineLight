@@ -8,6 +8,7 @@ public class TestEnemyScript : MonoBehaviour
     private float _finalHealth;
     [SerializeField]
     private float _speed;
+    [SerializeField]
 
     public GameObject _enemy;
     public Transform _enemySpawn;
@@ -19,14 +20,14 @@ public class TestEnemyScript : MonoBehaviour
     private void Update()
     {
         if (_finalHealth <= 0){
-            Destroy(gameObject);
+            Destroy(_enemy);
             GameObject _clone = Instantiate(_enemy, _enemySpawn.transform.position, Quaternion.identity);
-            _clone.name = _clone.name.Replace("(Clone)", ""); ;
+            _clone.name = _clone.name.Replace("(Clone)", "");
             _clone.GetComponent<Collider2D>().enabled = true;
             _clone.GetComponent<TestEnemyScript>().enabled = true;
             _finalHealth = _health;
         }
-        transform.Translate(Vector2.left * _speed * Time.deltaTime);
+        gameObject.transform.Translate(Vector2.left * _speed * Time.deltaTime);
     }
 
     public void TakeDamage(float _dmg){
