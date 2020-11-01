@@ -19,18 +19,15 @@ public class TabeeAIScript : MonoBehaviour
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-        if(distanceFromPlayer < lineOfSight && distanceFromPlayer > attackRange)
+        if (distanceFromPlayer < lineOfSight && distanceFromPlayer > attackRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
         }
-        else if(distanceFromPlayer <= attackRange)
+        else if (distanceFromPlayer <= attackRange)
         {
             //attack anim
-<<<<<<< HEAD
-=======
             //reduce player health
             //attack player once every x amount of secs
->>>>>>> 65409365a02817e5e4b81b0d2decdc4b481827fd
         }
 
         if (this.transform.position.x < player.position.x)
