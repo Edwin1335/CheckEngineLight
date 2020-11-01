@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockyAIs : MonoBehaviour
+public class CamFollow2D : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
