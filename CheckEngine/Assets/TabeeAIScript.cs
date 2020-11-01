@@ -26,8 +26,11 @@ public class TabeeAIScript : MonoBehaviour
         else if(distanceFromPlayer <= attackRange)
         {
             //attack anim
+<<<<<<< HEAD
+=======
             //reduce player health
             //attack player once every x amount of secs
+>>>>>>> 65409365a02817e5e4b81b0d2decdc4b481827fd
         }
 
         if (this.transform.position.x < player.position.x)
