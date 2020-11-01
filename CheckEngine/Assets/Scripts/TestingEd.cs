@@ -15,13 +15,11 @@ public class TestingEd : MonoBehaviour
     private bool playerIsFalling;
 
     private Rigidbody2D rb;
-    private Animator animator;
 
     // Start is used to get components at the start of the scene.
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     //Update is used to check input
@@ -31,9 +29,12 @@ public class TestingEd : MonoBehaviour
         moveInputHorizontal = Input.GetAxisRaw("Horizontal");
         // Check if player is on touching the ground.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
+        if (isGrounded)
+        {
+            Debug.Log("IS GROUNDED");
+        }
         // Check if player presses the UP button.
-        if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             pressedJumpButton = true;
         }
@@ -44,36 +45,28 @@ public class TestingEd : MonoBehaviour
     {
         // Funtion to move the player left and right and animate him.
         movePlayer(moveInputHorizontal);
-        
+
         // Funtion to make the player Jump.
         if (pressedJumpButton)
         {
             playerJump();
         }
 
-        if(pressedJumpButton && isGrounded)
+        if (pressedJumpButton && isGrounded)
         {
-            animator.SetBool("isJumping", false);
             pressedJumpButton = false;
         }
 
         // If the player is falling, play animation.
         if (!isGrounded && rb.velocity.y < -0.1)
         {
-            animator.SetBool("isFalling", true);
             playerIsFalling = true;
-        }
-        else
-        {
-            animator.SetBool("isFalling", false);
-
         }
 
         // If falling and landed, play landin animation
-        if(playerIsFalling && isGrounded)
+        if (playerIsFalling && isGrounded)
         {
             playerIsFalling = false;
-            animator.SetTrigger("hasLanded");
         }
     }
 
@@ -85,14 +78,6 @@ public class TestingEd : MonoBehaviour
         rb.velocity = new Vector2(moveInputHorizontal * speed, rb.velocity.y);
 
         // Perform animations if moveing
-        if ((moveInputHorizontal * speed) != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
 
         // Flip player left or right based on direction hes looking at.
         if (facingRight == false && moveInputHorizontal < 0)
@@ -115,9 +100,8 @@ public class TestingEd : MonoBehaviour
 
     private void playerJump()
     {
+        Debug.Log("Goes Here");
         rb.velocity = Vector2.up * jumpForce;
-        animator.SetTrigger("takeOff");
-        animator.SetBool("isJumping", true);
     }
 
 }
