@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 87567502714938217}
   - component: {fileID: 964511891}
   - component: {fileID: 964511890}
-  - component: {fileID: 212447303709998283}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Rocky
   m_TagString: Rocky
   m_Icon: {fileID: 0}
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1685153847
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e914821678ab0ae41ac3fcbec9e8091f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -116,8 +115,8 @@ MonoBehaviour:
   - {fileID: 87567504284459751}
   - {fileID: 87567503213939954}
   m_Bounds:
-    m_Center: {x: -3.8584085, y: 1.1904287, z: 0}
-    m_Extent: {x: 5.802709, y: 5.8651333, z: 0}
+    m_Center: {x: -3.8584075, y: 1.1904273, z: 0}
+    m_Extent: {x: 5.802709, y: 5.8651342, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!95 &87567502714938217
@@ -147,7 +146,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87567502714938213}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -186,23 +185,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.605421, y: 11.73027}
   m_EdgeRadius: 0
---- !u!114 &212447303709998283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87567502714938213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 209baab3dfe2b404db44bf79d1443b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  distance: 0.05
-  goingRight: 1
-  target: {fileID: 0}
-  startDazedTime: 0
 --- !u!1 &87567502759418694
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567502759418695}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567502848586861}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567503213939954}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567503277873751}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567503558991513}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567504284459751}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567504311714649}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567504492055441}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567504628411523}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87567504673088115}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1170519480708467308}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
