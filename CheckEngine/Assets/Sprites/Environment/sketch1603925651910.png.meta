@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: e23f722cb1589ee4c9da29d41139b690
+guid: 1b4a1b62e09148843a8d0cf20b80116d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7045866125051317299
-    second: PIKEEM_0
+      213: 8680040076292853772
+    second: sketch1603925651910_0
   - first:
-      213: -456167123496611102
-    second: PIKEEM_1
+      213: -8229991250670767829
+    second: sketch1603925651910_1
   - first:
-      213: -2530613230401760625
-    second: PIKEEM_2
-  - first:
-      213: -1688031980927640548
-    second: PIKEEM_3
-  - first:
-      213: 6667711792029916964
-    second: PIKEEM_4
-  - first:
-      213: 8110691820719698922
-    second: PIKEEM_5
+      213: -6061610318524743936
+    second: sketch1603925651910_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +41,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -64,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,127 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PIKEEM_0
+      name: sketch1603925651910_0
       rect:
         serializedVersion: 2
-        x: 330
-        y: 1579
-        width: 474
-        height: 314
-      alignment: 9
-      pivot: {x: 0.5596007, y: 0.5761287}
+        x: 182
+        y: 991
+        width: 782
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc3bb51071e083e90800000000000000
-      internalID: -7045866125051317299
+      spriteID: c001797e572b57870800000000000000
+      internalID: 8680040076292853772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PIKEEM_1
+      name: sketch1603925651910_1
       rect:
         serializedVersion: 2
-        x: 132
-        y: 876
-        width: 817
-        height: 545
-      alignment: 9
-      pivot: {x: 0.6356548, y: 0.33252895}
+        x: 343
+        y: 452
+        width: 430
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e2d5c50b6e5ba9f0800000000000000
-      internalID: -456167123496611102
+      spriteID: b213237df8239cd80800000000000000
+      internalID: -8229991250670767829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PIKEEM_2
+      name: sketch1603925651910_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 487
-        width: 197
-        height: 256
-      alignment: 9
-      pivot: {x: 0.64874727, y: 0.7757585}
+        x: 262
+        y: 452
+        width: 582
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f82dff9bca471ecd0800000000000000
-      internalID: -2530613230401760625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PIKEEM_3
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 499
-        width: 109
-        height: 171
-      alignment: 9
-      pivot: {x: 0.4511198, y: 0.788203}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1c1f4f5bd7e298e0800000000000000
-      internalID: -1688031980927640548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PIKEEM_4
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 128
-        width: 144
-        height: 249
-      alignment: 9
-      pivot: {x: 0.62024665, y: 0.82095534}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42f50ac3c88788c50800000000000000
-      internalID: 6667711792029916964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PIKEEM_5
-      rect:
-        serializedVersion: 2
-        x: 835
-        y: 153
-        width: 153
-        height: 259
-      alignment: 9
-      pivot: {x: 0.360709, y: 0.80856335}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae3f9a81d37fe8070800000000000000
-      internalID: 8110691820719698922
+      spriteID: 00f7d75f785d0eba0800000000000000
+      internalID: -6061610318524743936
       vertices: []
       indices: 
       edges: []
