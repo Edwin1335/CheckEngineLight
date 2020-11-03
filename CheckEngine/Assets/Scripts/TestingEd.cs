@@ -15,11 +15,13 @@ public class TestingEd : MonoBehaviour
     private bool playerIsFalling;
 
     private Rigidbody2D rb;
+    private Animator animator;
 
     // Start is used to get components at the start of the scene.
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     //Update is used to check input
@@ -78,6 +80,14 @@ public class TestingEd : MonoBehaviour
         rb.velocity = new Vector2(moveInputHorizontal * speed, rb.velocity.y);
 
         // Perform animations if moveing
+        if (horizInput != 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
 
         // Flip player left or right based on direction hes looking at.
         if (facingRight == false && moveInputHorizontal < 0)
