@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 6182230066212290805}
   - component: {fileID: 6182230066212290806}
   - component: {fileID: 8465377092509307559}
-  - component: {fileID: 2064962928}
   m_Layer: 8
   m_Name: Gloomy
   m_TagString: Player
@@ -193,25 +192,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2064962928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6182230066212290792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897c94bf8ed6406488de75a83ed7afc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7.05
-  jumpForce: 6.28
-  groundCheck: {fileID: 1432559308}
-  checkRadius: 0.2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!1 &6182230066262622037
 GameObject:
   m_ObjectHideFlags: 0
