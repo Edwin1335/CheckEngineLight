@@ -57,18 +57,28 @@ public class TestingEd : MonoBehaviour
         if (pressedJumpButton && isGrounded)
         {
             pressedJumpButton = false;
+            animator.SetTrigger("takeOff");
+            animator.SetBool("isJumping", true);
         }
 
         // If the player is falling, play animation.
         if (!isGrounded && rb.velocity.y < -0.1)
         {
             playerIsFalling = true;
+            animator.SetBool("isFalling", true);
         }
 
         // If falling and landed, play landin animation
         if (playerIsFalling && isGrounded)
         {
             playerIsFalling = false;
+            animator.SetBool("isFalling", false);
+        }
+
+        if(!playerIsFalling && isGrounded)
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
         }
     }
 
@@ -113,5 +123,4 @@ public class TestingEd : MonoBehaviour
         Debug.Log("Goes Here");
         rb.velocity = Vector2.up * jumpForce;
     }
-
 }
