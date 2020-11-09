@@ -17,6 +17,8 @@ public class TestingEd : MonoBehaviour
     private float moveInputHorizontal;
     private bool facingRight;
     private bool isGrounded;
+    private bool hitRoof;
+    private bool hittingRoof;
     private bool playerIsFalling;
     private int extraJumps = 1;
     private float jumpTimeCounter;
@@ -24,6 +26,7 @@ public class TestingEd : MonoBehaviour
 
     // Get Glommys different components needed to jump/run/dash, etc.
     private Transform groundCheck;
+    private Transform roofCheck;
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -33,6 +36,7 @@ public class TestingEd : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         groundCheck = this.gameObject.transform.GetChild(3).transform;
+        roofCheck = this.gameObject.transform.GetChild(4).transform;
     }
 
     //Update is used to check input
@@ -43,6 +47,17 @@ public class TestingEd : MonoBehaviour
 
         // Check if player is on touching the ground.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        if (isGrounded)
+        {
+            hittingRoof = false;
+        }
+
+        // Check if player has hit a roof.
+        hitRoof = Physics2D.OverlapCircle(roofCheck.position, checkRadius, whatIsGround);
+        if (hitRoof)
+        {
+            hittingRoof = true;
+        }
 
         // Check if player presses the jump/holds "Space bar" button ;
         if (Input.GetKeyDown(KeyCode.Space))
@@ -137,9 +152,8 @@ public class TestingEd : MonoBehaviour
     // Funtion to make/animate the player jump.
     private void playerJump()
     {
-        if (isGrounded)
+        if (isGrounded && !hittingRoof)
         {
-            Debug.Log("Goes Here");
             rb.velocity = Vector2.up * jumpForce;
             extraJumps = maxJumps;
             animator.SetTrigger("takeOff");
@@ -147,7 +161,7 @@ public class TestingEd : MonoBehaviour
             jumpTimeCounter = holdJumpTimer;
             isJumping = true;
         }
-        else if (!isGrounded && extraJumps > 0 && extraJump)
+        else if (!isGrounded && extraJumps > 0 && extraJump && !hittingRoof)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
@@ -159,7 +173,6 @@ public class TestingEd : MonoBehaviour
             // One last animation for the last jump
             if (extraJumps == 0)
             {
-                Debug.Log("LAST Jump");
                 animator.SetTrigger("lastJump");
                 animator.SetBool("isJumping", false);
                 animator.ResetTrigger("lastJump");
@@ -186,6 +199,11 @@ public class TestingEd : MonoBehaviour
         if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Jump"))
         {
             animator.SetBool("isJumping", false);
+            animator.SetTrigger("cancelTakeOff");
+        }
+        if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Take_Off"))
+        {
+            animator.SetTrigger("cancelTakeOff");
         }
     }
 }
