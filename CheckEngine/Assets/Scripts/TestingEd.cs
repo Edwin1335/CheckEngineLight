@@ -105,34 +105,36 @@ public class TestingEd : MonoBehaviour
     // Funtion to make/animate the player jump.
     private void playerJump()
     {
-        if(isGrounded)
+        if (isGrounded)
         {
+            Debug.Log("Goes Here");
             rb.velocity = Vector2.up * jumpForce;
             extraJumps = 2;
             animator.SetTrigger("takeOff");
-            animator.ResetTrigger("takeOff");
             animator.SetBool("isJumping", true);
         }
-        else if(!isGrounded && extraJumps > 0 && extraJump)
+        else if (!isGrounded && extraJumps > 0 && extraJump)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
-
+            animator.SetTrigger("takeOff");
+            animator.SetBool("isJumping", true);
         }
     }
 
     private void checkAnimationStatus()
     {
-        if(isGrounded)
-        {
-            // The player is not jumping or falling
-            animator.SetBool("isJumping", false);
-            animator.SetBool("isFalling", false);
-        }
-        else if(!isGrounded && rb.velocity.y < -0.1)
+        // If falling
+        if (!isGrounded && rb.velocity.y < -0.1)
         {
             // If the velocity is negative and its not touching the ground. Play falling animation.
             animator.SetBool("isFalling", true);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            animator.SetBool("isFalling", false);
         }
     }
 }
