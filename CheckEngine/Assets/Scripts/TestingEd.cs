@@ -182,5 +182,10 @@ public class TestingEd : MonoBehaviour
         {
             animator.SetBool("isFalling", false);
         }
+
+        if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Jump"))
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
 }
