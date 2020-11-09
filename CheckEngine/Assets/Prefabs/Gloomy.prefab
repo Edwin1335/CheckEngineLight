@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6182230066212290806}
   - component: {fileID: 8465377092509307559}
   - component: {fileID: 1654466831}
+  - component: {fileID: 1279930176}
   m_Layer: 8
   m_Name: Gloomy
   m_TagString: Player
@@ -206,13 +207,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 13
-  jumpForce: 12
+  jumpForce: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
   maxJumps: 1
   extraJump: 0
-  holdJumpTimer: 0.25
+  holdJumpTimer: 0.01
+--- !u!114 &1279930176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182230066212290792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05df31ea1e8e83841817f57f47dfe8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  numOfHearts: 4
+  hearts: []
+  fullHeart: {fileID: 21300000, guid: 7f7507ceb55e7b04ead53b940312909a, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 701b3ad5ea17c814583c6d8789a8e9f6, type: 3}
 --- !u!1 &6182230066262622037
 GameObject:
   m_ObjectHideFlags: 0
