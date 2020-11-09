@@ -465,26 +465,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1654466831, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: maxJumps
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1823077443, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1823077443, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.03258636
-      objectReference: {fileID: 0}
-    - target: {fileID: 1823077443, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9994689
-      objectReference: {fileID: 0}
-    - target: {fileID: 1823077443, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 3.735
-      objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_Name
       value: Gloomy
