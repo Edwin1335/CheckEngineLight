@@ -119,6 +119,15 @@ public class TestingEd : MonoBehaviour
             extraJumps--;
             animator.SetTrigger("takeOff");
             animator.SetBool("isJumping", true);
+
+            // One last animation for the last jump
+            if (extraJumps == 0)
+            {
+                Debug.Log("LAST Jump");
+                animator.SetTrigger("lastJump");
+                animator.SetBool("isJumping", false);
+                animator.ResetTrigger("lastJump");
+            }
         }
     }
 
@@ -131,6 +140,7 @@ public class TestingEd : MonoBehaviour
             animator.SetBool("isFalling", true);
             animator.SetBool("isJumping", false);
             animator.SetBool("isRunning", false);
+            animator.ResetTrigger("takeOff");
         }
         else
         {
