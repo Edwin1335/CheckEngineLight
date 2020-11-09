@@ -6,6 +6,7 @@ public class TestingEd : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce = 0;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private int maxJumps = 1;
     [SerializeField] private bool extraJump;
 
     // Private variables that will not be changes in the unity window. 
@@ -109,7 +110,7 @@ public class TestingEd : MonoBehaviour
         {
             Debug.Log("Goes Here");
             rb.velocity = Vector2.up * jumpForce;
-            extraJumps = 2;
+            extraJumps = maxJumps;
             animator.SetTrigger("takeOff");
             animator.SetBool("isJumping", true);
         }

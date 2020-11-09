@@ -210,6 +210,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  maxJumps: 1
   extraJump: 1
 --- !u!1 &6182230066262622037
 GameObject:
