@@ -2,12 +2,16 @@
 
 public class TestingEd : MonoBehaviour
 {
-    // SerializeField shows the data in Unity and can be modified.  
+    // SerializeField shows the data in Unity and can be modified. 
+    [Header("Movement")]
     [SerializeField] private float speed;
+    [Header("Jumping")]
     [SerializeField] private float jumpForce = 0;
+    [SerializeField] private float jumpForce2 = 0;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private bool extraJump;
+    [SerializeField] private float holdJumpTimer = 2;
 
     // Private variables that will not be changes in the unity window. 
     private float checkRadius = 0.1f;
@@ -16,6 +20,8 @@ public class TestingEd : MonoBehaviour
     private bool isGrounded;
     private bool playerIsFalling;
     private int extraJumps = 1;
+    private float jumpTimeCounter;
+    private bool isJumping;
 
     // Get Glommys different components needed to jump/run/dash, etc.
     private Transform groundCheck;
@@ -39,10 +45,36 @@ public class TestingEd : MonoBehaviour
         // Check if player is on touching the ground.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        // Check if player presses the jump button "Space bar";
+        // Check if player presses the jump/holds "Space bar" button ;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerJump();
+        }
+        if (Input.GetKey(KeyCode.Space) && isJumping)
+        {
+            if (jumpTimeCounter > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce2;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            jumpTimeCounter = 0;
+            isJumping = false;
+        }
+        if (isJumping)
+        {
+            Debug.Log("Jumping");
+        }
+        else
+        {
+            Debug.Log("Not Jumping");
         }
     }
 
@@ -113,6 +145,8 @@ public class TestingEd : MonoBehaviour
             extraJumps = maxJumps;
             animator.SetTrigger("takeOff");
             animator.SetBool("isJumping", true);
+            jumpTimeCounter = holdJumpTimer;
+            isJumping = true;
         }
         else if (!isGrounded && extraJumps > 0 && extraJump)
         {
@@ -120,6 +154,8 @@ public class TestingEd : MonoBehaviour
             extraJumps--;
             animator.SetTrigger("takeOff");
             animator.SetBool("isJumping", true);
+            jumpTimeCounter = holdJumpTimer;
+            isJumping = true;
 
             // One last animation for the last jump
             if (extraJumps == 0)
