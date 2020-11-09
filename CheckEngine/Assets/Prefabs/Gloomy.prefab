@@ -207,13 +207,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 13
-  jumpForce: 1
+  jumpForce: 12
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
   maxJumps: 1
   extraJump: 0
-  holdJumpTimer: 0.01
+  holdJumpTimer: 0.2
 --- !u!114 &1279930176
 MonoBehaviour:
   m_ObjectHideFlags: 0

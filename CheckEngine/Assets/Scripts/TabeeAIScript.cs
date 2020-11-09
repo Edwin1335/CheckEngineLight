@@ -7,36 +7,51 @@ public class TabeeAIScript : MonoBehaviour
     public float speed;
     public float lineOfSight;
     public float attackRange;
-    private Transform player;
+    private bool playerFound = false;
 
+    // Get Components
+    private Animator animator;
+    private Transform player;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        // Check if player exists in the scene.
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+            playerFound = true;
+            animator = GetComponent<Animator>();
+        }
     }
 
 
     void Update()
     {
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+        if (playerFound)
+        {
+            float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-        if (distanceFromPlayer < lineOfSight && distanceFromPlayer > attackRange)
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-        }
-        else if (distanceFromPlayer <= attackRange)
-        {
-            //attack anim
-            //reduce player health
-            //attack player once every x amount of secs
-        }
+            if (distanceFromPlayer < lineOfSight && distanceFromPlayer > attackRange)
+            {
+                animator.SetBool("isAttacking", false);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            }
+            else if (distanceFromPlayer <= attackRange)
+            {
+                // Attack Animation.
+                animator.SetBool("isAttacking", true);
+                //reduce player health
+                //attack player once every x amount of secs
+            }
 
-        if (this.transform.position.x < player.position.x)
-        {
-            this.transform.localScale = new Vector2(1, 1);
-        }
-        else if (this.transform.position.x > player.position.x)
-        {
-            this.transform.localScale = new Vector2(-1, 1);
+            // Flip tabbe to face player.
+            if (this.transform.position.x < player.position.x)
+            {
+                this.transform.localScale = new Vector2(1, 1);
+            }
+            else if (this.transform.position.x > player.position.x)
+            {
+                this.transform.localScale = new Vector2(-1, 1);
+            }
         }
 
     }
