@@ -10,7 +10,7 @@ public class PlantMove : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {

@@ -7,7 +7,6 @@ public class TestingEd : MonoBehaviour
     [SerializeField] private float speed;
     [Header("Jumping")]
     [SerializeField] private float jumpForce = 0;
-    [SerializeField] private float jumpForce2 = 0;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private bool extraJump;
@@ -54,7 +53,7 @@ public class TestingEd : MonoBehaviour
         {
             if (jumpTimeCounter > 0)
             {
-                rb.velocity = Vector2.up * jumpForce2;
+                rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
