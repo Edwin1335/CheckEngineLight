@@ -89,7 +89,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,7 +136,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 3.9
   m_Material: {fileID: 6200000, guid: 2b4c4429c6ce81c45a81a16bd7d6cdda, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -155,8 +155,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007489984, y: -0.38938522}
-  m_Size: {x: 0.4031857, y: 1.0050774}
+  m_Offset: {x: 0.007489984, y: -0.5217109}
+  m_Size: {x: 0.4031857, y: 1.269729}
   m_Direction: 0
 --- !u!58 &6182230066212290806
 CircleCollider2D:
@@ -171,9 +171,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22, y: 0.91}
+  m_Offset: {x: -0.21999998, y: 0.88845867}
   serializedVersion: 2
-  m_Radius: 0.7677152
+  m_Radius: 0.74617386
 --- !u!95 &8465377092509307559
 Animator:
   serializedVersion: 3
@@ -205,13 +205,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897c94bf8ed6406488de75a83ed7afc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8.51
-  jumpForce: 13.34
-  groundCheck: {fileID: 1432559308}
-  checkRadius: 0
+  speed: 11.71
+  jumpForce: 14.86
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  extraJump: 1
 --- !u!1 &6182230066262622037
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,26 +2,31 @@
 
 public class TestingEd : MonoBehaviour
 {
+    // SerializeField shows the data in Unity and can be modified.  
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce = 0;
-    public Transform groundCheck;
-    public float checkRadius;
-    public LayerMask whatIsGround;
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private bool extraJump;
 
+    // Private variables that will not be changes in the unity window. 
+    private float checkRadius = 0.1f;
     private float moveInputHorizontal;
     private bool facingRight;
     private bool isGrounded;
-    private bool pressedJumpButton;
     private bool playerIsFalling;
+    private int extraJumps = 1;
 
+    // Get Glommys different components needed to jump/run/dash, etc.
+    private Transform groundCheck;
     private Rigidbody2D rb;
     private Animator animator;
 
     // Start is used to get components at the start of the scene.
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        groundCheck = this.gameObject.transform.GetChild(3).transform;
     }
 
     //Update is used to check input
@@ -29,16 +34,14 @@ public class TestingEd : MonoBehaviour
     {
         // Check if player presses the <- or -> buttons.
         moveInputHorizontal = Input.GetAxisRaw("Horizontal");
+
         // Check if player is on touching the ground.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        if (isGrounded)
+
+        // Check if player presses the jump button "Space bar";
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("IS GROUNDED");
-        }
-        // Check if player presses the UP button.
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
-        {
-            pressedJumpButton = true;
+            playerJump();
         }
     }
 
@@ -47,45 +50,24 @@ public class TestingEd : MonoBehaviour
     {
         // Funtion to move the player left and right and animate him.
         movePlayer(moveInputHorizontal);
+        checkAnimationStatus();
 
-        // Funtion to make the player Jump.
-        if (pressedJumpButton)
+        if (isGrounded)
         {
-            playerJump();
+            Debug.Log("IS GROUNDED");
         }
-
-        if (pressedJumpButton && isGrounded)
+        else
         {
-            pressedJumpButton = false;
-            animator.SetTrigger("takeOff");
-            animator.SetBool("isJumping", true);
-        }
-
-        // If the player is falling, play animation.
-        if (!isGrounded && rb.velocity.y < -0.1)
-        {
-            playerIsFalling = true;
-            animator.SetBool("isFalling", true);
-        }
-
-        // If falling and landed, play landin animation
-        if (playerIsFalling && isGrounded)
-        {
-            playerIsFalling = false;
-            animator.SetBool("isFalling", false);
-        }
-
-        if(!playerIsFalling && isGrounded)
-        {
-            animator.SetBool("isJumping", false);
-            animator.SetBool("isFalling", false);
+            Debug.Log("Not Grounded");
         }
     }
 
+    // private funtion to move the position based on horizontal input.
     private void movePlayer(float horizInput)
     {
         // Display horizontal input
         Debug.Log("Horsizontal input " + moveInputHorizontal);
+
         // Move the player 
         rb.velocity = new Vector2(moveInputHorizontal * speed, rb.velocity.y);
 
@@ -108,8 +90,10 @@ public class TestingEd : MonoBehaviour
         {
             flipPLayer();
         }
+
     }
 
+    // Funcion to flip the player if facing right/left.
     private void flipPLayer()
     {
         facingRight = !facingRight;
@@ -118,9 +102,37 @@ public class TestingEd : MonoBehaviour
         transform.localScale = Scaler;
     }
 
+    // Funtion to make/animate the player jump.
     private void playerJump()
     {
-        Debug.Log("Goes Here");
-        rb.velocity = Vector2.up * jumpForce;
+        if(isGrounded)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            extraJumps = 2;
+            animator.SetTrigger("takeOff");
+            animator.ResetTrigger("takeOff");
+            animator.SetBool("isJumping", true);
+        }
+        else if(!isGrounded && extraJumps > 0 && extraJump)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            extraJumps--;
+
+        }
+    }
+
+    private void checkAnimationStatus()
+    {
+        if(isGrounded)
+        {
+            // The player is not jumping or falling
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+        }
+        else if(!isGrounded && rb.velocity.y < -0.1)
+        {
+            // If the velocity is negative and its not touching the ground. Play falling animation.
+            animator.SetBool("isFalling", true);
+        }
     }
 }
