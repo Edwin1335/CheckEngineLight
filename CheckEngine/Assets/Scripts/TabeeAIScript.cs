@@ -7,6 +7,7 @@ public class TabeeAIScript : MonoBehaviour
     public float speed;
     public float lineOfSight;
     public float attackRange;
+    private float standByMode;
     private bool playerFound = false;
     private bool flyTowardsPlayer = false;
 
@@ -14,6 +15,7 @@ public class TabeeAIScript : MonoBehaviour
     private Animator animator;
     private Transform player;
     private Vector2 originalPosition;
+    private Vector2 standByPosition;
 
     void Start()
     {
@@ -24,6 +26,7 @@ public class TabeeAIScript : MonoBehaviour
             playerFound = true;
             animator = GetComponent<Animator>();
             originalPosition = new Vector2(this.transform.position.x, this.transform.position.y);
+            standByMode = lineOfSight / 2;
         }
     }
 
@@ -54,7 +57,7 @@ public class TabeeAIScript : MonoBehaviour
                 //attack player once every x amount of secs
             }
 
-            // Flip Tabee to face player.
+            // Flip Tabee to face player or previous position.
             if (flyTowardsPlayer)
             {
                 if (this.transform.position.x < player.position.x)
@@ -80,6 +83,14 @@ public class TabeeAIScript : MonoBehaviour
             }
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.CompareTag("Player"))
+        {
+            // Do something.
+        }
     }
 
     private void OnDrawGizmosSelected()
