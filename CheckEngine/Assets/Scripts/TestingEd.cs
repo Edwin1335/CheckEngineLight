@@ -16,7 +16,7 @@ public class TestingEd : MonoBehaviour
     [SerializeField] private float holdJumpTimer = 2;
 
     // Private variables that will not be changes in the unity window. 
-    private float checkRadius = 0.1f;
+    private float checkRadius = 1f;
     private float moveInputHorizontal;
     private bool facingRight;
     private bool isGrounded;
