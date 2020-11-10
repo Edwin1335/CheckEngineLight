@@ -132,11 +132,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 85
+        y: 83
         width: 836
         height: 963
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,27 +144,6 @@ TextureImporter:
       bones: []
       spriteID: eebebc92cc9c4dc50800000000000000
       internalID: 6689193225263770606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees01_1
-      rect:
-        serializedVersion: 2
-        x: 1100
-        y: 739
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9da5f8ab3b16e3660800000000000000
-      internalID: 7367433464981707481
       vertices: []
       indices: 
       edges: []
@@ -178,7 +157,7 @@ TextureImporter:
         width: 689
         height: 860
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,48 +165,6 @@ TextureImporter:
       bones: []
       spriteID: 530e25af411e9f4b0800000000000000
       internalID: -5406042397466238923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees01_3
-      rect:
-        serializedVersion: 2
-        x: 1398
-        y: 156
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 521c00c8941eca4b0800000000000000
-      internalID: -5427715744890568411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees01_4
-      rect:
-        serializedVersion: 2
-        x: 1423
-        y: 156
-        width: 7
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1be7d4f36675c730800000000000000
-      internalID: 4018748414179666715
       vertices: []
       indices: 
       edges: []

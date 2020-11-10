@@ -86,14 +86,6 @@ public class TestingEd : MonoBehaviour
             jumpTimeCounter = 0;
             isJumping = false;
         }
-        if (isJumping)
-        {
-            Debug.Log("Jumping");
-        }
-        else
-        {
-            Debug.Log("Not Jumping");
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -124,9 +116,6 @@ public class TestingEd : MonoBehaviour
     // private funtion to move the position based on horizontal input.
     private void movePlayer(float horizInput)
     {
-        // Display horizontal input
-        Debug.Log("Horsizontal input " + moveInputHorizontal);
-
         // Move the player 
         rb.velocity = new Vector2(moveInputHorizontal * speed, rb.velocity.y);
 
@@ -213,10 +202,14 @@ public class TestingEd : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
-        // if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Take_Off"))
-        // {
-        //     animator.SetTrigger("cancelTakeOff");
-        // }
+        if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Take_Off"))
+        {
+            animator.SetTrigger("cancelTakeOff");
+        }
+        else
+        {
+            animator.ResetTrigger("cancelTakeOff");
+        }
     }
 
     private void OnDrawGizmos()
