@@ -502,6 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3985588771783996882}
   - component: {fileID: 3985588771783996881}
+  - component: {fileID: 8363206755400752114}
   m_Layer: 0
   m_Name: groundrock_fill_2
   m_TagString: Untagged
@@ -574,6 +575,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8363206755400752114
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985588771783996883}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.29021, y: -1.6227808}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.451449, y: 2.0700002}
+    newSize: {x: 4.451449, y: 2.0700002}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 17.031872, y: 5.3155622}
+  m_EdgeRadius: 0
 --- !u!1 &3985588772274880570
 GameObject:
   m_ObjectHideFlags: 0
