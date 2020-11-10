@@ -329,7 +329,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5.4
+  m_GravityScale: 10
   m_Material: {fileID: 6200000, guid: 2b4c4429c6ce81c45a81a16bd7d6cdda, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3b24fb198d8f94985d884295c881b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 15
 --- !u!114 &1997280147030430277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,8 +446,8 @@ MonoBehaviour:
     m_Bits: 1024
   _feet: {fileID: 136259456229183813}
   checkRadius: 0.1
-  _counterJumpForce: {x: 5, y: 0}
-  _jumpStrength: 10
+  _counterJumpForce: {x: 0, y: 5}
+  _jumpStrength: 50
   _jumpCount: 2
   _extraJump: 1
   _wallJumpForce: 5
