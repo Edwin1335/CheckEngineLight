@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJump : MonoBehaviour
+public class PlayerJump_bkup : MonoBehaviour
 {
     [SerializeField]
     private LayerMask _groundLayer;
@@ -14,16 +14,11 @@ public class PlayerJump : MonoBehaviour
 
     private float _jumpForce;
     private bool _jumpKeyHeld;
-    private bool _jumpKeyHeldPrev;
     private bool _isJumping;
     [SerializeField]
     private Vector2 _counterJumpForce;
     [SerializeField]
     private float _jumpStrength;
-    [SerializeField]
-    private int _jumpCount;
-    [SerializeField]
-    private bool _extraJump;
     [SerializeField]
     private float _wallJumpForce;
     private bool _wallFlip;
@@ -31,7 +26,6 @@ public class PlayerJump : MonoBehaviour
     private bool _wallSlide;
     private float _dirInput;
     private bool slideLooped;
-    private int _jumpsMade;
 
 
     private Rigidbody2D _rigidBody;
@@ -46,8 +40,6 @@ public class PlayerJump : MonoBehaviour
 
         //Calculates and stores jump force heigh based on physics gravity and jump strength, which can be defined in Unity Inspector
         _jumpForce = calculateJumpForce(Physics2D.gravity.magnitude, _jumpStrength);
-
-        _jumpsMade = _jumpCount;
     }
 
     private void FixedUpdate(){
@@ -59,36 +51,11 @@ public class PlayerJump : MonoBehaviour
             //(Incomplete, but can slow vertical descent if player is on wall)
             //_slideJump.SlideJump(_jumpKeyHeld, _dirInput);
 
-            if (_wallSlide == false && _extraJump == true && _jumpsMade != 0 && _jumpKeyHeldPrev == false){
-                _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-                Debug.Log("Jump Count: " + _jumpsMade);
-                _jumpsMade--;
-                _isJumping = true;
-            }
-            else if (_jumpsMade == 0){
-                _jumpsMade = _jumpCount;
-            }
-
-            /*
             //If the player is grounded and is not on a wall, they will jump vertically with an applied force
-            if (_grounded == true && _wallSlide == false && _isJumping == false){
-
-                //---------------------------------------------------------------
-                //Jumping Happens Here
-                //---------------------------------------------------------------
-                
+            if (_grounded == true && _wallSlide != true && _isJumping == false){
                 _isJumping = true;
                 _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
             }
-            else if (_grounded == false && _wallSlide == false && _isJumping == true && _extraJump == true && _jumpCount != 0 && _jumpKeyHeldPrev == false){
-                //Need to make sure jump key is let go before this loop can occur
-                _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-                _jumpCount--;
-            }
-            */
-
-
-
             //If the player is not on the ground but is sliding on a wall, they will jump away from the wall with an applied force
             //(Currently Incomplete)
             else if (_grounded != true && _wallSlide == true && _isJumping == false){
@@ -104,7 +71,6 @@ public class PlayerJump : MonoBehaviour
                 Debug.Log(_rigidBody.velocity);
             }
         }
-        _jumpKeyHeldPrev = _jumpKeyHeld;
 
         //Performs hitbox detection, indicating if player is on the ground or sliding on a wall
         //Hitbox detection sensitivity can be changed in Unity Inspector with _raycastFeet

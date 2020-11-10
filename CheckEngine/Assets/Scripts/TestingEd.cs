@@ -222,6 +222,8 @@ public class TestingEd : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
     }
 
+
+    /*
     public void Knockback(float knockBackDuration, float knockBackPower, Transform obj)
     {
         if (this.transform.position.x < obj.position.x)
@@ -233,4 +235,5 @@ public class TestingEd : MonoBehaviour
             rb.AddForce(new Vector2(-2f, 2f));
         }
     }
+    */
 }
