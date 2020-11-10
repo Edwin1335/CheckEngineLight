@@ -16,7 +16,7 @@ public class TestingEd : MonoBehaviour
     [SerializeField] private float holdJumpTimer = 2;
 
     // Private variables that will not be changes in the unity window. 
-    private float checkRadius = 1f;
+    private float checkRadius = 0.2f;
     private float moveInputHorizontal;
     private bool facingRight;
     private bool isGrounded;
@@ -170,6 +170,7 @@ public class TestingEd : MonoBehaviour
             extraJumps = maxJumps;
             animator.SetTrigger("takeOff");
             animator.SetBool("isJumping", true);
+            animator.ResetTrigger("cancelTakeOff");
             jumpTimeCounter = holdJumpTimer;
             isJumping = true;
         }
@@ -211,14 +212,20 @@ public class TestingEd : MonoBehaviour
         if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Jump"))
         {
             animator.SetBool("isJumping", false);
-            animator.SetTrigger("cancelTakeOff");
         }
-        if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Take_Off"))
-        {
-            animator.SetTrigger("cancelTakeOff");
-        }
+        // if (isGrounded && animator.GetCurrentAnimatorStateInfo(0).IsName("Gloomy_Take_Off"))
+        // {
+        //     animator.SetTrigger("cancelTakeOff");
+        // }
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+
+
+    }
     public void Knockback(float knockBackDuration, float knockBackPower, Transform obj)
     {
 
