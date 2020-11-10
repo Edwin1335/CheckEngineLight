@@ -236,7 +236,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2110682559
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dd5bcecd4210fc44cadedd72b4a776cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1856,7 +1856,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2110682559
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1a21ad86780d99a47ad8721986f9ff20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2748,6 +2748,11 @@ Transform:
   m_Father: {fileID: 1725312417}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1707223935 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6182230066212290802, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+  m_PrefabInstance: {fileID: 240344207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725312416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,6 +3725,6 @@ PrefabInstance:
     - target: {fileID: 8399969140748535320, guid: 9ded1203bab1c424c9fb8eed444f1bcf, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1707223935}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ded1203bab1c424c9fb8eed444f1bcf, type: 3}
