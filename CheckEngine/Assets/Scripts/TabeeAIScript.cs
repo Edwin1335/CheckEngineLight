@@ -92,7 +92,7 @@ public class TabeeAIScript : MonoBehaviour
     {
         if (other.collider.CompareTag("Player"))
         {
-            TestingEd.instance.Knockback(1f, 100f, this.transform);
+            TestingEd.instance.Knockback(10f, 1000f, this.transform);
             StartCoroutine(Attack());
         }
     }

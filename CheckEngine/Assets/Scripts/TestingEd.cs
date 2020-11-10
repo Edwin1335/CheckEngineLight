@@ -46,6 +46,18 @@ public class TestingEd : MonoBehaviour
     //Update is used to check input
     private void Update()
     {
+        // Testing 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Debug.Log("Adding Force");
+            rb.AddForce(new Vector2(-1000, 700), ForceMode2D.Force);
+            //rb.velocity = new Vector2(moveInputHorizontal * speed, rb.velocity.y);
+        }
+        else if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Debug.Log("Adding Force");
+        }
+
         // Check if player presses the <- or -> buttons.
         moveInputHorizontal = Input.GetAxisRaw("Horizontal");
 
@@ -85,14 +97,6 @@ public class TestingEd : MonoBehaviour
         {
             jumpTimeCounter = 0;
             isJumping = false;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.collider.CompareTag("Enemy"))
-        {
-            // 
         }
     }
 
@@ -216,13 +220,17 @@ public class TestingEd : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
-
-
     }
+
     public void Knockback(float knockBackDuration, float knockBackPower, Transform obj)
     {
-
-        Vector2 direction = (obj.transform.position - this.transform.position).normalized;
-        rb.AddForce(-obj.transform.position * knockBackPower);
+        if (this.transform.position.x < obj.position.x)
+        {
+            rb.AddForce(new Vector2(2f, 2f));
+        }
+        else if (this.transform.position.x > obj.position.x)
+        {
+            rb.AddForce(new Vector2(-2f, 2f));
+        }
     }
 }
