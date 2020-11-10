@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:CheckEngine/Assets/Scripts/PlayerController.cs.meta
-<<<<<<< HEAD
-guid: 246708bc89d1ab94998a1220876c51be
-=======
-guid: 394d0f3358d3ce042bc7656dd2441770
->>>>>>> 9ea4783642096ca2cad7fc6082a36d7d9e0cc005
-=======
-guid: e96c9a7d34f5f3f469ecdcc3cae6cb28
->>>>>>> Stashed changes:CheckEngine/Assets/Scripts/CamFollow2D.cs.meta
+guid: 436998de43bf7554da3350de600bc4ea
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

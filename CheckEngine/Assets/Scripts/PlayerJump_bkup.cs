@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJump : MonoBehaviour
+public class PlayerJump_bkup : MonoBehaviour
 {
     [SerializeField]
     private LayerMask _groundLayer;
