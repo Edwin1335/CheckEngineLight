@@ -219,10 +219,13 @@ public class TestingEd : MonoBehaviour
 
 
     }
+
+    /*
     public void Knockback(float knockBackDuration, float knockBackPower, Transform obj)
     {
 
         Vector2 direction = (obj.transform.position - this.transform.position).normalized;
         rb.AddForce(-obj.transform.position * knockBackPower);
     }
+    */
 }

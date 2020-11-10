@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,8 +19,6 @@ public class PlayerJump : MonoBehaviour
     private Vector2 _counterJumpForce;
     [SerializeField]
     private float _jumpStrength;
-    [SerializeField]
-    private int _jumpCount;
     [SerializeField]
     private float _wallJumpForce;
     private bool _wallFlip;
@@ -54,23 +52,10 @@ public class PlayerJump : MonoBehaviour
             //_slideJump.SlideJump(_jumpKeyHeld, _dirInput);
 
             //If the player is grounded and is not on a wall, they will jump vertically with an applied force
-            if (_grounded == true && _wallSlide == false && _isJumping == false){
-
-                //---------------------------------------------------------------
-                //Jumping Happens Here
-                //---------------------------------------------------------------
-                
+            if (_grounded == true && _wallSlide != true && _isJumping == false){
                 _isJumping = true;
                 _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
             }
-            else if (_grounded == false && _wallslide == false && _isJumping == true && _jumpCount != 0 && _jumpKeyHeldPrev == false){
-                //Need to make sure jump key is let go before this loop can occur
-                _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-                _jumpCount--;
-            }
-
-
-
             //If the player is not on the ground but is sliding on a wall, they will jump away from the wall with an applied force
             //(Currently Incomplete)
             else if (_grounded != true && _wallSlide == true && _isJumping == false){
@@ -86,7 +71,6 @@ public class PlayerJump : MonoBehaviour
                 Debug.Log(_rigidBody.velocity);
             }
         }
-        _jumpKeyHeldPrev = _jumpKeyHeld;
 
         //Performs hitbox detection, indicating if player is on the ground or sliding on a wall
         //Hitbox detection sensitivity can be changed in Unity Inspector with _raycastFeet
