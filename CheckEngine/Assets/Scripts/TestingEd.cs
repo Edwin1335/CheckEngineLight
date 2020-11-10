@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class TestingEd : MonoBehaviour
 {
+    public static TestingEd instance;
+
     // SerializeField shows the data in Unity and can be modified. 
     [Header("Movement")]
     [SerializeField] private float speed;
@@ -33,6 +36,7 @@ public class TestingEd : MonoBehaviour
     // Start is used to get components at the start of the scene.
     void Awake()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         groundCheck = this.gameObject.transform.GetChild(3).transform;
@@ -89,6 +93,14 @@ public class TestingEd : MonoBehaviour
         else
         {
             Debug.Log("Not Jumping");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.CompareTag("Enemy"))
+        {
+            // 
         }
     }
 
@@ -205,5 +217,12 @@ public class TestingEd : MonoBehaviour
         {
             animator.SetTrigger("cancelTakeOff");
         }
+    }
+
+    public void Knockback(float knockBackDuration, float knockBackPower, Transform obj)
+    {
+
+        Vector2 direction = (obj.transform.position - this.transform.position).normalized;
+        rb.AddForce(-obj.transform.position * knockBackPower);
     }
 }

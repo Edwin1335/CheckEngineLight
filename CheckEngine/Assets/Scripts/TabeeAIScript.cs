@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class TabeeAIScript : MonoBehaviour
 {
+    // Modifiable varables 
     public float speed;
     public float lineOfSight;
     public float attackRange;
-    private float standByMode;
+
+    // Hiiden varaibles
     private bool playerFound = false;
     private bool flyTowardsPlayer = false;
+    private bool attacked = false;
 
     // Get Components
     private Animator animator;
     private Transform player;
     private Vector2 originalPosition;
-    private Vector2 standByPosition;
 
     void Start()
     {
@@ -26,14 +28,13 @@ public class TabeeAIScript : MonoBehaviour
             playerFound = true;
             animator = GetComponent<Animator>();
             originalPosition = new Vector2(this.transform.position.x, this.transform.position.y);
-            standByMode = lineOfSight / 2;
         }
     }
 
 
     void Update()
     {
-        if (playerFound)
+        if (playerFound && !attacked)
         {
             float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
@@ -53,6 +54,9 @@ public class TabeeAIScript : MonoBehaviour
             {
                 // Attack Animation.
                 animator.SetBool("isAttacking", true);
+
+                // Must still move towards the player so that it could collide and the player can take damage on collision.
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
                 //reduce player health
                 //attack player once every x amount of secs
             }
@@ -82,21 +86,30 @@ public class TabeeAIScript : MonoBehaviour
 
             }
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.CompareTag("Player"))
         {
-            // Do something.
+            TestingEd.instance.Knockback(1f, 100f, this.transform);
+            StartCoroutine(Attack());
         }
+    }
+
+    private IEnumerator Attack()
+    {
+        attacked = true;
+        animator.SetBool("isAttacking", false);
+        yield return new WaitForSeconds(3f);
+        attacked = false;
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lineOfSight);
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

@@ -242,7 +242,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
-  maxJumps: 5
+  maxJumps: 2
   extraJump: 1
   holdJumpTimer: 0.2
 --- !u!114 &1279930176

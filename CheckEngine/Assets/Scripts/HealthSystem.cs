@@ -18,7 +18,7 @@ public class HealthSystem : MonoBehaviour
         {
             health = numOfHearts;
         }
-        for(int i = 0; i < hearts.Length; i++)
+        for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)
             {
@@ -28,7 +28,7 @@ public class HealthSystem : MonoBehaviour
             {
                 hearts[i].sprite = emptyHeart;
             }
-            if(i < numOfHearts)
+            if (i < numOfHearts)
             {
                 hearts[i].enabled = true;
             }
@@ -41,12 +41,7 @@ public class HealthSystem : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "Tabee")
-        {
-            Damage(1);
-            Debug.Log("Taking Damage");
-        }
-        else if(collision.gameObject.tag == "Rocky")
+        if (collision.gameObject.tag == "Enemy")
         {
             Damage(1);
             Debug.Log("Taking Damage");
