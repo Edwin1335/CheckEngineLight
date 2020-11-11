@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2110682559
-  m_SortingLayer: 7
+  m_SortingLayer: 3
   m_SortingOrder: 6
   m_Sprite: {fileID: -691534964852846653, guid: ca32a4e63e203de41b0bf135833c7a3d, type: 3}
   m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6163645209305322513}
   - component: {fileID: 6163645209305322512}
   - component: {fileID: 6163645209305322514}
-  - component: {fileID: 655340084996255305}
+  - component: {fileID: 6163645209305322519}
   m_Layer: 0
   m_Name: GrassPlant 1
   m_TagString: Untagged
@@ -151,7 +151,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &655340084996255305
+--- !u!114 &6163645209305322519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,6 +160,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6163645209305322518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be007a31ac8e5646bde9f472364ca3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b8b97891e64ae242ad3241d14aba643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

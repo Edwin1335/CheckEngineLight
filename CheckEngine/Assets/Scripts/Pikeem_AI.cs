@@ -5,13 +5,9 @@ using UnityEngine;
 
 public class Pikeem_AI : MonoBehaviour
 {
-    public float pikeemMovespeed;
+    [SerializeField] float pikeemMovespeed = 1f;
+
     Rigidbody2D pkrigbody;
-    public float circleRadius;
-    public GameObject groundcheck;
-    public LayerMask groundLayer;
-    public bool facingRight;
-    public bool isGround;
 
     void Start()
     {
@@ -20,29 +16,23 @@ public class Pikeem_AI : MonoBehaviour
 
     void Update()
     {
-        pkrigbody.velocity = Vector2.right * pikeemMovespeed * Time.deltaTime;
-        isGround = Physics2D.OverlapCircle(groundcheck.transform.position, circleRadius, groundLayer);
-        if(!isGround && facingRight)
+        if (IsFacingRight())
         {
-            Flip();
+            pkrigbody.velocity = new Vector2(pikeemMovespeed, 0f);
         }
-        else if(!isGround && !facingRight)
+        else
         {
-            Flip();
+            pkrigbody.velocity = new Vector2(-pikeemMovespeed, 0f);
         }
     }
 
-    void Flip()
+    private bool IsFacingRight()
     {
-        facingRight = !facingRight;
-        transform.Rotate(new Vector3(0, 180, 0));
-        pikeemMovespeed = -pikeemMovespeed;
+        return transform.localScale.x > Mathf.Epsilon;
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(groundcheck.transform.position, circleRadius);
+        transform.localScale = new Vector2(-(Mathf.Sign(pkrigbody.velocity.x)), transform.localScale.y);
     }
-
 }
