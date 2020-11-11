@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 6659601e5802f214382d1f173ef0889b
+guid: 17e035425e3c6124686ec83b7783c281
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2377426721765405055
-    second: Env_0
+      213: -6265054668056534801
+    second: bridge_0
   - first:
-      213: -4953810848778235540
-    second: Env_1
+      213: -376147737124152719
+    second: bridge_1
   - first:
-      213: 456708265112743097
-    second: Env_2
+      213: -8818591403317373605
+    second: bridge_2
   - first:
-      213: -947860795770484261
-    second: Env_3
+      213: -4879604279965285802
+    second: bridge_3
   - first:
-      213: -1218000702325256830
-    second: Env_4
+      213: 5074979543036475874
+    second: bridge_4
   - first:
-      213: 7187090809436342812
-    second: Env_5
+      213: -7189432014358526074
+    second: bridge_5
   - first:
-      213: 8586645556790886951
-    second: Env_6
+      213: 6379489803180860466
+    second: bridge_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,6 +107,18 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -122,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_0
+      name: bridge_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2511
-        width: 1500
-        height: 617
+        x: 345
+        y: 770
+        width: 1063
+        height: 262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71395ed1015ef020800000000000000
-      internalID: 2377426721765405055
+      spriteID: fe0661c19fd0e09a0800000000000000
+      internalID: -6265054668056534801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_1
+      name: bridge_1
       rect:
         serializedVersion: 2
-        x: 442
-        y: 1589
-        width: 925
-        height: 884
+        x: 386
+        y: 579
+        width: 961
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61d81a8747804bb0800000000000000
-      internalID: -4953810848778235540
+      spriteID: 17ad5a140a7a7caf0800000000000000
+      internalID: -376147737124152719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_3
+      name: bridge_4
       rect:
         serializedVersion: 2
-        x: 1181
-        y: 578
-        width: 182
-        height: 420
+        x: 599
+        y: 350
+        width: 631
+        height: 136
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd9c493d0a588d2f0800000000000000
-      internalID: -947860795770484261
+      spriteID: 2e930198103fd6640800000000000000
+      internalID: 5074979543036475874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_4
+      name: bridge_6
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 46
-        width: 435
-        height: 1483
+        x: 355
+        y: 87
+        width: 1005
+        height: 178
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,71 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d0ab180dac81fe0800000000000000
-      internalID: -1218000702325256830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_5
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 57
-        width: 255
-        height: 545
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1a8de8230dadb360800000000000000
-      internalID: 7187090809436342812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_6
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 45
-        width: 493
-        height: 641
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72205b0d3a4e92770800000000000000
-      internalID: 8586645556790886951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_2
-      rect:
-        serializedVersion: 2
-        x: 1265
-        y: 2502
-        width: 284
-        height: 466
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bca7045fbd865600800000000000000
-      internalID: 456708265112743097
+      spriteID: 23462de0d20888850800000000000000
+      internalID: 6379489803180860466
       vertices: []
       indices: 
       edges: []
