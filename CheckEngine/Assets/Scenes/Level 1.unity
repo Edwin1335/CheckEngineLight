@@ -4991,6 +4991,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1997280147030430277, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: _extraJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997280147030430277, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: _jumpCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_Name
       value: Gloomy
