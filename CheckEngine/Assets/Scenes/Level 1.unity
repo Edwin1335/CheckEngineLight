@@ -2229,7 +2229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8806592887486424021, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
       propertyPath: m_TagString
-      value: Tabee
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8806592887486424022, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5348,6 +5348,14 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 445805812}
+    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: numOfHearts
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1247331687, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -5366,7 +5374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290802, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22233,7 +22241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -50.00232, y: 59.987244}
+  m_AnchoredPosition: {x: -50.00244, y: 59.987244}
   m_SizeDelta: {x: 275.00464, y: 275.97412}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1393230211
