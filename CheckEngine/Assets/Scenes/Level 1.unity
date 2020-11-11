@@ -5850,14 +5850,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 518058158, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: hearts.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
@@ -5878,41 +5870,9 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 445805812}
-    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: numOfHearts
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: health
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1247331687, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 136259456229183813, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 500192306175256105, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: _moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997280147030430277, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: _extraJump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997280147030430277, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: _jumpStrength
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_Name
       value: Gloomy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290802, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17952,7 +17912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067645219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.71929, y: 17.810453, z: -15.113614}
+  m_LocalPosition: {x: 21.37, y: 18.35, z: -15.113614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1545559099}

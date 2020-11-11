@@ -6,9 +6,10 @@ public class PlayerDash : MonoBehaviour
 {
     private Rigidbody2D _rigidBody;
     [SerializeField]
-    private float _dashSpeed;
+    private float _dashSpeed = 1500;
     private float _dashTime;
-    public float _startDashTime;
+    [SerializeField]
+    private float _startDashTime = 0.15f;
     
     private float _direction;
     private bool _dashKey;
@@ -38,7 +39,10 @@ public class PlayerDash : MonoBehaviour
                 //Begins counting down until current dash time reaches zero
                 _dashTime -= Time.deltaTime;
                 //Applies high force to player to greatly increase their movement speed for dash duration
+            //---------------------------------------------------------------------------
+                //Dashing Occurs Here
                 _rigidBody.AddForce(new Vector2(_direction * _dashSpeed, _rigidBody.velocity.y));
+            //---------------------------------------------------------------------------
                 _isDashing = true;
                 //_atkKey = Input.GetKey(KeyCode.X);
             }
