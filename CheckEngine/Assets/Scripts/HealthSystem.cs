@@ -12,6 +12,8 @@ public class HealthSystem : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    private bool takingDamage = false;
+
     void Update()
     {
         if (health > numOfHearts)
@@ -38,28 +40,29 @@ public class HealthSystem : MonoBehaviour
             }
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && !takingDamage)
         {
             Damage(1);
             Debug.Log("Taking Damage");
+            StartCoroutine(waiter());
         }
         // GetComponent<BoxCollider2D>().enabled = false;
-        //StartCoroutine(waiter());
         //GetComponent<BoxCollider2D>().enabled = true;
     }
+
     IEnumerator waiter()
     {
-        //Wait for 2 seconds
-        yield return new WaitForSeconds(2);
+        takingDamage = true;
+        yield return new WaitForSeconds(1);
+        takingDamage = false;
     }
-
 
     void Damage(int a)
     {
         health = health - a;
-
     }
 }
