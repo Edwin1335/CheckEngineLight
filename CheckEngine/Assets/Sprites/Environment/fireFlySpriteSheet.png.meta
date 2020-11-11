@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: 6659601e5802f214382d1f173ef0889b
+guid: 6d5b88d232a274bffbf6b53e54e33d36
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2377426721765405055
-    second: Env_0
+      213: -176317411978846315
+    second: fireFlySpriteSheet_0
   - first:
-      213: -4953810848778235540
-    second: Env_1
+      213: 1467550128246339374
+    second: fireFlySpriteSheet_1
   - first:
-      213: 456708265112743097
-    second: Env_2
+      213: -3966422463985389551
+    second: fireFlySpriteSheet_2
   - first:
-      213: -947860795770484261
-    second: Env_3
+      213: 1730358751122949222
+    second: fireFlySpriteSheet_3
   - first:
-      213: -1218000702325256830
-    second: Env_4
+      213: -430274964946036157
+    second: fireFlySpriteSheet_4
   - first:
-      213: 7187090809436342812
-    second: Env_5
+      213: 8989503968647116498
+    second: fireFlySpriteSheet_5
   - first:
-      213: 8586645556790886951
-    second: Env_6
+      213: 4892057371328523741
+    second: fireFlySpriteSheet_6
+  - first:
+      213: 8127643223627464020
+    second: fireFlySpriteSheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,164 +109,173 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_0
+      name: fireFlySpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2511
-        width: 1500
-        height: 617
+        x: 0
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71395ed1015ef020800000000000000
-      internalID: 2377426721765405055
+      spriteID: 59fd84b7f389d8df0800000000000000
+      internalID: -176317411978846315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_1
+      name: fireFlySpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 442
-        y: 1589
-        width: 925
-        height: 884
+        x: 40
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61d81a8747804bb0800000000000000
-      internalID: -4953810848778235540
+      spriteID: e27b334f019cd5410800000000000000
+      internalID: 1467550128246339374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_3
+      name: fireFlySpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1181
-        y: 578
-        width: 182
-        height: 420
+        x: 80
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd9c493d0a588d2f0800000000000000
-      internalID: -947860795770484261
+      spriteID: 1107505b8cf64f8c0800000000000000
+      internalID: -3966422463985389551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_4
+      name: fireFlySpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 46
-        width: 435
-        height: 1483
+        x: 120
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d0ab180dac81fe0800000000000000
-      internalID: -1218000702325256830
+      spriteID: 6640ca6cd18730810800000000000000
+      internalID: 1730358751122949222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_5
+      name: fireFlySpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 187
-        y: 57
-        width: 255
-        height: 545
+        x: 160
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1a8de8230dadb360800000000000000
-      internalID: 7187090809436342812
+      spriteID: 34ad5a6f23b570af0800000000000000
+      internalID: -430274964946036157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_6
+      name: fireFlySpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 684
-        y: 45
-        width: 493
-        height: 641
+        x: 200
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72205b0d3a4e92770800000000000000
-      internalID: 8586645556790886951
+      spriteID: 2d6fc262b3221cc70800000000000000
+      internalID: 8989503968647116498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_2
+      name: fireFlySpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 1265
-        y: 2502
-        width: 284
-        height: 466
+        x: 240
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bca7045fbd865600800000000000000
-      internalID: 456708265112743097
+      spriteID: ddd2ede824414e340800000000000000
+      internalID: 4892057371328523741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireFlySpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45dfc6523703bc070800000000000000
+      internalID: 8127643223627464020
       vertices: []
       indices: 
       edges: []

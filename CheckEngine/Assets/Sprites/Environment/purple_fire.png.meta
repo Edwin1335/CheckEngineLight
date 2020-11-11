@@ -1,28 +1,97 @@
 fileFormatVersion: 2
-guid: 6659601e5802f214382d1f173ef0889b
+guid: 36ab8b2562057664eab30437f504aff0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2377426721765405055
-    second: Env_0
+      213: -6024975685854858701
+    second: purple_fire_0
   - first:
-      213: -4953810848778235540
-    second: Env_1
+      213: -659846760035960521
+    second: purple_fire_1
   - first:
-      213: 456708265112743097
-    second: Env_2
+      213: 5170263388493213179
+    second: purple_fire_2
   - first:
-      213: -947860795770484261
-    second: Env_3
+      213: -8994188184429962072
+    second: purple_fire_3
   - first:
-      213: -1218000702325256830
-    second: Env_4
+      213: 3771877085830644748
+    second: purple_fire_4
   - first:
-      213: 7187090809436342812
-    second: Env_5
+      213: -2360851897549176664
+    second: purple_fire_5
   - first:
-      213: 8586645556790886951
-    second: Env_6
+      213: 8357272269769483131
+    second: purple_fire_6
+  - first:
+      213: 8518916642687773412
+    second: purple_fire_7
+  - first:
+      213: 5779372735069135473
+    second: purple_fire_8
+  - first:
+      213: 1215438627474208474
+    second: purple_fire_9
+  - first:
+      213: -8863741371883867082
+    second: purple_fire_10
+  - first:
+      213: 3579491741673502108
+    second: purple_fire_11
+  - first:
+      213: 215284207429218100
+    second: purple_fire_12
+  - first:
+      213: 4971347025841490275
+    second: purple_fire_13
+  - first:
+      213: -5268929759958760091
+    second: purple_fire_14
+  - first:
+      213: 8357985768472248234
+    second: purple_fire_15
+  - first:
+      213: 870444053501213826
+    second: purple_fire_16
+  - first:
+      213: 7456602172429117101
+    second: purple_fire_17
+  - first:
+      213: 2734876356395581637
+    second: purple_fire_18
+  - first:
+      213: -4547941668616551256
+    second: purple_fire_19
+  - first:
+      213: -8973706996179144387
+    second: purple_fire_20
+  - first:
+      213: 4731516728847317519
+    second: purple_fire_21
+  - first:
+      213: 3862153477320326477
+    second: purple_fire_22
+  - first:
+      213: 9185720046617240633
+    second: purple_fire_23
+  - first:
+      213: -8189574326362338799
+    second: purple_fire_24
+  - first:
+      213: 4396141769549317048
+    second: purple_fire_25
+  - first:
+      213: 7414867313838444377
+    second: purple_fire_26
+  - first:
+      213: -3604780784353027387
+    second: purple_fire_27
+  - first:
+      213: 5756700806983835763
+    second: purple_fire_28
+  - first:
+      213: 2141678806486945495
+    second: purple_fire_29
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,148 +191,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_0
+      name: purple_fire_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2511
-        width: 1500
-        height: 617
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 135
+        y: 67
+        width: 135
+        height: 230
+      alignment: 9
+      pivot: {x: 0.5640869, y: 0.09451025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71395ed1015ef020800000000000000
-      internalID: 2377426721765405055
+      spriteID: 3327140198cf26ca0800000000000000
+      internalID: -6024975685854858701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_1
+      name: purple_fire_1
       rect:
         serializedVersion: 2
-        x: 442
-        y: 1589
-        width: 925
-        height: 884
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 596
+        y: 73
+        width: 138
+        height: 305
+      alignment: 9
+      pivot: {x: 0.52424026, y: 0.06859889}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61d81a8747804bb0800000000000000
-      internalID: -4953810848778235540
+      spriteID: 7393dd52ed0c7d6f0800000000000000
+      internalID: -659846760035960521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_3
+      name: purple_fire_2
       rect:
         serializedVersion: 2
-        x: 1181
-        y: 578
-        width: 182
-        height: 420
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1048
+        y: 73
+        width: 139
+        height: 345
+      alignment: 9
+      pivot: {x: 0.5641756, y: 0.05984388}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd9c493d0a588d2f0800000000000000
-      internalID: -947860795770484261
+      spriteID: bfd685a982770c740800000000000000
+      internalID: 5170263388493213179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_4
+      name: purple_fire_3
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 46
-        width: 435
-        height: 1483
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1503
+        y: 72
+        width: 138
+        height: 351
+      alignment: 9
+      pivot: {x: 0.5323203, y: 0.05842262}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d0ab180dac81fe0800000000000000
-      internalID: -1218000702325256830
+      spriteID: 8ac5900ef793e2380800000000000000
+      internalID: -8994188184429962072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_5
+      name: purple_fire_4
       rect:
         serializedVersion: 2
-        x: 187
-        y: 57
-        width: 255
-        height: 545
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1945
+        y: 84
+        width: 145
+        height: 360
+      alignment: 9
+      pivot: {x: 0.51538, y: 0.057072513}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1a8de8230dadb360800000000000000
-      internalID: 7187090809436342812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_6
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 45
-        width: 493
-        height: 641
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72205b0d3a4e92770800000000000000
-      internalID: 8586645556790886951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_2
-      rect:
-        serializedVersion: 2
-        x: 1265
-        y: 2502
-        width: 284
-        height: 466
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bca7045fbd865600800000000000000
-      internalID: 456708265112743097
+      spriteID: c040f5da936685430800000000000000
+      internalID: 3771877085830644748
       vertices: []
       indices: 
       edges: []

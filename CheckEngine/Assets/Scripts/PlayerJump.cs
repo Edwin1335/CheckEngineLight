@@ -10,20 +10,20 @@ public class PlayerJump : MonoBehaviour
     [SerializeField]
     private Transform _feet;
     [SerializeField]
-    private float checkRadius;
+    private float checkRadius = 0.1f;
 
     private float _jumpForce;
     private bool _jumpKeyHeld;
     private bool _jumpKeyHeldPrev;
     private bool _isJumping;
     [SerializeField]
-    private Vector2 _counterJumpForce;
+    private Vector2 _counterJumpForce = new Vector2(0, 5);
     [SerializeField]
-    private float _jumpStrength;
+    private float _jumpStrength = 50;
     [SerializeField]
-    private int _jumpCount;
+    private int _jumpCount = 2;
     [SerializeField]
-    private bool _extraJump;
+    private bool _extraJump = true;
     [SerializeField]
     private float _wallJumpForce;
     private bool _wallFlip;
@@ -74,6 +74,9 @@ public class PlayerJump : MonoBehaviour
 
             if (_wallSlide == false){
                 _rigidBody.velocity = new Vector2(0, 0);
+            //---------------------------------------------------------------------------
+                //Jumping Occurs Here
+            //---------------------------------------------------------------------------
                 _rigidBody.AddForce(new Vector2 (0, _jumpForce), ForceMode2D.Impulse);
                 _jumpsLeft--;
                 _isJumping = true;

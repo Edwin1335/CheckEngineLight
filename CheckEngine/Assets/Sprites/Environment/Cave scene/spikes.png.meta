@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 6659601e5802f214382d1f173ef0889b
+guid: a09f15bb37415b242b414b7e4f587f67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2377426721765405055
-    second: Env_0
+      213: 8382717070696663976
+    second: spikes_0
   - first:
-      213: -4953810848778235540
-    second: Env_1
+      213: -2244080383998043531
+    second: spikes_1
   - first:
-      213: 456708265112743097
-    second: Env_2
-  - first:
-      213: -947860795770484261
-    second: Env_3
-  - first:
-      213: -1218000702325256830
-    second: Env_4
-  - first:
-      213: 7187090809436342812
-    second: Env_5
-  - first:
-      213: 8586645556790886951
-    second: Env_6
+      213: -7836376798481834204
+    second: spikes_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,148 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_0
+      name: spikes_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2511
-        width: 1500
-        height: 617
+        x: 519
+        y: 367
+        width: 183
+        height: 318
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71395ed1015ef020800000000000000
-      internalID: 2377426721765405055
+      spriteID: 8ab4a7323c4655470800000000000000
+      internalID: 8382717070696663976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_1
+      name: spikes_1
       rect:
         serializedVersion: 2
-        x: 442
-        y: 1589
-        width: 925
-        height: 884
+        x: 869
+        y: 483
+        width: 67
+        height: 199
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61d81a8747804bb0800000000000000
-      internalID: -4953810848778235540
+      spriteID: 57adf58c7cc6bd0e0800000000000000
+      internalID: -2244080383998043531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_3
+      name: spikes_2
       rect:
         serializedVersion: 2
-        x: 1181
-        y: 578
-        width: 182
-        height: 420
+        x: 1184
+        y: 526
+        width: 100
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd9c493d0a588d2f0800000000000000
-      internalID: -947860795770484261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_4
-      rect:
-        serializedVersion: 2
-        x: 2112
-        y: 46
-        width: 435
-        height: 1483
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28d0ab180dac81fe0800000000000000
-      internalID: -1218000702325256830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_5
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 57
-        width: 255
-        height: 545
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1a8de8230dadb360800000000000000
-      internalID: 7187090809436342812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_6
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 45
-        width: 493
-        height: 641
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72205b0d3a4e92770800000000000000
-      internalID: 8586645556790886951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_2
-      rect:
-        serializedVersion: 2
-        x: 1265
-        y: 2502
-        width: 284
-        height: 466
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bca7045fbd865600800000000000000
-      internalID: 456708265112743097
+      spriteID: 42f906812d89f3390800000000000000
+      internalID: -7836376798481834204
       vertices: []
       indices: 
       edges: []

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float _moveSpeed;
+    private float _moveSpeed = 15;
     private float _direction;
     private bool _playerDirection;
 
@@ -28,8 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //---------------------------------------------------------------------------
+            //Movement Occurs Here
         _rigidBody.velocity = new Vector2(_direction * _moveSpeed, _rigidBody.velocity.y);
-
+        //---------------------------------------------------------------------------
     }
 
     public void Move(float _input)

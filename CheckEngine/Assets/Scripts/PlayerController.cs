@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(PlayerMovement), typeof(PlayerJump), typeof(PlayerDash))]
+[RequireComponent (typeof(PlayerWallJump), typeof(PlayerAttack))]
+
 public class PlayerController : MonoBehaviour
 {
     public RigidbodyInterpolation Interpolation;

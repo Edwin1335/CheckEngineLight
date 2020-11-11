@@ -1,28 +1,52 @@
 fileFormatVersion: 2
-guid: 6659601e5802f214382d1f173ef0889b
+guid: 1f2785e05d1af594297f7fe9be549d3e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2377426721765405055
-    second: Env_0
+      213: 1467898261958610796
+    second: health_fire_0
   - first:
-      213: -4953810848778235540
-    second: Env_1
+      213: -8295284447648616193
+    second: health_fire_1
   - first:
-      213: 456708265112743097
-    second: Env_2
+      213: 1953590100447203375
+    second: health_fire_2
   - first:
-      213: -947860795770484261
-    second: Env_3
+      213: 1008597884912114581
+    second: health_fire_3
   - first:
-      213: -1218000702325256830
-    second: Env_4
+      213: 6687031724346774841
+    second: health_fire_4
   - first:
-      213: 7187090809436342812
-    second: Env_5
+      213: 3523521972479189125
+    second: health_fire_5
   - first:
-      213: 8586645556790886951
-    second: Env_6
+      213: -1751580997065961214
+    second: health_fire_6
+  - first:
+      213: -7191985968928922465
+    second: health_fire_7
+  - first:
+      213: -1468181451144611142
+    second: health_fire_8
+  - first:
+      213: -2246658647744773574
+    second: health_fire_9
+  - first:
+      213: -5768127346772424984
+    second: health_fire_10
+  - first:
+      213: -204750945515013516
+    second: health_fire_11
+  - first:
+      213: -8198839943362705196
+    second: health_fire_12
+  - first:
+      213: -1119413008008884319
+    second: health_fire_13
+  - first:
+      213: 2718892330103636736
+    second: health_fire_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +77,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -122,148 +146,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_0
+      name: health_fire_7
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2511
-        width: 1500
-        height: 617
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1014
+        y: 25
+        width: 213
+        height: 392
+      alignment: 9
+      pivot: {x: 0.20529476, y: 0.08078457}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71395ed1015ef020800000000000000
-      internalID: 2377426721765405055
+      spriteID: f94e564bddee03c90800000000000000
+      internalID: -7191985968928922465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_1
+      name: health_fire_8
       rect:
         serializedVersion: 2
-        x: 442
-        y: 1589
-        width: 925
-        height: 884
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1474
+        y: 25
+        width: 212
+        height: 397
+      alignment: 9
+      pivot: {x: 0.19965291, y: 0.0797472}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61d81a8747804bb0800000000000000
-      internalID: -4953810848778235540
+      spriteID: aba35babfb8ff9be0800000000000000
+      internalID: -1468181451144611142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_3
+      name: health_fire_9
       rect:
         serializedVersion: 2
-        x: 1181
-        y: 578
-        width: 182
-        height: 420
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2368
+        y: 25
+        width: 213
+        height: 368
+      alignment: 9
+      pivot: {x: 0.20699915, y: 0.086015984}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd9c493d0a588d2f0800000000000000
-      internalID: -947860795770484261
+      spriteID: a320d99fcd342d0e0800000000000000
+      internalID: -2246658647744773574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_4
+      name: health_fire_11
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 46
-        width: 435
-        height: 1483
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 555
+        y: 25
+        width: 213
+        height: 345
+      alignment: 9
+      pivot: {x: 0.20717739, y: 0.091833375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d0ab180dac81fe0800000000000000
-      internalID: -1218000702325256830
+      spriteID: 47af6219914982df0800000000000000
+      internalID: -204750945515013516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_5
+      name: health_fire_13
       rect:
         serializedVersion: 2
-        x: 187
-        y: 57
-        width: 255
-        height: 545
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 97
+        y: 25
+        width: 212
+        height: 285
+      alignment: 9
+      pivot: {x: 0.20976257, y: 0.09984056}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1a8de8230dadb360800000000000000
-      internalID: 7187090809436342812
+      spriteID: 1afcda4dccb0770f0800000000000000
+      internalID: -1119413008008884319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_6
+      name: health_fire_14
       rect:
         serializedVersion: 2
-        x: 684
-        y: 45
-        width: 493
-        height: 641
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1910
+        y: 23
+        width: 211
+        height: 419
+      alignment: 9
+      pivot: {x: 0.20003968, y: 0.080311514}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72205b0d3a4e92770800000000000000
-      internalID: 8586645556790886951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_2
-      rect:
-        serializedVersion: 2
-        x: 1265
-        y: 2502
-        width: 284
-        height: 466
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bca7045fbd865600800000000000000
-      internalID: 456708265112743097
+      spriteID: 0038c5e3b227bb520800000000000000
+      internalID: 2718892330103636736
       vertices: []
       indices: 
       edges: []
