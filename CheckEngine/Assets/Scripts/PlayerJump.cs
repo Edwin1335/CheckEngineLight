@@ -31,7 +31,7 @@ public class PlayerJump : MonoBehaviour
     private bool _wallSlide;
     private float _dirInput;
     private bool slideLooped;
-    private int _jumpsMade;
+    private int _jumpsLeft;
 
 
     private Rigidbody2D _rigidBody;
@@ -47,47 +47,37 @@ public class PlayerJump : MonoBehaviour
         //Calculates and stores jump force heigh based on physics gravity and jump strength, which can be defined in Unity Inspector
         _jumpForce = calculateJumpForce(Physics2D.gravity.magnitude, _jumpStrength);
 
-        _jumpsMade = _jumpCount;
+        _jumpsLeft = _jumpCount;
     }
 
     private void FixedUpdate(){
 
+        if (_grounded == true && _extraJump == true){
+            //Debug.Log("Double Jump Reset: " + _jumpCount);
+            _isJumping = false;
+            _jumpsLeft = _jumpCount - 1;
+            //Debug.Log("Button on jumps made: " + _jumpsLeft);
+        }
+        else if (_grounded == true && _extraJump == false){
+            //Debug.Log("No Double Jump Reset: " + _jumpCount);
+            _isJumping = false;
+            _jumpsLeft = 1;
+            //Debug.Log("Button off jumps made: " + _jumpsLeft);
+        }
+
         //Enters jump loop if jump key is pressed
-        if (_jumpKeyHeld == true){
+        if (_jumpKeyHeld == true && _jumpsLeft != 0 && _jumpKeyHeldPrev == false){
 
             //Passes jump button state and direction to PlayerWallJump script 
             //(Incomplete, but can slow vertical descent if player is on wall)
             //_slideJump.SlideJump(_jumpKeyHeld, _dirInput);
 
-            if (_wallSlide == false && _extraJump == true && _jumpsMade != 0 && _jumpKeyHeldPrev == false){
-                _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-                Debug.Log("Jump Count: " + _jumpsMade);
-                _jumpsMade--;
+            if (_wallSlide == false){
+                _rigidBody.velocity = new Vector2(0, 0);
+                _rigidBody.AddForce(new Vector2 (0, _jumpForce), ForceMode2D.Impulse);
+                _jumpsLeft--;
                 _isJumping = true;
             }
-            else if (_jumpsMade == 0){
-                _jumpsMade = _jumpCount;
-            }
-
-            /*
-            //If the player is grounded and is not on a wall, they will jump vertically with an applied force
-            if (_grounded == true && _wallSlide == false && _isJumping == false){
-
-                //---------------------------------------------------------------
-                //Jumping Happens Here
-                //---------------------------------------------------------------
-                
-                _isJumping = true;
-                _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-            }
-            else if (_grounded == false && _wallSlide == false && _isJumping == true && _extraJump == true && _jumpCount != 0 && _jumpKeyHeldPrev == false){
-                //Need to make sure jump key is let go before this loop can occur
-                _rigidBody.AddForce(Vector2.up * _jumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-                _jumpCount--;
-            }
-            */
-
-
 
             //If the player is not on the ground but is sliding on a wall, they will jump away from the wall with an applied force
             //(Currently Incomplete)

@@ -463,8 +463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e3c19a139182d4ca90ee58dda8146d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dashSpeed: 1000
-  _startDashTime: 0.1
+  _dashSpeed: 1500
+  _startDashTime: 0.15
 --- !u!114 &2930374588564673795
 MonoBehaviour:
   m_ObjectHideFlags: 0
