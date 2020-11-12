@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-
+    //Each variable immediately below a [SerializeField] is editable in the Unity Inspector
     private float _timeBtwAtk;
     [SerializeField]
     private float _startTimeBtwAtk;
@@ -23,9 +23,11 @@ public class PlayerAttack : MonoBehaviour
     private bool _prevAtkState; //Used to prevent holding attack to hit repeatedly
     private bool _isDashing;
 
-    private float _dashTime;
+    private float _dashTime;    
 
     private PlayerDash _dash;
+
+    public GameObject Enemy;
 
     private void Awake(){
         _dash = GetComponent<PlayerDash>();
@@ -39,21 +41,35 @@ public class PlayerAttack : MonoBehaviour
         }
         else{
             _finalDmg = _dmg;
-        }
+        }        
 
         if ((_currAtkState == true && _prevAtkState == false) || (_currAtkState == true && _isDashing == true)){
             //Checks to see if enemy is within attack range
         //---------------------------------------------------------------------------
             //Attacking Occurs Here
             Collider2D[] _enemiesToDmg = Physics2D.OverlapCircleAll(_atkPos.position, _atkRange, _isEnemy);
+
+            /*
+            foreach (GameObject _enemyObject in _enemiesToDmg){
+                if (_enemyObject.GetComponent<Collider>().Enemy.tag == "Enemy"){
+
+                }   
+            }
+            */
+
+            foreach (var enemy in _enemiesToDmg){
+                Debug.Log(enemy);
+            }
+
         //---------------------------------------------------------------------------
             //Deals damage to all enemies within attack range
             for (int i = 0; i < _enemiesToDmg.Length; i++){
                 //Damage reduction is performed enemy side
                 //_enemiesToDmg[i].GetComponent<TestEnemyScript>().TakeDamage(_finalDmg);
             }
+
             //Debug.Log(_isDashing);
-            Debug.Log("Damage Output: " + _finalDmg);
+            //Debug.Log("Damage Output: " + _finalDmg);
         }
         _prevAtkState = _currAtkState;
     }
