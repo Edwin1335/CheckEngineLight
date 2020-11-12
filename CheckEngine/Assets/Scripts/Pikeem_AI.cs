@@ -42,7 +42,7 @@ public class Pikeem_AI : MonoBehaviour
     void Flip()
     {
         facingRight = !facingRight;
-        transform.Rotate(new Vector3(0, 180, 0));
+        transform.Rotate(new Vector3(0, -180, 0));
         pikeemMovespeed = -pikeemMovespeed;
     }
 
