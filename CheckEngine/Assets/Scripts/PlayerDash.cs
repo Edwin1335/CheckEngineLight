@@ -49,6 +49,7 @@ public class PlayerDash : MonoBehaviour
         }
         else if (_dashTime <= 0){
             _direction = 0;
+            _rigidBody.velocity = Vector2.zero;
             _isDashing = false;
             //Debug.Log(_currDashing + ", " + _dashTime);
         }
