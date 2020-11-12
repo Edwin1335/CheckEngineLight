@@ -85,7 +85,7 @@ public class PlayerJump : MonoBehaviour
                 //---------------------------------------------------------------------------
                 //Jumping Occurs Here
                 //---------------------------------------------------------------------------
-                Debug.Log("Goes Here JUMP");
+                //Debug.Log("Goes Here JUMP");
                 animator.SetBool("isJumping", true);
                 _rigidBody.AddForce(new Vector2(0, _jumpForce), ForceMode2D.Impulse);
                 _jumpsLeft--;
@@ -96,15 +96,10 @@ public class PlayerJump : MonoBehaviour
             //(Currently Incomplete)
             else if (_grounded != true && _wallSlide == true && _isJumping == false)
             {
-                //Debug.Log("Walljump True");
-                //Vector2 _jumpVector = new Vector2(-_dirInput, 0);
-                _isJumping = true;
-                //_rigidBody.velocity = new Vector2(_dirInput * -1, _rigidBody.velocity.y);
+                _isJumping = true;                
                 _wallFlip = true;
                 _rigidBody.velocity = new Vector2(_wallJumpForce * -_dirInput, _jumpForce);
                 _dirInput = -_dirInput;
-                //_rigidBody.AddForce(_jumpVector * _jumpForce * _wallJumpForce * _rigidBody.mass, ForceMode2D.Impulse);
-                //Debug.Log(_jumpVector * _jumpForce * _wallJumpForce * _rigidBody.mass + ", " + _rigidBody.velocity);
                 Debug.Log(_rigidBody.velocity);
             }
         }

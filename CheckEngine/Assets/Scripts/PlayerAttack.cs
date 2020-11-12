@@ -46,7 +46,8 @@ public class PlayerAttack : MonoBehaviour
         if ((_currAtkState == true && _prevAtkState == false) || (_currAtkState == true && _isDashing == true)){
             //Checks to see if enemy is within attack range
         //---------------------------------------------------------------------------
-            //Attacking Occurs Here
+            //Attacking Begins Here
+        //---------------------------------------------------------------------------
             Collider2D[] _enemiesToDmg = Physics2D.OverlapCircleAll(_atkPos.position, _atkRange, _isEnemy);
 
             //Deals damage to all enemies within attack range
@@ -54,7 +55,6 @@ public class PlayerAttack : MonoBehaviour
                 //Damage reduction is performed enemy side
                 _enemiesToDmg[i].GetComponent<TakeDamage>().EnemyDamage(_finalDmg);
             }
-        //---------------------------------------------------------------------------
 
             //Debug.Log(_isDashing);
             //Debug.Log("Damage Output: " + _finalDmg);

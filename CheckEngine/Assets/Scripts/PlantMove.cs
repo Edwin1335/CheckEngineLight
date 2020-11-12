@@ -14,7 +14,7 @@ public class PlantMove : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Goes Here");
+            //Debug.Log("Goes Here");
             animator.SetTrigger("plantMove");
         }
     }
