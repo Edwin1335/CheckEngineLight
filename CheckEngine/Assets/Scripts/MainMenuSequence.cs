@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuSequence : MonoBehaviour
-{
-    // Start is called before the first frame update
+{ 
+    /* Start is called before the first frame update
     void Start()
     {
         StartCoroutine(LoadVideos());
@@ -21,5 +21,5 @@ public class MainMenuSequence : MonoBehaviour
         Handheld.PlayFullScreenMovie("Intro", Color.black, FullScreenMovieControlMode.CancelOnInput);
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
-    }
+    }   */
 }

@@ -5348,6 +5348,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4692649273686651617, guid: 521c2b63b17b3164c84421803a16d1d3, type: 3}
+      propertyPath: m_Offset.x
+      value: 6.6151533
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692649273686651617, guid: 521c2b63b17b3164c84421803a16d1d3, type: 3}
+      propertyPath: m_Size.x
+      value: 25.352308
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692649273686651617, guid: 521c2b63b17b3164c84421803a16d1d3, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.8005803
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692649273686651617, guid: 521c2b63b17b3164c84421803a16d1d3, type: 3}
+      propertyPath: m_Size.y
+      value: 5.5934577
+      objectReference: {fileID: 0}
     - target: {fileID: 4692649274167632974, guid: 521c2b63b17b3164c84421803a16d1d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.87
