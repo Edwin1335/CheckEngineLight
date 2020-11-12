@@ -4387,53 +4387,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1067645220}
     m_Modifications:
-    - target: {fileID: 3861445462061884738, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: pikeemMovespeed
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861445462061884738, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: isGround
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861445462061884738, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: circleRadius
-      value: 0.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 8806592886446053249, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 657cac1ceed621347a1d37777d5c5a5b, type: 2}
-    - target: {fileID: 8806592886446053249, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8806592886816146115, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 657cac1ceed621347a1d37777d5c5a5b, type: 2}
-    - target: {fileID: 8806592887046114160, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 657cac1ceed621347a1d37777d5c5a5b, type: 2}
-    - target: {fileID: 8806592887112119094, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 657cac1ceed621347a1d37777d5c5a5b, type: 2}
-    - target: {fileID: 8806592887148987140, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 657cac1ceed621347a1d37777d5c5a5b, type: 2}
-    - target: {fileID: 8806592887261385795, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 657cac1ceed621347a1d37777d5c5a5b, type: 2}
     - target: {fileID: 8806592887486424021, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
       propertyPath: m_Name
       value: Pikeem1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8806592887486424021, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8806592887486424022, guid: d6bdf57e04a1f424689680a3a6b2da93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53765,6 +53721,10 @@ PrefabInstance:
     - target: {fileID: 964511890, guid: 6ff3391f526bb6840a4cc2f363130820, type: 3}
       propertyPath: m_Size.y
       value: 10.675418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727057025, guid: 6ff3391f526bb6840a4cc2f363130820, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 87567502714938213, guid: 6ff3391f526bb6840a4cc2f363130820, type: 3}
       propertyPath: m_Name
