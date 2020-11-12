@@ -49,24 +49,12 @@ public class PlayerAttack : MonoBehaviour
             //Attacking Occurs Here
             Collider2D[] _enemiesToDmg = Physics2D.OverlapCircleAll(_atkPos.position, _atkRange, _isEnemy);
 
-            /*
-            foreach (GameObject _enemyObject in _enemiesToDmg){
-                if (_enemyObject.GetComponent<Collider>().Enemy.tag == "Enemy"){
-
-                }   
-            }
-            */
-
-            foreach (var enemy in _enemiesToDmg){
-                Debug.Log(enemy);
-            }
-
-        //---------------------------------------------------------------------------
             //Deals damage to all enemies within attack range
             for (int i = 0; i < _enemiesToDmg.Length; i++){
                 //Damage reduction is performed enemy side
-                //_enemiesToDmg[i].GetComponent<TestEnemyScript>().TakeDamage(_finalDmg);
+                _enemiesToDmg[i].GetComponent<TakeDamage>().EnemyDamage(_finalDmg);
             }
+        //---------------------------------------------------------------------------
 
             //Debug.Log(_isDashing);
             //Debug.Log("Damage Output: " + _finalDmg);
