@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: 2b5a29078db2841b0a1a83db02bf9818
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1948490323837223714
+    second: GloomyDeathSpriteSheet_0
+  - first:
+      213: 6221127434470551139
+    second: GloomyDeathSpriteSheet_1
+  - first:
+      213: -8795764103388434392
+    second: GloomyDeathSpriteSheet_2
+  - first:
+      213: -1576007240124984188
+    second: GloomyDeathSpriteSheet_3
+  - first:
+      213: 1535686277505529868
+    second: GloomyDeathSpriteSheet_4
+  - first:
+      213: 8810851157150708701
+    second: GloomyDeathSpriteSheet_5
+  - first:
+      213: -7326054396639182686
+    second: GloomyDeathSpriteSheet_6
+  - first:
+      213: 4869672789125780725
+    second: GloomyDeathSpriteSheet_7
+  - first:
+      213: 1335836764109199968
+    second: GloomyDeathSpriteSheet_8
+  - first:
+      213: 1048674142698603756
+    second: GloomyDeathSpriteSheet_9
+  - first:
+      213: -5738485038468110186
+    second: GloomyDeathSpriteSheet_10
+  - first:
+      213: 2522922294974204853
+    second: GloomyDeathSpriteSheet_11
+  - first:
+      213: -6355383925743406227
+    second: GloomyDeathSpriteSheet_12
+  - first:
+      213: 12094064684529356
+    second: GloomyDeathSpriteSheet_13
+  - first:
+      213: 2403795126775912905
+    second: GloomyDeathSpriteSheet_14
+  - first:
+      213: -8901350766144703245
+    second: GloomyDeathSpriteSheet_15
+  - first:
+      213: -4160981058767290516
+    second: GloomyDeathSpriteSheet_16
+  - first:
+      213: 4984866431806783905
+    second: GloomyDeathSpriteSheet_17
+  - first:
+      213: -8775673087073304526
+    second: GloomyDeathSpriteSheet_18
+  - first:
+      213: 6361316224198301203
+    second: GloomyDeathSpriteSheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc756fbf5295f4e0800000000000000
+      internalID: -1948490323837223714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36eed02d072e55650800000000000000
+      internalID: 6221127434470551139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8207661662b2fe580800000000000000
+      internalID: -8795764103388434392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48418e0e3c5e02ae0800000000000000
+      internalID: -1576007240124984188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08b821788adf4510800000000000000
+      internalID: 1535686277505529868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3bece027e664a70800000000000000
+      internalID: 8810851157150708701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a002236750a45a90800000000000000
+      internalID: -7326054396639182686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f45a30e99d849340800000000000000
+      internalID: 4869672789125780725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ad2aa9578d98210800000000000000
+      internalID: 1335836764109199968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce400b0a393ad8e00800000000000000
+      internalID: 1048674142698603756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698e635e24ecc50b0800000000000000
+      internalID: -5738485038468110186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbc9d3d578330320800000000000000
+      internalID: 2522922294974204853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6336d6edf32dc7a0800000000000000
+      internalID: -6355383925743406227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6796ddc77fa2000800000000000000
+      internalID: 12094064684529356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 4620
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c91b449eeefb5120800000000000000
+      internalID: 2403795126775912905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 4950
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f43bcab3ac087480800000000000000
+      internalID: -8901350766144703245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ffb0bd5c93146c0800000000000000
+      internalID: -4160981058767290516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 5610
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1cc98db9dcd2540800000000000000
+      internalID: 4984866431806783905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 5940
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2304a04a2db863680800000000000000
+      internalID: -8775673087073304526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GloomyDeathSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 0
+        width: 330
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316d447f66fe74850800000000000000
+      internalID: 6361316224198301203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
