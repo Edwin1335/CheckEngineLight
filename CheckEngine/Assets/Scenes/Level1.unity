@@ -3318,6 +3318,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &93855444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4724710577888353894, guid: 64746b8b19a5b01449f855dae2244378, type: 3}
+  m_PrefabInstance: {fileID: 4724710576455651192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &93855448
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93855444}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.086517155, y: 0.93300927}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5640869, y: 0.09451025}
+    oldSize: {x: 1.35, y: 2.300944}
+    newSize: {x: 1.35, y: 2.300944}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.35, y: 2.300944}
+  m_EdgeRadius: 0
+--- !u!114 &93855449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93855444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5aa5e07a3965f64184df4bbda38ed55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &99117969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2876076706639742331, guid: 521c2b63b17b3164c84421803a16d1d3, type: 3}
@@ -10787,6 +10830,14 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 445805812}
+    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: numOfHearts
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_Name
       value: Gloomy
