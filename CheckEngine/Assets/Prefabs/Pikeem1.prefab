@@ -99,7 +99,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 5
   m_Sprite: {fileID: -2530613230401760625, guid: e23f722cb1589ee4c9da29d41139b690, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 5
   m_Sprite: {fileID: 6667711792029916964, guid: e23f722cb1589ee4c9da29d41139b690, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 6
   m_Sprite: {fileID: -7045866125051317299, guid: e23f722cb1589ee4c9da29d41139b690, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -349,7 +349,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 1
   m_Sprite: {fileID: -456167123496611102, guid: e23f722cb1589ee4c9da29d41139b690, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -431,7 +431,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 5
   m_Sprite: {fileID: 8110691820719698922, guid: e23f722cb1589ee4c9da29d41139b690, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -513,7 +513,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 1
   m_Sprite: {fileID: -1688031980927640548, guid: e23f722cb1589ee4c9da29d41139b690, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 3861445462061884738}
   m_Layer: 9
   m_Name: Pikeem1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,11 +658,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d318e2656bbfaf641b4875b418ae4861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pikeemMovespeed: 10
-  circleRadius: 0.17
+  pikeemHealth: 2
+  pikeemMovespeed: 250
+  circleRadius: 0.41
   groundcheck: {fileID: 636164156703577528}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
   facingRight: 1
-  isGround: 1
+  isGround: 0

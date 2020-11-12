@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TabeeAIScript : MonoBehaviour
 {
+    public float tabeeHealth = 2f;
+
     // Modifiable varables 
     public float speed;
     public float lineOfSight;
@@ -86,7 +88,13 @@ public class TabeeAIScript : MonoBehaviour
 
             }
         }
+
+        if(tabeeHealth <= 0)
+        {
+            Destroy(gameObject, 0.0f);
+        }
     }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {

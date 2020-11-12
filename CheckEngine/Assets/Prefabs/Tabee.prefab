@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1694156912}
   - component: {fileID: 1193625148}
   - component: {fileID: 5956500236718464119}
-  - component: {fileID: 1006856946}
+  - component: {fileID: 613249628}
   m_Layer: 9
   m_Name: Tabee
   m_TagString: Enemy
@@ -97,14 +97,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 4
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -147,7 +147,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.35, y: -0.34}
   m_Size: {x: 0.40408182, y: 0.4986135}
   m_Direction: 0
---- !u!114 &1006856946
+--- !u!114 &613249628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,12 +156,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 455797604079179990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae3ef1fa67d20c7428fa4567df5353f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 22341cf4f50abb745b81e86086e265e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tabeeHealth: 2
   speed: 3
-  lineOfSight: 9.5
-  attackRange: 1.4
+  lineOfSight: 6.45
+  attackRange: 1.93
 --- !u!1 &455797604089160327
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +232,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 4
+  m_SortingLayer: 9
   m_SortingOrder: 2
   m_Sprite: {fileID: -4700101350522571344, guid: 10f89c4d1168a4549b4f4ffd5c09b282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -313,7 +314,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 4
+  m_SortingLayer: 9
   m_SortingOrder: 3
   m_Sprite: {fileID: -7777398144068543966, guid: 10f89c4d1168a4549b4f4ffd5c09b282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -395,7 +396,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 4
+  m_SortingLayer: 9
   m_SortingOrder: 5
   m_Sprite: {fileID: 3151744876335796036, guid: 10f89c4d1168a4549b4f4ffd5c09b282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -477,7 +478,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 4
+  m_SortingLayer: 9
   m_SortingOrder: 2
   m_Sprite: {fileID: -2853129554537100523, guid: 10f89c4d1168a4549b4f4ffd5c09b282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -559,7 +560,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 513674051
-  m_SortingLayer: 4
+  m_SortingLayer: 9
   m_SortingOrder: 4
   m_Sprite: {fileID: 2334731280021397967, guid: 10f89c4d1168a4549b4f4ffd5c09b282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

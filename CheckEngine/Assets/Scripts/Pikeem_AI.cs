@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Pikeem_AI : MonoBehaviour
 {
+    public float pikeemHealth = 2f;
+
     public float pikeemMovespeed;
     Rigidbody2D pkrigbody;
     public float circleRadius;
@@ -29,6 +31,11 @@ public class Pikeem_AI : MonoBehaviour
         else if(!isGround && !facingRight)
         {
             Flip();
+        }
+
+        if (pikeemHealth <= 0)
+        {
+            Destroy(gameObject, 0.0f);
         }
     }
 
