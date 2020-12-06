@@ -10830,13 +10830,9 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 445805812}
-    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: numOfHearts
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: health
-      value: 1
+    - target: {fileID: 3123924137406519047, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: _poundForce
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_Name
@@ -43055,7 +43051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -50.00232, y: 59.987305}
+  m_AnchoredPosition: {x: -50.00244, y: 59.987305}
   m_SizeDelta: {x: 275.00464, y: 275.97412}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1393230211
