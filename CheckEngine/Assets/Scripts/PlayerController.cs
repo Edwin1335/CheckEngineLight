@@ -4,23 +4,24 @@ using UnityEngine;
 
 [RequireComponent (typeof(PlayerMovement), typeof(PlayerJump), typeof(PlayerDash))]
 [RequireComponent (typeof(PlayerWallJump), typeof(PlayerAttack), typeof(PlayerGroundPound))]
+[RequireComponent (typeof(PlayerPaintBomb))]
 
 public class PlayerController : MonoBehaviour
 {
-    public RigidbodyInterpolation Interpolation;
-
     private PlayerMovement _movement;
     private PlayerJump _jumping;
     private PlayerDash _dash;
     private PlayerWallJump _slideJump;
     private PlayerAttack _attack;
     private PlayerGroundPound _groundPound;
+    private PlayerPaintBomb _paintBomb;
 
     private float _dirInputX;
     private float _dirInputY;
     private bool _jumpKeyState;
     private bool _dashKeyState;
     private bool _atkKeyState;
+    private bool _specialKeyState;
 
     //Cache currently used scripts to access as components
     private void Awake(){
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         _dash = GetComponent<PlayerDash>();
         _attack = GetComponent<PlayerAttack>();
         _groundPound = GetComponent<PlayerGroundPound>();
+        _paintBomb = GetComponent<PlayerPaintBomb>();
     }
 
     private void Start(){
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
         _jumpKeyState = (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Space)); //Jump
         _dashKeyState = Input.GetKey(KeyCode.LeftShift); //Dash
         _atkKeyState = Input.GetKey(KeyCode.X); //Attack
+        _specialKeyState = Input.GetKey(KeyCode.C); //Special (Bounce Bomb)
 
         //Jumping
         //Only true when jump key is pressed, which is then sent to PlayerJump script
@@ -66,6 +69,9 @@ public class PlayerController : MonoBehaviour
 
         //Ground Pound
         _groundPound.GroundPound(_atkKeyState, _dirInputY);
+
+        //PaintBomb
+        _paintBomb.ThrowBomb(_specialKeyState);
 
     }
 }

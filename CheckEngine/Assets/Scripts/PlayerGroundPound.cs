@@ -9,7 +9,7 @@ public class PlayerGroundPound : MonoBehaviour
     private bool _prevAtkKey;
 
     [SerializeField]
-    private int _poundForce;
+    private int _poundForce = 3000;
 
     private Rigidbody2D _rigidBody;
     private Collider2D _collider;

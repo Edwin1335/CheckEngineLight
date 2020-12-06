@@ -10830,10 +10830,6 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 445805812}
-    - target: {fileID: 3123924137406519047, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
-      propertyPath: _poundForce
-      value: 3000
-      objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_Name
       value: Gloomy
@@ -10884,6 +10880,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+--- !u!1 &391291251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6501404683570003759, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+  m_PrefabInstance: {fileID: 391291250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &391291252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391291251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdea31bc7153f8c4092b64618295d6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &395583572
 GameObject:
   m_ObjectHideFlags: 0
