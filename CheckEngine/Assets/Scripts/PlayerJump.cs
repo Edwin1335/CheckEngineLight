@@ -94,14 +94,14 @@ public class PlayerJump : MonoBehaviour
 
             //If the player is not on the ground but is sliding on a wall, they will jump away from the wall with an applied force
             //(Currently Incomplete)
-            else if (_grounded != true && _wallSlide == true && _isJumping == false)
-            {
-                _isJumping = true;                
-                _wallFlip = true;
-                _rigidBody.velocity = new Vector2(_wallJumpForce * -_dirInput, _jumpForce);
-                _dirInput = -_dirInput;
-                Debug.Log(_rigidBody.velocity);
-            }
+            // else if (_grounded != true && _wallSlide == true && _isJumping == false)
+            // {
+            //     _isJumping = true;                
+            //     _wallFlip = true;
+            //     _rigidBody.velocity = new Vector2(_wallJumpForce * -_dirInput, _jumpForce);
+            //     _dirInput = -_dirInput;
+            //     Debug.Log(_rigidBody.velocity);
+            // }
         }
         _jumpKeyHeldPrev = _jumpKeyHeld;
 
