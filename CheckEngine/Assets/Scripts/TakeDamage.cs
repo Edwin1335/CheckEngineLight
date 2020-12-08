@@ -46,6 +46,19 @@ public class TakeDamage : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("PikeemDead");
             }
+            else if (enemyName == "Tabee")
+            {
+                int choose = Random.Range(0, 2);
+                if (choose == 0)
+                {
+                    FindObjectOfType<AudioManager>().Play("TabeDead1");
+                }
+                else
+                {
+                    FindObjectOfType<AudioManager>().Play("TabeeDead2");
+
+                }
+            }
 
             Destroy(gameObject, 0.0f);
         }
