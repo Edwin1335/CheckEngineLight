@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &53351404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53351405}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53351405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53351404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20576827, y: -0.3506841, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8806592887486424022}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636164156703577528
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2659117611970317265}
   m_Layer: 0
-  m_Name: GroundCheck
+  m_Name: EdgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -204,9 +234,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8806592887046114161}
   - component: {fileID: 8806592887046114160}
+  - component: {fileID: 3313132306925119374}
   m_Layer: 9
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: KnockBack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,6 +307,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &3313132306925119374
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806592887046114166}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.22, y: 0.08}
+  m_Size: {x: 1.3, y: 0.73}
+  m_Direction: 1
 --- !u!1 &8806592887112119092
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +609,7 @@ Transform:
   - {fileID: 8806592887046114161}
   - {fileID: 8806592887112119095}
   - {fileID: 2659117611970317265}
+  - {fileID: 53351405}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.42}
@@ -592,11 +640,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8806592887486424021}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -660,13 +708,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pikeemMovespeed: 250
-  circleRadius: 0.41
-  groundcheck: {fileID: 636164156703577528}
+  circleRadius: 0.3
+  edgeCheck: {fileID: 636164156703577528}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
   facingRight: 1
-  isGround: 0
 --- !u!114 &1835803736365358304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,9 +726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a903fdc23e2fb204db2dbe3b632588a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 10
-  vertKnockback: 100
-  horKnockback: 100
+  _health: 20
+  vertKnockback: 500
+  horKnockback: 500
   deathParticlePrefab: {fileID: 2548129096922297821, guid: 4e28735135c1d804fbcf8919d4789c69, type: 3}
   bodyParts:
   - {fileID: 8806592887046114160}

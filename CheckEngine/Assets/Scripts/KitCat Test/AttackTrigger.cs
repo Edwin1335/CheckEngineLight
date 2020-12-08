@@ -10,15 +10,15 @@ public class AttackTrigger : MonoBehaviour
         recentDamageList.Clear();
 
         // Check if the collider hit an enemy.
-        if (col.tag == "Enemy")
+        if (col.tag == "KnockBack")
         {
             // Do not hit an enemy more than once if it has more than one collider.
             if (!recentDamageList.Contains(col))
             {
                 Debug.Log("Attacking " + col.name);
                 recentDamageList.Add(col);
-                col.GetComponent<TakeDamage>().EnemyDamage(1);
-                col.GetComponent<TakeDamage>().knockBack(this.transform);
+                col.GetComponentInParent<TakeDamage>().EnemyDamage(1);
+                col.GetComponentInParent<TakeDamage>().knockBack(this.transform);
             }
         }
     }

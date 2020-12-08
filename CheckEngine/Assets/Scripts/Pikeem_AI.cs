@@ -8,31 +8,40 @@ public class Pikeem_AI : MonoBehaviour
     public float pikeemMovespeed;
     Rigidbody2D pkrigbody;
     public float circleRadius;
-    public GameObject groundcheck;
+    public GameObject edgeCheck;
     public LayerMask groundLayer;
     public bool facingRight;
-    public bool isGround;
+    private bool onEdge;
+    private bool isGrounded = false;
 
     private TakeDamage damage;
-    
+    private GameObject groundCheck;
+
+
     void Start()
     {
         pkrigbody = GetComponent<Rigidbody2D>();
         damage = GetComponent<TakeDamage>();
+        groundCheck = this.gameObject.transform.GetChild(3).gameObject;
         damage.enemyName = "Pikeem";
     }
 
     void Update()
     {
-        pkrigbody.velocity = Vector2.right * pikeemMovespeed * Time.deltaTime;
-        isGround = Physics2D.OverlapCircle(groundcheck.transform.position, circleRadius, groundLayer);
-        if(!isGround && facingRight)
+        isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, circleRadius, groundLayer);
+
+        if (isGrounded)
         {
-            Flip();
-        }
-        else if(!isGround && !facingRight)
-        {
-            Flip();
+            pkrigbody.velocity = Vector2.right * pikeemMovespeed * Time.deltaTime;
+            onEdge = Physics2D.OverlapCircle(edgeCheck.transform.position, circleRadius, groundLayer);
+            if (!onEdge && facingRight)
+            {
+                Flip();
+            }
+            else if (!onEdge && !facingRight)
+            {
+                Flip();
+            }
         }
     }
 
@@ -46,7 +55,7 @@ public class Pikeem_AI : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(groundcheck.transform.position, circleRadius);
+        Gizmos.DrawWireSphere(edgeCheck.transform.position, circleRadius);
     }
 
 }
