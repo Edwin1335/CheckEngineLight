@@ -71,7 +71,11 @@ public class PlayerController : MonoBehaviour
         _groundPound.GroundPound(_atkKeyState, _dirInputY);
 
         //PaintBomb
+<<<<<<< Updated upstream:CheckEngine/Assets/Scripts/Player/PlayerController.cs
         //_paintBomb.ThrowBomb(_specialKeyState);
+=======
+        _paintBomb.ThrowBomb(_specialKeyState, _dirInputY);
+>>>>>>> Stashed changes:CheckEngine/Assets/Scripts/PlayerController.cs
 
     }
 }
