@@ -8,6 +8,7 @@ public class TakeDamage : MonoBehaviour
     private float _health;
     public float vertKnockback = 100;
     public float horKnockback = 100;
+    public GameObject deathParticlePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class TakeDamage : MonoBehaviour
     {
         if (_health <= 0)
         {
+            Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
             Destroy(gameObject, 0.0f);
         }
     }
