@@ -7,16 +7,27 @@ public class TestingEd : MonoBehaviour
 
     // SerializeField shows the data in Unity and can be modified. 
     [Header("Movement")]
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 12.0f;
     [Header("Jumping")]
-    [SerializeField] private float jumpForce = 0;
+    [SerializeField] private float jumpForce = 12.0f;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private LayerMask isEnemy;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private bool extraJump;
     [SerializeField] private float holdJumpTimer = 2;
+    [Header("Attack")]
+    [SerializeField] private float attackPower = 1;
+    [SerializeField] private float knockbackStrength = 10;
+    [SerializeField] private Collider2D attackTrigger;
+
+
 
     // Private variables that will not be changes in the unity window. 
-    private float checkRadius = 0.2f;
+    private float groundRadius = 0.2f;
+    private float attackRadius = 0.5f;
+    private bool attacking = false;
+    private float attackCD = 0.3f;
+    private float attackTimer = 0f;
     private float moveInputHorizontal;
     private bool facingRight;
     private bool isGrounded;
@@ -29,6 +40,7 @@ public class TestingEd : MonoBehaviour
 
     // Get Glommys different components needed to jump/run/dash, etc.
     private Transform groundCheck;
+    private Transform attackCheck;
     private Transform roofCheck;
     private Rigidbody2D rb;
     private Animator animator;
@@ -41,6 +53,8 @@ public class TestingEd : MonoBehaviour
         animator = GetComponent<Animator>();
         groundCheck = this.gameObject.transform.GetChild(3).transform;
         roofCheck = this.gameObject.transform.GetChild(4).transform;
+        attackCheck = this.gameObject.transform.GetChild(6).transform;
+        attackTrigger.enabled = false;
     }
 
     //Update is used to check input
@@ -50,14 +64,14 @@ public class TestingEd : MonoBehaviour
         moveInputHorizontal = Input.GetAxisRaw("Horizontal");
 
         // Check if player is on touching the ground.
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
         if (isGrounded)
         {
             hittingRoof = false;
         }
 
         // Check if player has hit a roof.
-        hitRoof = Physics2D.OverlapCircle(roofCheck.position, checkRadius, whatIsGround);
+        hitRoof = Physics2D.OverlapCircle(roofCheck.position, groundRadius, whatIsGround);
         if (hitRoof)
         {
             hittingRoof = true;
@@ -86,14 +100,29 @@ public class TestingEd : MonoBehaviour
             jumpTimeCounter = 0;
             isJumping = false;
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.collider.CompareTag("Enemy"))
+        //******************************* Attacking *************************
+        if (Input.GetKeyDown(KeyCode.R) && !attacking)
         {
-            // 
+            attacking = true;
+            attackTimer = attackCD;
+            attackTrigger.enabled = true;
         }
+        if (attacking)
+        {
+            if (attackTimer > 0)
+            {
+                attackTimer -= Time.deltaTime;
+            }
+            else
+            {
+                attacking = false;
+                attackTrigger.enabled = false;
+            }
+        }
+
+
+
     }
 
     // Fixed updates is used to preform operations and animations on input.
@@ -215,8 +244,7 @@ public class TestingEd : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
-
+        Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
 
     }
 
