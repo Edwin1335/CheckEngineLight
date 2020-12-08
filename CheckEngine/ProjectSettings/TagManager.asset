@@ -8,6 +8,7 @@ TagManager:
   - Rocky
   - MainMenu
   - Enemy
+  - KnockBack
   layers:
   - Default
   - TransparentFX

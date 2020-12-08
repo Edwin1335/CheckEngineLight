@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 5956500236718464119}
   - component: {fileID: 613249628}
   - component: {fileID: 3953640886498275466}
+  - component: {fileID: 2144656237}
   m_Layer: 9
   m_Name: Tabee
   m_TagString: Enemy
@@ -366,7 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabeeHealth: 2
   speed: 3
-  lineOfSight: 7.56
+  lineOfSight: 11.1
   attackRange: 1.93
 --- !u!114 &3953640886498275466
 MonoBehaviour:
@@ -380,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a903fdc23e2fb204db2dbe3b632588a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 2
   vertKnockback: 100
   horKnockback: 100
   deathParticlePrefab: {fileID: 2548129096922297821, guid: 3a6ed1a2eb4cc2b4daf7b55c5f503c1a, type: 3}
@@ -394,6 +395,103 @@ MonoBehaviour:
   - {fileID: 455797604958673895}
   hurtColor: {r: 0.321858, g: 0.0082769515, b: 0.5849056, a: 1}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  enemyName: 
+--- !u!82 &2144656237
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455797604079179990}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 81003f736801a3d4bb53521d3968f91c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 5
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &455797604089160327
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,9 +666,10 @@ GameObject:
   m_Component:
   - component: {fileID: 455797605498997476}
   - component: {fileID: 455797605498997477}
+  - component: {fileID: 620760154}
   m_Layer: 9
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: KnockBack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,6 +741,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &620760154
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455797605498997479}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.33, y: -0.4}
+  m_Size: {x: 0.46, y: 1.33}
+  m_Direction: 0
 --- !u!1 &455797605629577205
 GameObject:
   m_ObjectHideFlags: 0

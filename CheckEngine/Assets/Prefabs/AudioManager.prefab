@@ -49,4 +49,12 @@ MonoBehaviour:
     volume: 0.824
     pitch: 1.79
     loop: 0
+    spacial: 0
+    source: {fileID: 0}
+  - name: PikeemDead
+    clip: {fileID: 8300000, guid: 0918978102748a74a9e36053cbffb227, type: 3}
+    volume: 0.824
+    pitch: 1.79
+    loop: 0
+    spacial: 0
     source: {fileID: 0}

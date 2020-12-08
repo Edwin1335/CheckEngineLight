@@ -30,6 +30,7 @@ public class TabeeAIScript : MonoBehaviour
             playerFound = true;
             animator = GetComponent<Animator>();
             originalPosition = new Vector2(this.transform.position.x, this.transform.position.y);
+            FindObjectOfType<AudioManager>().Play("TabeeFly");
         }
     }
 
@@ -89,7 +90,7 @@ public class TabeeAIScript : MonoBehaviour
             }
         }
 
-        if(tabeeHealth <= 0)
+        if (tabeeHealth <= 0)
         {
             Destroy(gameObject, 0.0f);
         }
