@@ -5,7 +5,7 @@ using UnityEngine;
 public class TakeDamage : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] private float _health;
+    public float _health;
     [Header("KnockBack")]
     [SerializeField] private float vertKnockback = 100;
     [SerializeField] private float horKnockback = 100;
@@ -14,6 +14,9 @@ public class TakeDamage : MonoBehaviour
     [SerializeField] private SpriteRenderer[] bodyParts;
     [SerializeField] private Color hurtColor;
     [SerializeField] private Color originalColor;
+
+    [HideInInspector]
+    public string enemyName;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,11 @@ public class TakeDamage : MonoBehaviour
         {
             Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
             CameraShake.Instance.ShakeCamera(8f, .2f);
+            Debug.Log(this.name);
+            if (enemyName == "Rocky")
+            {
+                FindObjectOfType<AudioManager>().Play("RockyDead");
+            }
             Destroy(gameObject, 0.0f);
         }
     }
@@ -58,6 +66,11 @@ public class TakeDamage : MonoBehaviour
             this.GetComponent<Rigidbody2D>().AddForce(transform.up * vertKnockback + (transform.right * horKnockback) * -1);
         }
     }
+
+    // public void setName(string name)
+    // {
+    //     this.enemyName = name;
+    // }
 
     IEnumerator flash()
     {

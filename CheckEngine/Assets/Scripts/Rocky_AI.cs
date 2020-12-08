@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class Rocky_AI : MonoBehaviour
 {
-    public float rockyHealth = 3f;
+    private TakeDamage damage;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        damage = GetComponent<TakeDamage>();
+        damage.enemyName = "Rocky";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rockyHealth <= 0)
-        {
-            Destroy(gameObject, 0.0f);
-        }
+
     }
 }
