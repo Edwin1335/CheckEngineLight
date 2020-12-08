@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TakeDamage))]
 public class TabeeAIScript : MonoBehaviour
 {
     public float tabeeHealth = 2f;
@@ -20,16 +21,20 @@ public class TabeeAIScript : MonoBehaviour
     private Animator animator;
     private Transform player;
     private Vector2 originalPosition;
+    private TakeDamage damage;
 
     void Start()
     {
         // Check if player exists in the scene.
         if (GameObject.FindGameObjectWithTag("Player"))
         {
+            damage = GetComponent<TakeDamage>();
+            damage.enemyName = "Tabee";
             player = GameObject.FindGameObjectWithTag("Player").transform;
             playerFound = true;
             animator = GetComponent<Animator>();
             originalPosition = new Vector2(this.transform.position.x, this.transform.position.y);
+            FindObjectOfType<AudioManager>().Play("TabeeFly");
         }
     }
 
@@ -89,7 +94,7 @@ public class TabeeAIScript : MonoBehaviour
             }
         }
 
-        if(tabeeHealth <= 0)
+        if (tabeeHealth <= 0)
         {
             Destroy(gameObject, 0.0f);
         }
