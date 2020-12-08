@@ -30,7 +30,7 @@ public class TakeDamage : MonoBehaviour
         if (_health <= 0)
         {
             Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-            CameraShake.Instance.ShakeCamera(8f, .1f);
+            CameraShake.Instance.ShakeCamera(8f, .2f);
             Destroy(gameObject, 0.0f);
         }
     }

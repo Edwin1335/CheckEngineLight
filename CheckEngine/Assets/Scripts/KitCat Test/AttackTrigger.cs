@@ -7,8 +7,6 @@ public class AttackTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         List<Collider2D> recentDamageList = new List<Collider2D>();
-
-
         recentDamageList.Clear();
 
         // Check if the collider hit an enemy.
