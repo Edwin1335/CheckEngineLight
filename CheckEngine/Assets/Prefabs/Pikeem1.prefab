@@ -557,7 +557,7 @@ Transform:
   m_GameObject: {fileID: 8806592887486424021}
   m_LocalRotation: {x: 0, y: 0, z: -0.0036651045, w: 0.9999933}
   m_LocalPosition: {x: -16.96, y: -7.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 8806592887046114161}
   - {fileID: 8806592887112119095}
@@ -680,4 +680,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a903fdc23e2fb204db2dbe3b632588a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 2
+  _health: 10
+  vertKnockback: 100
+  horKnockback: 100
+  deathParticlePrefab: {fileID: 2548129096922297821, guid: 4e28735135c1d804fbcf8919d4789c69, type: 3}
+  bodyParts:
+  - {fileID: 8806592887046114160}
+  - {fileID: 8806592887112119094}
+  - {fileID: 8806592886446053249}
+  - {fileID: 8806592887261385795}
+  - {fileID: 8806592886816146115}
+  - {fileID: 8806592887148987140}
+  hurtColor: {r: 0, g: 0.86045, b: 1, a: 1}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}

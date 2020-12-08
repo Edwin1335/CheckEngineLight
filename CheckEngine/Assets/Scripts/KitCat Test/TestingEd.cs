@@ -16,8 +16,6 @@ public class TestingEd : MonoBehaviour
     [SerializeField] private bool extraJump;
     [SerializeField] private float holdJumpTimer = 2;
     [Header("Attack")]
-    [SerializeField] private float attackPower = 1;
-    [SerializeField] private float knockbackStrength = 10;
     [SerializeField] private Collider2D attackTrigger;
 
 

@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabeeHealth: 2
   speed: 3
-  lineOfSight: 6.45
+  lineOfSight: 7.56
   attackRange: 1.93
 --- !u!114 &3953640886498275466
 MonoBehaviour:
@@ -381,6 +381,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 3
+  vertKnockback: 100
+  horKnockback: 100
+  deathParticlePrefab: {fileID: 2548129096922297821, guid: 3a6ed1a2eb4cc2b4daf7b55c5f503c1a, type: 3}
+  bodyParts:
+  - {fileID: 455797605498997477}
+  - {fileID: 1600828901}
+  - {fileID: 168694845}
+  - {fileID: 455797605629577211}
+  - {fileID: 455797604089160325}
+  - {fileID: 455797605756031639}
+  - {fileID: 455797604958673895}
+  hurtColor: {r: 0.321858, g: 0.0082769515, b: 0.5849056, a: 1}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &455797604089160327
 GameObject:
   m_ObjectHideFlags: 0

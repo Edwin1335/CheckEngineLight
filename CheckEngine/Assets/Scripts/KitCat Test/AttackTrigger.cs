@@ -17,6 +17,7 @@ public class AttackTrigger : MonoBehaviour
             // Do not hit an enemy more than once if it has more than one collider.
             if (!recentDamageList.Contains(col))
             {
+                Debug.Log("Attacking " + col.name);
                 recentDamageList.Add(col);
                 col.GetComponent<TakeDamage>().EnemyDamage(1);
                 col.GetComponent<TakeDamage>().knockBack(this.transform);
