@@ -338,7 +338,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   maxJumps: 1
-  extraJump: 0
+  extraJump: 1
   holdJumpTimer: 0.2
   attackTrigger: {fileID: 1789724253}
 --- !u!1 &6182230066262622037

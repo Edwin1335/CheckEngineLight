@@ -35,10 +35,18 @@ public class TakeDamage : MonoBehaviour
             Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
             CameraShake.Instance.ShakeCamera(8f, .2f);
             Debug.Log(this.name);
+
+            // Play sound based on enemy.
+            Debug.Log(enemyName);
             if (enemyName == "Rocky")
             {
                 FindObjectOfType<AudioManager>().Play("RockyDead");
             }
+            else if (enemyName == "Pikeem")
+            {
+                FindObjectOfType<AudioManager>().Play("PikeemDead");
+            }
+
             Destroy(gameObject, 0.0f);
         }
     }
