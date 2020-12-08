@@ -7,15 +7,19 @@ public class AttackTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         List<Collider2D> recentDamageList = new List<Collider2D>();
+
+
         recentDamageList.Clear();
 
+        // Check if the collider hit an enemy.
         if (col.tag == "Enemy")
         {
+            // Do not hit an enemy more than once if it has more than one collider.
             if (!recentDamageList.Contains(col))
             {
                 recentDamageList.Add(col);
-                col.SendMessageUpwards("EnemyDamage", 1);
-                Debug.Log("Attacked" + col.name);
+                col.GetComponent<TakeDamage>().EnemyDamage(1);
+                col.GetComponent<TakeDamage>().knockBack(this.transform);
             }
         }
     }
