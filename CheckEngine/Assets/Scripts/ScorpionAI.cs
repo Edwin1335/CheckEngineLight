@@ -28,8 +28,18 @@ public class ScorpionAI : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime);
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetecion.position, Vector2.down, distance);
 
-        Debug.Log(Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("isWalking", Mathf.Abs(rb.velocity.x));
+        //Animations.
+        if (Mathf.Abs(rb.velocity.x) > 0)
+        {
+            animator.SetBool("isWalking", true);
+
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
+
+        //Edge collider   
         if (groundInfo.collider == false)
         {
             if (movingRight == true)

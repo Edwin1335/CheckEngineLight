@@ -2942,18 +2942,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9598815, guid: f0931b26a49aacf46a91030adf69fa0f, type: 3}
-      propertyPath: distance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9598815, guid: f0931b26a49aacf46a91030adf69fa0f, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9598815, guid: f0931b26a49aacf46a91030adf69fa0f, type: 3}
-      propertyPath: groundDetecion
-      value: 
-      objectReference: {fileID: 2073052730}
     - target: {fileID: 7276050657220212138, guid: f0931b26a49aacf46a91030adf69fa0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4085548
@@ -4522,11 +4510,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6163645209305322513, guid: 9c551fbbccf0f6840811faacf371052e, type: 3}
   m_PrefabInstance: {fileID: 623905709}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2073052730 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1960699391, guid: f0931b26a49aacf46a91030adf69fa0f, type: 3}
-  m_PrefabInstance: {fileID: 1356382093}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2098683380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4730,18 +4713,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1789724253, guid: 1211cefe4c45b274e86893d4c2df6ced, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.3495284
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789724253, guid: 1211cefe4c45b274e86893d4c2df6ced, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.009982057
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789724253, guid: 1211cefe4c45b274e86893d4c2df6ced, type: 3}
-      propertyPath: m_Radius
-      value: 1.1393828
-      objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: 1211cefe4c45b274e86893d4c2df6ced, type: 3}
       propertyPath: m_Name
       value: Test Player
@@ -4789,6 +4760,10 @@ PrefabInstance:
     - target: {fileID: 6182230066212290802, guid: 1211cefe4c45b274e86893d4c2df6ced, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.669
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182230066212290802, guid: 1211cefe4c45b274e86893d4c2df6ced, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.70594996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1211cefe4c45b274e86893d4c2df6ced, type: 3}
