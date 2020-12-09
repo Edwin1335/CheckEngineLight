@@ -59,6 +59,11 @@ public class TakeDamage : MonoBehaviour
 
                 }
             }
+            else if(enemyName == "Scorpion")
+            {
+                FindObjectOfType<AudioManager>().Play("ScorpionDies");
+
+            }
 
             Destroy(gameObject, 0.0f);
         }
