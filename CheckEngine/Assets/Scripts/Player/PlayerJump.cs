@@ -128,15 +128,22 @@ public class PlayerJump : MonoBehaviour
             _grounded = false;
             _isJumping = true;
 
-            if (_rigidBody.velocity.y > 0){
+            if (_rigidBody.velocity.y > 0.1)
+            {
                 animator.SetBool("isJumping", true);
             }
-            else if (_rigidBody.velocity.y < 0){
+            if (!_grounded && _rigidBody.velocity.y < -0.1)
+            {
                 animator.SetBool("isFalling", true);
+                animator.SetBool("isJumping", false);
+            }
+            else
+            {
+                animator.SetBool("isFalling", false);
             }
         }
+        
         //slideLooped = false;
-
         if ((_grounded == true && _wallFlip == true) || (_wallSlide == true && _wallFlip == true))
         {
             //_rigidBody.velocity = new Vector2(_dirInput * -1, _rigidBody.velocity.y);
