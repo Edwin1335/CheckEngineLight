@@ -24,7 +24,7 @@ public class TestingEd : MonoBehaviour
     private float groundRadius = 0.2f;
     private float attackRadius = 0.5f;
     private bool attacking = false;
-    private float attackCD = 0.3f;
+    private float attackCD = 0.1f;
     private float attackTimer = 0f;
     private float moveInputHorizontal;
     private bool facingRight;

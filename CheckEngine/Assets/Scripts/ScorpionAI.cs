@@ -4,54 +4,255 @@ using UnityEngine;
 
 public class ScorpionAI : MonoBehaviour
 {
-    public float speed;
-    public float distance;
-    private bool movingRight = true;
-    private Transform groundDetecion;
-    private TakeDamage damage;
-    private Animator animator;
-    private Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Start()
+    // Different stets the enemy can be in.
+    private States currentState;
+    enum States
     {
-        damage = GetComponent<TakeDamage>();
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        groundDetecion = this.transform.GetChild(1).transform;
-        damage.enemyName = "Scorpion";
+        Moving,
+        Knockback,
+        Attack,
+        Death
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private float groundCheckDistance = 0.5f, wallCheckDistance = 0.5f, playerCheckDistance = 1.0f;
+    [SerializeField] private float maxHealth, knockbackDuration = 0.2f, attackingDuration = 0.08f, movSpeed = 4.0f;
+    [SerializeField] private Transform groundCheck, wallcheck, playerCheck;
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private Vector2 knockbackSpeed;
+    [Header("Attacked")]
+    [SerializeField] private GameObject deathParticlePrefab;
+    [SerializeField] private SpriteRenderer[] bodyParts;
+    [SerializeField] private Color hurtColor;
+    [SerializeField] private Color originalColor;
+
+
+    private bool groundDetected, wallDetected, playerDetected;
+    private int facingDirection;
+    private int damageDirection;
+    private int facingRight;
+
+    private float currentHealth;
+    private float knockbackStartTime;
+    private float attackingStartTime;
+
+    private Animator animator;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+    private LayerMask whatIsPlayer;
+
+    private void Start()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetecion.position, Vector2.down, distance);
-
-        //Animations.
-        if (Mathf.Abs(rb.velocity.x) > 0)
+        facingDirection = 1;
+        currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        whatIsPlayer = LayerMask.GetMask("Player");
+        if (bodyParts.Length > 0)
         {
-            animator.SetBool("isWalking", true);
+            originalColor = bodyParts[0].GetComponent<SpriteRenderer>().color;
+        }
+    }
 
+    private void Update()
+    {
+        switch (currentState)
+        {
+            case States.Moving:
+                UpdateMovingState();
+                break;
+            case States.Knockback:
+                UpdateKnockbackState();
+                break;
+            case States.Attack:
+                UpdateAttackState();
+                break;
+            case States.Death:
+                UpdateDeathState();
+                break;
+        }
+    }
+
+    //---------Moving----------------------------
+    private void EnterMovingState()
+    {
+
+    }
+
+    private void UpdateMovingState()
+    {
+        groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+        wallDetected = Physics2D.Raycast(wallcheck.position, transform.right, wallCheckDistance, whatIsGround);
+        playerDetected = Physics2D.Raycast(playerCheck.position, transform.right, playerCheckDistance, whatIsPlayer);
+        if (playerDetected)
+        {
+            SwitchState(States.Attack);
+        }
+        if (!groundDetected || wallDetected)
+        {
+            Flip();
         }
         else
         {
-            animator.SetBool("isWalking", false);
+            movement.Set(movSpeed * facingDirection, rb.velocity.y);
+            rb.velocity = movement;
+        }
+    }
+    private void ExitMovingState()
+    {
+
+    }
+
+    //---------Knockback----------------------------
+    private void EnterKnockbackState()
+    {
+        knockbackStartTime = Time.time;
+        movement.Set(knockbackSpeed.x * damageDirection, knockbackSpeed.y);
+        rb.velocity = movement;
+        animator.SetBool("Knockback", true);
+    }
+    private void UpdateKnockbackState()
+    {
+        if (Time.time >= knockbackStartTime + knockbackDuration)
+        {
+            SwitchState(States.Moving);
+        }
+    }
+    private void ExitKnockbackState()
+    {
+        animator.SetBool("Knockback", false);
+    }
+
+    //---------Attack----------------------------
+    private void EnterAttackState()
+    {
+        animator.SetBool("isAttacking", true);
+        attackingStartTime = Time.time;
+
+    }
+    private void UpdateAttackState()
+    {
+        if (Time.time >= attackingStartTime + attackingDuration)
+        {
+            SwitchState(States.Moving);
+        }
+    }
+    private void ExitAttackState()
+    {
+        animator.SetBool("isAttacking", false);
+    }
+
+    //---------Death----------------------------
+    private void EnterDeathState()
+    {
+        Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+        CameraShake.Instance.ShakeCamera(8f, .2f);
+        FindObjectOfType<AudioManager>().Play("ScorpionDies");
+        Destroy(this.gameObject, 0.0f);
+    }
+    private void UpdateDeathState()
+    {
+
+    }
+    private void ExitDeathState()
+    {
+
+    }
+
+    //--------- Other Functions ----------------------------
+    public void Damage(float[] attackDetails)
+    {
+        // Decrease the health
+        currentHealth -= attackDetails[0];
+
+        // Check position of player
+        if (attackDetails[1] > transform.position.x)
+        {
+            damageDirection = -1;
+        }
+        else
+        {
+            damageDirection = 1;
         }
 
-        //Edge collider   
-        if (groundInfo.collider == false)
+        // Change color
+        if (bodyParts.Length > 0)
         {
-            if (movingRight == true)
-            {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingRight = false;
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                movingRight = true;
-            }
+            StartCoroutine(flash());
         }
+
+
+        if (currentHealth > 0.0f)
+        {
+            SwitchState(States.Knockback);
+        }
+        else if (currentHealth <= 0.0f)
+        {
+            SwitchState(States.Death);
+        }
+    }
+
+    private void Flip()
+    {
+        facingDirection *= -1;
+        this.transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
+    private void SwitchState(States state)
+    {
+        switch (currentState)
+        {
+            case States.Moving:
+                ExitMovingState();
+                break;
+            case States.Knockback:
+                ExitKnockbackState();
+                break;
+            case States.Death:
+                ExitDeathState();
+                break;
+            case States.Attack:
+                ExitAttackState();
+                break;
+        }
+
+        switch (state)
+        {
+            case States.Moving:
+                EnterMovingState();
+                break;
+            case States.Knockback:
+                EnterKnockbackState();
+                break;
+            case States.Attack:
+                EnterAttackState();
+                break;
+            case States.Death:
+                EnterDeathState();
+                break;
+        }
+
+        currentState = state;
+    }
+
+    IEnumerator flash()
+    {
+
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            bodyParts[i].color = hurtColor;
+        }
+        yield return new WaitForSeconds(.2f);
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            bodyParts[i].color = originalColor;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(groundCheck.position, new Vector2(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
+        Gizmos.DrawLine(wallcheck.position, new Vector2(wallcheck.position.x + wallCheckDistance, wallcheck.position.y));
+        Gizmos.DrawLine(playerCheck.position, new Vector2(playerCheck.position.x + playerCheckDistance, playerCheck.position.y));
     }
 }

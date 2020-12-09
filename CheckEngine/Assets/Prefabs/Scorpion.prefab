@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1586077727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586077728}
+  m_Layer: 9
+  m_Name: PlayerDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1586077728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586077727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.789, y: -0.833, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7276050657220212138}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1960699390
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +104,7 @@ GameObject:
   - component: {fileID: 7276050657220212143}
   - component: {fileID: 7276050657220212139}
   - component: {fileID: 404093114}
-  - component: {fileID: 404093106}
+  - component: {fileID: 404093107}
   m_Layer: 9
   m_Name: Scorpion
   m_TagString: Enemy
@@ -95,6 +125,7 @@ Transform:
   m_Children:
   - {fileID: 1960699391}
   - {fileID: 2032732833}
+  - {fileID: 1586077728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 2.041, z: 0}
@@ -238,7 +269,7 @@ PolygonCollider2D:
       - {x: 1.0104711, y: -0.6032902}
       - {x: 0.91924965, y: -0.7229792}
       - {x: 0.692985, y: -0.9733417}
---- !u!114 &404093106
+--- !u!114 &404093107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,16 +278,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7276050657220212142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b579815bf803c204684617c17a9fda6b, type: 3}
+  m_Script: {fileID: 11500000, guid: f1387b816634b08468c39b9c71f2a895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheckDistance: 0.5
   wallCheckDistance: 0.5
-  movSpeed: 3
+  playerCheckDistance: 1
   maxHealth: 10
   knockbackDuration: 0.2
+  attackingDuration: 0.5
+  movSpeed: 4
   groundCheck: {fileID: 1960699391}
   wallcheck: {fileID: 2032732833}
+  playerCheck: {fileID: 1586077728}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
@@ -264,5 +298,5 @@ MonoBehaviour:
   deathParticlePrefab: {fileID: 2548129096922297821, guid: 6db2e813264533343ad7536d8a07c2d2, type: 3}
   bodyParts:
   - {fileID: 7276050657220212141}
-  hurtColor: {r: 0.0082166195, g: 1, b: 0, a: 1}
+  hurtColor: {r: 0.21335769, g: 1, b: 0, a: 1}
   originalColor: {r: 0, g: 0, b: 0, a: 0}

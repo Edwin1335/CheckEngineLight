@@ -9,12 +9,11 @@ public class AttackTrigger : MonoBehaviour
         float[] attackDetails = new float[2];
         attackDetails[0] = 1;
         attackDetails[1] = this.GetComponentInParent<Transform>().transform.position.x;
-        Debug.Log(attackDetails[1]);
         // Check if the collider hit an enemy.
         if (col.tag == "Enemy")
         {
             FindObjectOfType<AudioManager>().Play("GloomyHit");
-            col.GetComponent<AllEnemies>().Damage(attackDetails);
+            col.SendMessageUpwards("Damage", attackDetails);
         }
     }
 }
