@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 7276050657220212139}
   - component: {fileID: 9598814}
   - component: {fileID: 9598815}
-  - component: {fileID: 1408020102}
   m_Layer: 9
   m_Name: Scorpion
   m_TagString: Enemy
@@ -209,21 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1387b816634b08468c39b9c71f2a895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1408020102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7276050657220212142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f8bf8f4b54cd7349b6428c4317f3fa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  distance: 10
-  groundDetecion: {fileID: 1960699391}
+  speed: 2
+  distance: 2
 --- !u!1 &7276050657399929406
 GameObject:
   m_ObjectHideFlags: 0
