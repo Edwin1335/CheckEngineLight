@@ -115,7 +115,7 @@ TextureImporter:
         width: 975
         height: 849
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: BounceBomb_1
       rect:
         serializedVersion: 2
-        x: 309
-        y: 166
-        width: 1474
-        height: 747
-      alignment: 9
-      pivot: {x: 0.5014387, y: 0.9968268}
+        x: 123
+        y: 0
+        width: 1771
+        height: 965
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

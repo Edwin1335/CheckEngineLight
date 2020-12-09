@@ -3,8 +3,7 @@ guid: cdea31bc7153f8c4092b64618295d6cf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - pfBombSplash: {fileID: 1211530679681813089, guid: 11429e5244970724ca9b803445bf80c6, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
