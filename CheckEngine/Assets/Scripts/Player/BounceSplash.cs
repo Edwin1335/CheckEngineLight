@@ -34,31 +34,33 @@ public class BounceSplash : MonoBehaviour
             Collider2D[] _objectsToBounce = Physics2D.OverlapBoxAll(gameObject.transform.position, _collider.size / 2, _rotation, _groundLayer);
 
             for (int i = 0; i < _objectsToBounce.Length; i++){
-                Rigidbody2D _objectRB = _objectsToBounce[i].attachedRigidbody;
-                // _xVelocity = _objectRB.velocity.x;
-                _yVelocity = _objectRB.velocity.y;
+                if (_objectsToBounce[i].attachedRigidbody != null){
+                    Rigidbody2D _objectRB = _objectsToBounce[i].attachedRigidbody;
+                    // _xVelocity = _objectRB.velocity.x;
+                    _yVelocity = _objectRB.velocity.y;
 
-                if (_rotation == 0){
-                    // Debug.Log("Up Splash");
-                    if (_yVelocity > 0){
-                        _objectRB.AddForce(new Vector2(0, _jumpTrue * _jumpForceMultiplier * _yVelocity), ForceMode2D.Impulse);
+                    if (_rotation == 0){
+                        // Debug.Log("Up Splash");
+                        if (_yVelocity > 0){
+                            _objectRB.AddForce(new Vector2(0, _jumpTrue * _jumpForceMultiplier * _yVelocity), ForceMode2D.Impulse);
+                        }
+                        else if (_yVelocity < 0){
+                            _objectRB.velocity = new Vector2(0, 0);
+                            _objectRB.AddForce(new Vector2(0, _jumpForceMultiplier * Mathf.Abs(_yVelocity)), ForceMode2D.Impulse);
+                        }
                     }
-                    else if (_yVelocity < 0){
+                    if (_rotation == -180){
+                        Debug.Log("Down Splash");
                         _objectRB.velocity = new Vector2(0, 0);
-                        _objectRB.AddForce(new Vector2(0, _jumpForceMultiplier * Mathf.Abs(_yVelocity)), ForceMode2D.Impulse);
+                        _objectRB.AddForce(new Vector2(0, -1 * _jumpForceMultiplier * _yVelocity), ForceMode2D.Impulse);
                     }
+                    // if (_rotation == 90 || _rotation == -90){
+                    //     Debug.Log("Sideways Splash");
+                    //     Debug.Log(_objectRB.velocity.x);
+                    //     _objectRB.velocity = new Vector2(0, 0);
+                    //     _objectRB.AddForce(new Vector2(1000 * _jumpForceMultiplier * _xVelocity, 0), ForceMode2D.Impulse);
+                    // }
                 }
-                if (_rotation == -180){
-                    Debug.Log("Down Splash");
-                    _objectRB.velocity = new Vector2(0, 0);
-                    _objectRB.AddForce(new Vector2(0, -1 * _jumpForceMultiplier * _yVelocity), ForceMode2D.Impulse);
-                }
-                // if (_rotation == 90 || _rotation == -90){
-                //     Debug.Log("Sideways Splash");
-                //     Debug.Log(_objectRB.velocity.x);
-                //     _objectRB.velocity = new Vector2(0, 0);
-                //     _objectRB.AddForce(new Vector2(1000 * _jumpForceMultiplier * _xVelocity, 0), ForceMode2D.Impulse);
-                // }
             }
         }
         _prevSplashRun = _splashRun;

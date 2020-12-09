@@ -50,6 +50,7 @@ public class PlayerAttack : MonoBehaviour
 
             //Deals damage to all enemies within attack range
             for (int i = 0; i < _enemiesToDmg.Length; i++){
+                Debug.Log("Attacking");
                 //Damage reduction is performed enemy side
                 _enemiesToDmg[i].GetComponent<TakeDamage>().EnemyDamage(_finalDmg);
             }

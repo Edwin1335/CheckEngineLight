@@ -86,7 +86,7 @@ public class PlayerJump : MonoBehaviour
                 //Jumping Occurs Here
                 //---------------------------------------------------------------------------
                 //Debug.Log("Goes Here JUMP");
-                animator.SetBool("isJumping", true);
+                // animator.SetBool("isJumping", true);
                 _rigidBody.AddForce(new Vector2(0, _jumpForce), ForceMode2D.Impulse);
                 _jumpsLeft--;
                 _isJumping = true;
@@ -115,6 +115,7 @@ public class PlayerJump : MonoBehaviour
         {
             _isJumping = false;
             animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
         }
         //Detects if player is not on the ground and is sliding on a wall
         else if (_grounded == false && _wallSlide != false)
@@ -126,6 +127,13 @@ public class PlayerJump : MonoBehaviour
         {
             _grounded = false;
             _isJumping = true;
+
+            if (_rigidBody.velocity.y > 0){
+                animator.SetBool("isJumping", true);
+            }
+            else if (_rigidBody.velocity.y < 0){
+                animator.SetBool("isFalling", true);
+            }
         }
         //slideLooped = false;
 
@@ -150,16 +158,16 @@ public class PlayerJump : MonoBehaviour
         _dirInput = _input;
     }
 
-    private void jumpAnimations()
-    {
-        if (!_grounded)
-        {
-            animator.SetBool("isJumping", true);
+    // private void jumpAnimations()
+    // {
+    //     if (!_grounded)
+    //     {
+    //         animator.SetBool("isJumping", true);
 
-        }
-        else
-        {
-            animator.SetBool("isJumping", false);
-        }
-    }
+    //     }
+    //     else
+    //     {
+    //         animator.SetBool("isJumping", false);
+    //     }
+    // }
 }
