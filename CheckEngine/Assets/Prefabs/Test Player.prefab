@@ -341,6 +341,7 @@ MonoBehaviour:
   extraJump: 1
   holdJumpTimer: 0.2
   attackTrigger: {fileID: 1789724253}
+  particleEffect: {fileID: 2548129096922297821, guid: 0f967e9be6bba8e4cb68834df57fb3e7, type: 3}
 --- !u!1 &6182230066262622037
 GameObject:
   m_ObjectHideFlags: 0

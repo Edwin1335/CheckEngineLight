@@ -17,6 +17,7 @@ public class TestingEd : MonoBehaviour
     [SerializeField] private float holdJumpTimer = 2;
     [Header("Attack")]
     [SerializeField] private Collider2D attackTrigger;
+    [SerializeField] private GameObject particleEffect;
 
 
 

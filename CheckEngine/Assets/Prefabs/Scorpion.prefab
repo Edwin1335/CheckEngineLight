@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586077727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.789, y: -0.833, z: 0}
+  m_LocalPosition: {x: -0.52, y: -0.8, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7276050657220212138}
@@ -284,7 +284,7 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   wallCheckDistance: 0.5
   playerCheckDistance: 1
-  maxHealth: 10
+  maxHealth: 5
   knockbackDuration: 0.2
   attackingDuration: 0.5
   movSpeed: 4
@@ -294,7 +294,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
-  knockbackSpeed: {x: 10, y: 5}
+  knockbackSpeed: {x: 12, y: 7}
   deathParticlePrefab: {fileID: 2548129096922297821, guid: 6db2e813264533343ad7536d8a07c2d2, type: 3}
   bodyParts:
   - {fileID: 7276050657220212141}

@@ -3,60 +3,220 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(TakeDamage))]
 public class Pikeem_AI : MonoBehaviour
 {
-    public float pikeemMovespeed;
-    Rigidbody2D pkrigbody;
-    public float circleRadius;
-    public GameObject edgeCheck;
-    public LayerMask groundLayer;
-    public bool facingRight;
-    private bool onEdge;
-    private bool isGrounded = false;
-
-    private TakeDamage damage;
-    private GameObject groundCheck;
-
-
-    void Start()
+    // Different stets the enemy can be in.
+    private States currentState;
+    enum States
     {
-        pkrigbody = GetComponent<Rigidbody2D>();
-        damage = GetComponent<TakeDamage>();
-        groundCheck = this.gameObject.transform.GetChild(3).gameObject;
-        damage.enemyName = "Pikeem";
+        Moving,
+        Knockback,
+        Death
     }
 
-    void Update()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, circleRadius, groundLayer);
+    [SerializeField] private float groundCheckDistance = 0.5f, wallCheckDistance = 0.5f;
+    [SerializeField] private float maxHealth, knockbackDuration = 0.2f, movSpeed = 4.0f;
+    [SerializeField] private Transform groundCheck, wallcheck;
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private Vector2 knockbackSpeed;
+    [Header("Attacked")]
+    [SerializeField] private GameObject deathParticlePrefab;
+    [SerializeField] private SpriteRenderer[] bodyParts;
+    [SerializeField] private Color hurtColor;
+    [SerializeField] private Color originalColor;
 
-        if (isGrounded)
+
+    private bool groundDetected, wallDetected;
+    private int facingDirection;
+    private int facingRight;
+    private int damageDirection;
+
+    private float currentHealth;
+    private float knockbackStartTime;
+
+    private Animator animator;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
+    private void Start()
+    {
+        facingDirection = 1;
+        currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        if (bodyParts.Length > 0)
         {
-            pkrigbody.velocity = Vector2.right * pikeemMovespeed * Time.deltaTime;
-            onEdge = Physics2D.OverlapCircle(edgeCheck.transform.position, circleRadius, groundLayer);
-            if (!onEdge && facingRight)
-            {
-                Flip();
-            }
-            else if (!onEdge && !facingRight)
-            {
-                Flip();
-            }
+            originalColor = bodyParts[0].GetComponent<SpriteRenderer>().color;
         }
     }
 
-    void Flip()
+    private void Update()
     {
-        facingRight = !facingRight;
-        transform.Rotate(new Vector3(0, -180, 0));
-        pikeemMovespeed = -pikeemMovespeed;
+        switch (currentState)
+        {
+            case States.Moving:
+                UpdateMovingState();
+                break;
+            case States.Knockback:
+                UpdateKnockbackState();
+                break;
+            case States.Death:
+                UpdateDeathState();
+                break;
+        }
     }
 
-    private void OnDrawGizmosSelected()
+    //---------Moving----------------------------
+    private void EnterMovingState()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(edgeCheck.transform.position, circleRadius);
+
+    }
+
+    private void UpdateMovingState()
+    {
+        groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+        wallDetected = Physics2D.Raycast(wallcheck.position, transform.right, wallCheckDistance, whatIsGround);
+
+        if (!groundDetected || wallDetected)
+        {
+            Flip();
+        }
+        else
+        {
+            movement.Set(movSpeed * facingDirection, rb.velocity.y);
+            rb.velocity = movement;
+        }
+    }
+    private void ExitMovingState()
+    {
+
+    }
+
+    //---------Knockback----------------------------
+    private void EnterKnockbackState()
+    {
+        knockbackStartTime = Time.time;
+        movement.Set(knockbackSpeed.x * damageDirection, knockbackSpeed.y);
+        rb.velocity = movement;
+        animator.SetBool("Knockback", true);
+    }
+    private void UpdateKnockbackState()
+    {
+        if (Time.time >= knockbackStartTime + knockbackDuration)
+        {
+            SwitchState(States.Moving);
+        }
+    }
+    private void ExitKnockbackState()
+    {
+        animator.SetBool("Knockback", false);
+    }
+
+    //---------Death----------------------------
+    private void EnterDeathState()
+    {
+        Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+        CameraShake.Instance.ShakeCamera(8f, .2f);
+        FindObjectOfType<AudioManager>().Play("PikeemDead");
+        Destroy(this.gameObject, 0.0f);
+    }
+    private void UpdateDeathState()
+    {
+
+    }
+    private void ExitDeathState()
+    {
+
+    }
+
+    //--------- Other Functions ----------------------------
+    public void Damage(float[] attackDetails)
+    {
+        // Decrease the health
+        currentHealth -= attackDetails[0];
+
+        // Check position of player
+        if (attackDetails[1] > transform.position.x)
+        {
+            damageDirection = -1;
+        }
+        else
+        {
+            damageDirection = 1;
+        }
+
+        // Change color
+        if (bodyParts.Length > 0)
+        {
+            StartCoroutine(flash());
+        }
+
+
+        if (currentHealth > 0.0f)
+        {
+            SwitchState(States.Knockback);
+        }
+        else if (currentHealth <= 0.0f)
+        {
+            SwitchState(States.Death);
+        }
+    }
+
+    private void Flip()
+    {
+        facingDirection *= -1;
+        this.transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
+    private void SwitchState(States state)
+    {
+        switch (currentState)
+        {
+            case States.Moving:
+                ExitMovingState();
+                break;
+            case States.Knockback:
+                ExitKnockbackState();
+                break;
+            case States.Death:
+                ExitDeathState();
+                break;
+        }
+
+        switch (state)
+        {
+            case States.Moving:
+                EnterMovingState();
+                break;
+            case States.Knockback:
+                EnterKnockbackState();
+                break;
+            case States.Death:
+                EnterDeathState();
+                break;
+        }
+
+        currentState = state;
+    }
+
+    IEnumerator flash()
+    {
+
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            bodyParts[i].color = hurtColor;
+        }
+        yield return new WaitForSeconds(.2f);
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            bodyParts[i].color = originalColor;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(groundCheck.position, new Vector2(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
+        Gizmos.DrawLine(wallcheck.position, new Vector2(wallcheck.position.x + wallCheckDistance, wallcheck.position.y));
     }
 
 }
