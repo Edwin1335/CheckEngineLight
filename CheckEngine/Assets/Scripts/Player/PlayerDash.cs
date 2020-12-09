@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     private Rigidbody2D _rigidBody;
+    private Animator animator;
     [SerializeField]
     private float _dashSpeed = 1500;
     private float _dashTime;
@@ -24,6 +25,7 @@ public class PlayerDash : MonoBehaviour
     private void Awake(){
         _rigidBody = GetComponent<Rigidbody2D>();
         _atk = GetComponent<PlayerAttack>();
+        animator = GetComponent<Animator>();
 
         //Player dashes for a certain time (_startDashTime), given in Unity inspector
         _dashTime = _startDashTime;
@@ -42,6 +44,7 @@ public class PlayerDash : MonoBehaviour
             //---------------------------------------------------------------------------
                 //Dashing Occurs Here
                 _rigidBody.AddForce(new Vector2(_direction * _dashSpeed, _rigidBody.velocity.y));
+                animator.SetBool("isDashing", true);
             //---------------------------------------------------------------------------
                 _isDashing = true;
                 //_atkKey = Input.GetKey(KeyCode.X);
@@ -50,6 +53,7 @@ public class PlayerDash : MonoBehaviour
         else if (_dashTime <= 0){
             _direction = 0;
             _isDashing = false;
+            animator.SetBool("isDashing", false);
             //Debug.Log(_currDashing + ", " + _dashTime);
         }
         if (_currDashing == false && _dashTime <= 0){

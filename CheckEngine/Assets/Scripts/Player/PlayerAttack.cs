@@ -23,36 +23,44 @@ public class PlayerAttack : MonoBehaviour
     private bool _prevAtkState; //Used to prevent holding attack to hit repeatedly
     private bool _isDashing;
 
-    private float _dashTime;    
+    private float _dashTime;
 
     private PlayerDash _dash;
+    private Animator animator;
 
-    private void Awake(){
+    private void Awake()
+    {
         _dash = GetComponent<PlayerDash>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
-    { 
+    {
 
-        if (_isDashing == true){
+        if (_isDashing == true)
+        {
             _finalDmg = _dmg * _dashDmg;
         }
-        else{
+        else
+        {
             _finalDmg = _dmg;
-        }        
+        }
 
-        if ((_currAtkState == true && _prevAtkState == false) || (_currAtkState == true && _isDashing == true)){
+        if ((_currAtkState == true && _prevAtkState == false) || (_currAtkState == true && _isDashing == true))
+        {
             //Checks to see if enemy is within attack range
             //---------------------------------------------------------------------------
             //Attacking Begins Here
             //---------------------------------------------------------------------------
+            animator.SetTrigger("Attacked");
             float[] attackDetails = new float[2];
             attackDetails[0] = _finalDmg;
             attackDetails[1] = this.GetComponent<Transform>().transform.position.x;
             Collider2D[] _enemiesToDmg = Physics2D.OverlapCircleAll(_atkPos.position, _atkRange, _isEnemy);
 
             //Deals damage to all enemies within attack range
-            for (int i = 0; i < _enemiesToDmg.Length; i++){
+            for (int i = 0; i < _enemiesToDmg.Length; i++)
+            {
                 Debug.Log("Attacking");
                 //Damage reduction is performed enemy side
                 _enemiesToDmg[i].SendMessageUpwards("Damage", attackDetails);
@@ -64,12 +72,14 @@ public class PlayerAttack : MonoBehaviour
         _prevAtkState = _currAtkState;
     }
 
-    public void OnDrawGizmosSelected(){
+    public void OnDrawGizmosSelected()
+    {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(_atkPos.position, _atkRange);
     }
 
-    public void Attack(bool _atkKeyState, bool _dashState){
+    public void Attack(bool _atkKeyState, bool _dashState)
+    {
         _currAtkState = _atkKeyState;
         _isDashing = _dashState;
         //Debug.Log("AtkKey: " + _currAtkState + ", isDashing: " + _isDashing);
