@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1960699390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960699391}
+  m_Layer: 0
+  m_Name: Ground Detection
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960699391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960699390}
+  m_LocalRotation: {x: -0, y: -0.017809864, z: 0, w: 0.9998414}
+  m_LocalPosition: {x: -0.78, y: -1.27, z: -0.05}
+  m_LocalScale: {x: -0.45614916, y: 0.34789822, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7276050657220212138}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7276050657220212142
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,6 +45,7 @@ GameObject:
   - component: {fileID: 7276050657220212139}
   - component: {fileID: 9598814}
   - component: {fileID: 9598815}
+  - component: {fileID: 1408020102}
   m_Layer: 9
   m_Name: Scorpion
   m_TagString: Enemy
@@ -31,9 +62,10 @@ Transform:
   m_GameObject: {fileID: 7276050657220212142}
   m_LocalRotation: {x: 0, y: 0.017810145, z: 0, w: 0.9998414}
   m_LocalPosition: {x: 34.86, y: -3.38, z: 0.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 7276050657399929407}
+  - {fileID: 1960699391}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 2.041, z: 0}
@@ -177,6 +209,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1387b816634b08468c39b9c71f2a895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1408020102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276050657220212142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8bf8f4b54cd7349b6428c4317f3fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  distance: 10
+  groundDetecion: {fileID: 1960699391}
 --- !u!1 &7276050657399929406
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7276050657399929406}
   m_LocalRotation: {x: -0, y: -0.017809864, z: 0, w: 0.9998414}
-  m_LocalPosition: {x: 0.3144307, y: -0.65999985, z: -0.11887725}
+  m_LocalPosition: {x: 0.3144307, y: -0.65999985, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7276050657220212138}
