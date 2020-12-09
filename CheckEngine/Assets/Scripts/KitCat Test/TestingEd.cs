@@ -116,14 +116,11 @@ public class TestingEd : MonoBehaviour
             }
             else
             {
-                animator.SetBool("Attacking", true);
+                animator.SetBool("Attacking", false);
                 attacking = false;
                 attackTrigger.enabled = false;
             }
         }
-
-
-
     }
 
     // Fixed updates is used to preform operations and animations on input.
@@ -241,20 +238,4 @@ public class TestingEd : MonoBehaviour
             animator.ResetTrigger("cancelTakeOff");
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
-
-    }
-
-    /*
-    public void Knockback(float knockBackDuration, float knockBackPower, Transform obj)
-    {
-
-        Vector2 direction = (obj.transform.position - this.transform.position).normalized;
-        rb.AddForce(-obj.transform.position * knockBackPower);
-    }
-    */
 }

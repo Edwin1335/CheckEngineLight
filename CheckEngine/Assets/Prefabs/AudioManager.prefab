@@ -72,6 +72,13 @@ MonoBehaviour:
     loop: 0
     spacial: 0
     source: {fileID: 0}
+  - name: GloomyHit
+    clip: {fileID: 8300000, guid: 4f18ccc183893a345b3344a89fcc03aa, type: 3}
+    volume: 1
+    pitch: 2.31
+    loop: 0
+    spacial: 0
+    source: {fileID: 0}
   - name: ScorpionDies
     clip: {fileID: 8300000, guid: 88aad8cbe893db14a9e5fa7e73b1e5b9, type: 3}
     volume: 0.824
