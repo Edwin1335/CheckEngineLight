@@ -105,15 +105,18 @@ public class TestingEd : MonoBehaviour
             attacking = true;
             attackTimer = attackCD;
             attackTrigger.enabled = true;
+            animator.SetBool("Attacking", true);
         }
         if (attacking)
         {
+            animator.SetBool("Attacking", true);
             if (attackTimer > 0)
             {
                 attackTimer -= Time.deltaTime;
             }
             else
             {
+                animator.SetBool("Attacking", true);
                 attacking = false;
                 attackTrigger.enabled = false;
             }
