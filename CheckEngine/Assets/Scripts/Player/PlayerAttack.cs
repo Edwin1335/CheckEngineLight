@@ -27,8 +27,6 @@ public class PlayerAttack : MonoBehaviour
 
     private PlayerDash _dash;
 
-    public GameObject Enemy;
-
     private void Awake(){
         _dash = GetComponent<PlayerDash>();
     }

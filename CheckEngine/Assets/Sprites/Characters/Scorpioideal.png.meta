@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: b541d687a39acfa4391e36e39d6dc307
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5907140372858836036
+    second: Scorpioideal_0
+  - first:
+      213: -2078836450767881599
+    second: Scorpioideal_1
+  - first:
+      213: -3025110682739802783
+    second: Scorpioideal_2
+  - first:
+      213: 8780731968243036234
+    second: Scorpioideal_3
+  - first:
+      213: 170188857936890345
+    second: Scorpioideal_4
+  - first:
+      213: -8937528032085287802
+    second: Scorpioideal_5
+  - first:
+      213: -7956373698401308954
+    second: Scorpioideal_6
+  - first:
+      213: -5357022019875259004
+    second: Scorpioideal_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scorpioideal_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 730
+        width: 335
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb6165d02f950ea0800000000000000
+      internalID: -5907140372858836036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scorpioideal_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 730
+        width: 347
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ab8dd134d7623e0800000000000000
+      internalID: -2078836450767881599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scorpioideal_2
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 730
+        width: 352
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dfd0d9cd5a406d0800000000000000
+      internalID: -3025110682739802783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scorpioideal_3
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 730
+        width: 330
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40fa0be33d6bd970800000000000000
+      internalID: 8780731968243036234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scorpioideal_4
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 267
+        width: 330
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9ce065dd1ac5200800000000000000
+      internalID: 170188857936890345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scorpioideal_5
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 267
+        width: 352
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cd57d9b9587f380800000000000000
+      internalID: -8937528032085287802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scorpioideal_6
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 267
+        width: 347
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee6786a648459190800000000000000
+      internalID: -7956373698401308954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scorpioideal_7
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 267
+        width: 335
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48db36b0bd808a5b0800000000000000
+      internalID: -5357022019875259004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
