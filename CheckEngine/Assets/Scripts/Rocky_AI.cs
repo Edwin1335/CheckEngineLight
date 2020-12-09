@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TakeDamage))]
 public class Rocky_AI : MonoBehaviour
 {
     public float knockback = 10;

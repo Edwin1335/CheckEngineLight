@@ -58,3 +58,24 @@ MonoBehaviour:
     loop: 0
     spacial: 0
     source: {fileID: 0}
+  - name: TabeDead1
+    clip: {fileID: 8300000, guid: fd10feef490967043947dbc6d09c354c, type: 3}
+    volume: 0.824
+    pitch: 1.79
+    loop: 0
+    spacial: 0
+    source: {fileID: 0}
+  - name: TabeeDead2
+    clip: {fileID: 8300000, guid: 9260a49f7b8c10942ad0dca5e489e6f0, type: 3}
+    volume: 0.824
+    pitch: 1.79
+    loop: 0
+    spacial: 0
+    source: {fileID: 0}
+  - name: TabeeDead2
+    clip: {fileID: 8300000, guid: 9260a49f7b8c10942ad0dca5e489e6f0, type: 3}
+    volume: 0.824
+    pitch: 1.79
+    loop: 0
+    spacial: 0
+    source: {fileID: 0}

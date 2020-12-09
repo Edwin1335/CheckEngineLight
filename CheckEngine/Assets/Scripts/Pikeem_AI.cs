@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TakeDamage))]
 public class Pikeem_AI : MonoBehaviour
 {
     public float pikeemMovespeed;
