@@ -24,7 +24,7 @@ public class turretBullet : MonoBehaviour
         if (coll.CompareTag("Player"))
         {
             DestroyProj();
-            hs.health -= 1;
+            hs.Damage(1);
         }
         else if (coll.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {

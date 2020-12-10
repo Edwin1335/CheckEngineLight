@@ -128,7 +128,7 @@ public class HealthSystem : MonoBehaviour
     }
 
 
-    void Damage(int a)
+    public void Damage(int a)
     {
         health = health - a;
         playerController.enabled = false;
