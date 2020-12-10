@@ -24,28 +24,29 @@ public class BossAI : MonoBehaviour
     [SerializeField] private GameObject restPlace;
     [SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
-
+    [SerializeField] private Transform groundCheck;
     [SerializeField] private SpriteRenderer[] bodyParts;
     [SerializeField] private Color hurtColor;
     [SerializeField] private Color originalColor;
+    [SerializeField] private float groundCheckDistance;
+    [SerializeField] private LayerMask whatIsGround;
 
     // Times Delay
     private float currentTime;
     [SerializeField] private float idleTimeDelay;
     [SerializeField] private float restTime;
 
-
     // Hidden variables.
     private bool playerFound = false;
     private float currentHealth;
     private float attackingStartTime;
     private float distanceFromPlayer;
+    private bool groundDetected;
 
     // Get componenets.
     private Animator animator;
     private Transform player;
     private Rigidbody2D rb;
-
 
     private void Start()
     {
@@ -55,6 +56,11 @@ public class BossAI : MonoBehaviour
             currentHealth = health;
             animator = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
+            groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+            if(groundDetected)
+            {
+                SwitchState(States.Idle);
+            }
             player = GameObject.FindGameObjectWithTag("Player").transform;
             if (bodyParts.Length > 0)
             {
@@ -98,7 +104,7 @@ public class BossAI : MonoBehaviour
     }
     public void UpdateIdleState()
     {
-        if(Time.time >= Time.time + currentTime)
+        if (Time.time >= Time.time + currentTime)
         {
             SwitchState(States.Flying);
         }
@@ -112,10 +118,22 @@ public class BossAI : MonoBehaviour
     private void EnterFlyingState()
     {
         animator.SetTrigger("isFlying");
+        currentTime = Time.time;
+
     }
     public void UpdateFlyingState()
     {
-
+        if (this.transform.transform.position.x != pointA.transform.position.x && this.transform.transform.position.y != pointA.transform.position.y)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, pointA.transform.position, Time.deltaTime);
+        }
+        else
+        {
+            if (Time.time >= Time.time + currentTime)
+            {
+                SwitchState(States.Flying);
+            }
+        }
     }
     public void ExitFlyingState()
     {

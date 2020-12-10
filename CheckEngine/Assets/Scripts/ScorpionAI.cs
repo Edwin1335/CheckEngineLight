@@ -17,7 +17,7 @@ public class ScorpionAI : MonoBehaviour
 
     // Modifiable fileds.
     [SerializeField] private float groundCheckDistance = 0.5f, wallCheckDistance = 0.5f, playerCheckDistance = 1.0f;
-    [SerializeField] private float maxHealth, knockbackDuration = 0.2f, attackingDuration = 0.2f, movSpeed = 4.0f;
+    [SerializeField] private float maxHealth, knockbackDuration = 0.2f, attackingDuration = 0.5f, movSpeed = 4.0f;
     [SerializeField] private Transform groundCheck, wallcheck, playerCheck, attackTrigger;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private Vector2 knockbackSpeed;
