@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        ScoreText.gemAmount += 1;
-        FindObjectOfType<AudioManager>().Play("Collect");
-        Destroy(gameObject);
+        if (col.gameObject.CompareTag("Player"))
+        {
+            ScoreText.gemAmount += 1;
+            FindObjectOfType<AudioManager>().Play("Collect");
+            Destroy(gameObject);
+        }
     }
 }
