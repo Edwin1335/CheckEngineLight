@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4724710577836894769}
   m_Layer: 0
   m_Name: HPFire
-  m_TagString: Untagged
+  m_TagString: HP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 5925363191529480455}
   m_Layer: 0
   m_Name: purple_fire_0 (1)
-  m_TagString: Untagged
+  m_TagString: HP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

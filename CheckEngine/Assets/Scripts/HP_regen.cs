@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HP_regen : MonoBehaviour
 {
+
     void OnTriggerEnter2D(Collider2D col)
     {
         GameObject thePlayer = GameObject.Find("Gloomy");
@@ -13,5 +14,6 @@ public class HP_regen : MonoBehaviour
         {
             SN.health = 5;
         }
+
     }
 }

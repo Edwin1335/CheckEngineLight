@@ -9,6 +9,7 @@ TagManager:
   - MainMenu
   - Enemy
   - KnockBack
+  - HP
   layers:
   - Default
   - TransparentFX

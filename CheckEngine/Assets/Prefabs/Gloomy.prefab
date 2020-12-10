@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 6508362626656904577}
   - component: {fileID: 3123924137406519047}
   - component: {fileID: 5977317185887224437}
+  - component: {fileID: 2090424114}
   m_Layer: 8
   m_Name: Gloomy
   m_TagString: Player
@@ -443,6 +444,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bombSpawnOffset: 0.5
   pfBounceBomb: {fileID: 1211530679681813089, guid: c4d94650ad2be2b4a97d1940e5b7311b, type: 3}
+--- !u!114 &2090424114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182230066212290792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f303d18bd0726b04291776b3d9a4d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 2548129096922297821, guid: 0f967e9be6bba8e4cb68834df57fb3e7, type: 3}
+  top: {fileID: 6182230068109869047}
+  left: {fileID: 6182230066940640798}
+  right: {fileID: 6182230066262622037}
 --- !u!1 &6182230066262622037
 GameObject:
   m_ObjectHideFlags: 0
