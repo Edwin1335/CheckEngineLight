@@ -25,8 +25,8 @@ public class BeetleBoss : MonoBehaviour
 
     private void Awake(){
         if (GameObject.FindGameObjectWithTag("Player")){
-            _damage = GetComponent<TakeDamage>();
-            _damage.enemyName = "Tabee";
+            // _damage = GetComponent<TakeDamage>();
+            // _damage.enemyName = "Tabee";
             _player = GameObject.FindGameObjectWithTag("Player").transform;
             _playerFound = true;
             animator = GetComponent<Animator>();
