@@ -17,7 +17,7 @@ public class ScorpionAI : MonoBehaviour
 
     [SerializeField] private float groundCheckDistance = 0.5f, wallCheckDistance = 0.5f, playerCheckDistance = 1.0f;
     [SerializeField] private float maxHealth, knockbackDuration = 0.2f, attackingDuration = 0.08f, movSpeed = 4.0f;
-    [SerializeField] private Transform groundCheck, wallcheck, playerCheck;
+    [SerializeField] private Transform groundCheck, wallcheck, playerCheck, attackTrigger;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private Vector2 knockbackSpeed;
     [Header("Attacked")]
@@ -25,6 +25,9 @@ public class ScorpionAI : MonoBehaviour
     [SerializeField] private SpriteRenderer[] bodyParts;
     [SerializeField] private Color hurtColor;
     [SerializeField] private Color originalColor;
+    [Header("Attack")]
+    [SerializeField] private GameObject spit;
+
 
 
     private bool groundDetected, wallDetected, playerDetected;
@@ -128,7 +131,7 @@ public class ScorpionAI : MonoBehaviour
     {
         animator.SetBool("isAttacking", true);
         attackingStartTime = Time.time;
-
+        Instantiate(spit, attackTrigger.position, attackTrigger.rotation);
     }
     private void UpdateAttackState()
     {

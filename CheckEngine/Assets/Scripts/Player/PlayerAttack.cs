@@ -57,7 +57,7 @@ public class PlayerAttack : MonoBehaviour
             attackDetails[0] = _finalDmg;
             attackDetails[1] = this.GetComponent<Transform>().transform.position.x;
             Collider2D[] _enemiesToDmg = Physics2D.OverlapCircleAll(_atkPos.position, _atkRange, _isEnemy);
-
+            FindObjectOfType<AudioManager>().Play("GloomyHit");
             //Deals damage to all enemies within attack range
             for (int i = 0; i < _enemiesToDmg.Length; i++)
             {
