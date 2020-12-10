@@ -17,12 +17,14 @@ public class PlayerPaintBomb : MonoBehaviour
     private Collider2D _collider;
 
     private BounceBomb _bounceBomb;
+    private Animator animator;
 
     private void Awake(){
         _rigidBody = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
 
         _bounceBomb = GetComponent<BounceBomb>();
+        animator = GetComponent<Animator>();
 
         // animator = GetComponent<Animator>();
     }
@@ -32,6 +34,7 @@ public class PlayerPaintBomb : MonoBehaviour
             Destroy(pfCloneSplash);
             Destroy(pfCloneBomb);
             pfCloneBomb = Instantiate(pfBounceBomb, new Vector2(transform.position.x - _bombSpawnOffset, transform.position.y), transform.rotation);
+            animator.SetBool("isThrowBomb", true);
         }
         _prevAtkKey = _atkKey;
     }

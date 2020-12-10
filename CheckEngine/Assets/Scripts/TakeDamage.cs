@@ -91,11 +91,6 @@ public class TakeDamage : MonoBehaviour
         }
     }
 
-    // public void setName(string name)
-    // {
-    //     this.enemyName = name;
-    // }
-
     IEnumerator flash()
     {
 
