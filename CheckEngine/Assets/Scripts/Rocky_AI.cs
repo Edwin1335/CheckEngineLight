@@ -16,9 +16,9 @@ public class Rocky_AI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        damage = GetComponent<TakeDamage>();
+        // damage = GetComponent<TakeDamage>();
         rb = GetComponent<Rigidbody2D>();
-        damage.enemyName = "Rocky";
+        // damage.enemyName = "Rocky";
     }
 
     // Update is called once per frame

@@ -1,0 +1,814 @@
+fileFormatVersion: 2
+guid: 390a9efe333d1ec49a498b7c4eb328ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8623164775228163548
+    second: KirinBeetle_0
+  - first:
+      213: 1788732861604946587
+    second: KirinBeetle_1
+  - first:
+      213: -7359452711293269861
+    second: KirinBeetle_2
+  - first:
+      213: 1604836047757405919
+    second: KirinBeetle_3
+  - first:
+      213: 8349483670728393782
+    second: KirinBeetle_4
+  - first:
+      213: -5514334021216283569
+    second: KirinBeetle_5
+  - first:
+      213: 3561057009789361314
+    second: KirinBeetle_6
+  - first:
+      213: -5662513384541428168
+    second: KirinBeetle_7
+  - first:
+      213: 5476510693179915943
+    second: KirinBeetle_8
+  - first:
+      213: 5519419420730225648
+    second: KirinBeetle_9
+  - first:
+      213: 6974704415494139751
+    second: KirinBeetle_10
+  - first:
+      213: 2743522327733152491
+    second: KirinBeetle_11
+  - first:
+      213: -1118480109379740502
+    second: KirinBeetle_12
+  - first:
+      213: 8494271903507786826
+    second: KirinBeetle_13
+  - first:
+      213: 6284245401651680226
+    second: KirinBeetle_14
+  - first:
+      213: 4663691808686762878
+    second: KirinBeetle_15
+  - first:
+      213: -3898166272936269477
+    second: KirinBeetle_16
+  - first:
+      213: -3967419436256515293
+    second: KirinBeetle_17
+  - first:
+      213: 3047438918527458813
+    second: KirinBeetle_18
+  - first:
+      213: 2796196723310688017
+    second: KirinBeetle_19
+  - first:
+      213: -1470504229350264128
+    second: KirinBeetle_20
+  - first:
+      213: -1203655905447704645
+    second: KirinBeetle_21
+  - first:
+      213: 3868049981579781161
+    second: KirinBeetle_22
+  - first:
+      213: 5097725971015812739
+    second: KirinBeetle_23
+  - first:
+      213: -3345909364801194307
+    second: KirinBeetle_24
+  - first:
+      213: 1123341320675692090
+    second: KirinBeetle_25
+  - first:
+      213: -6970505484589194117
+    second: KirinBeetle_26
+  - first:
+      213: 3829272209220369658
+    second: KirinBeetle_27
+  - first:
+      213: -6974293177115174270
+    second: KirinBeetle_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KirinBeetle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1431
+        width: 2048
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 79, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a3ddc035d545880800000000000000
+      internalID: -8623164775228163548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_1
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1953
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92e70e7f0bd2d810800000000000000
+      internalID: 1788732861604946587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_2
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1951
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98441a40c8fdd990800000000000000
+      internalID: -7359452711293269861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_3
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1951
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde6255f1e5854610800000000000000
+      internalID: 1604836047757405919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_4
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1950
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634c0bb39235fd370800000000000000
+      internalID: 8349483670728393782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_5
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1950
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f445d848c662973b0800000000000000
+      internalID: -5514334021216283569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_6
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1933
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acd86dab7a6b6130800000000000000
+      internalID: 3561057009789361314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_7
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1934
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836638af316ba61b0800000000000000
+      internalID: -5662513384541428168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1409
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aefd9ba579700c40800000000000000
+      internalID: 5476510693179915943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_9
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1409
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3740358bae89c40800000000000000
+      internalID: 5519419420730225648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_10
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1412
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f60ea56b02bc060800000000000000
+      internalID: 6974704415494139751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_11
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 1142
+        width: 358
+        height: 285
+      alignment: 9
+      pivot: {x: 0.9735834, y: 0.30810034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea23e17503f21620800000000000000
+      internalID: 2743522327733152491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_12
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1046
+        width: 156
+        height: 372
+      alignment: 9
+      pivot: {x: 0.48831254, y: 0.090795375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac9418344c5a70f0800000000000000
+      internalID: -1118480109379740502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_13
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1143
+        width: 377
+        height: 248
+      alignment: 9
+      pivot: {x: 0.9738943, y: 0.42648956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ca92aaa47b1e570800000000000000
+      internalID: 8494271903507786826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_14
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1007
+        width: 293
+        height: 185
+      alignment: 9
+      pivot: {x: 0.5062214, y: 0.9286608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e394deb5ef163750800000000000000
+      internalID: 6284245401651680226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_15
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 640
+        width: 662
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b6cae9df2c8b040800000000000000
+      internalID: 4663691808686762878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_16
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 713
+        width: 280
+        height: 310
+      alignment: 9
+      pivot: {x: 0.96552646, y: 0.16773523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59a93a9d6ee6e9c0800000000000000
+      internalID: -3898166272936269477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_17
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 776
+        width: 56
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b23f20b05e0f8c0800000000000000
+      internalID: -3967419436256515293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_18
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 750
+        width: 91
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd9785ec8daa4a20800000000000000
+      internalID: 3047438918527458813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_19
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 780
+        width: 91
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1177b0fda161ec620800000000000000
+      internalID: 2796196723310688017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_20
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 815
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c23ed8c138b79be0800000000000000
+      internalID: -1470504229350264128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_21
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 716
+        width: 76
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb70dfbc451cb4fe0800000000000000
+      internalID: -1203655905447704645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_22
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 737
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924e485e6f21ea530800000000000000
+      internalID: 3868049981579781161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_23
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 750
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3864ea003c2ceb640800000000000000
+      internalID: 5097725971015812739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_24
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 703
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db63f5cf821f091d0800000000000000
+      internalID: -3345909364801194307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_25
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 687
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e846cbaf8e69f00800000000000000
+      internalID: 1123341320675692090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_26
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 663
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74262e613ac34f90800000000000000
+      internalID: -6970505484589194117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 2020
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcfad239ce442530800000000000000
+      internalID: 3829272209220369658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KirinBeetle_28
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 390
+        width: 441
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5723429, y: 0.9466452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a9e9a8e45563f90800000000000000
+      internalID: -6974293177115174270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

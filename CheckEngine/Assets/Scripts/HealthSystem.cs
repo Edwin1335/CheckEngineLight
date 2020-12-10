@@ -12,6 +12,12 @@ public class HealthSystem : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    private Animator animator;
+
+    private void Awake(){
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (health > numOfHearts)
@@ -37,6 +43,12 @@ public class HealthSystem : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+
+        if (health <= 0){
+            animator.SetBool("isDead", true);
+            Destroy(gameObject, 0.0f);
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -45,6 +57,7 @@ public class HealthSystem : MonoBehaviour
         {
             Damage(1);
             Debug.Log("Taking Damage");
+            // Add Knockback Here
         }
         // GetComponent<BoxCollider2D>().enabled = false;
         //StartCoroutine(waiter());
