@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4705238747561191253}
   - component: {fileID: 4705238747561191252}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4705238748429948490}
   - component: {fileID: 4705238748429948489}
   - component: {fileID: 5091301083561771197}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Gem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4705238748429948494}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.8303204, y: -7.973796, z: 0}
   m_LocalScale: {x: 0.40668094, y: 0.40668094, z: 0.40668094}
   m_Children:

@@ -31,7 +31,7 @@ public class ProjectileSpit : MonoBehaviour
             DestroyProj();
             if (healthSysyFound)
             {
-                hs.health -= 1;
+                hs.Damage(1);
             }
         }
         else if (coll.gameObject.layer == LayerMask.NameToLayer("Ground"))
