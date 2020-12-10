@@ -1298,6 +1298,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 768663215, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6182230066212290792, guid: ddb9b3ca5a190ed4cb534121e7006449, type: 3}
       propertyPath: m_Name
       value: Gloomy
@@ -1412,13 +1416,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4058787619268299651, guid: 6213438e0bad46b49bac42c0ef64d052, type: 3}
+      propertyPath: _speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058787619268299651, guid: 6213438e0bad46b49bac42c0ef64d052, type: 3}
+      propertyPath: _lineOfSight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058787619268299651, guid: 6213438e0bad46b49bac42c0ef64d052, type: 3}
+      propertyPath: _attackRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6076214200692030489, guid: 6213438e0bad46b49bac42c0ef64d052, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.251444
+      value: -6.84
       objectReference: {fileID: 0}
     - target: {fileID: 6076214200692030489, guid: 6213438e0bad46b49bac42c0ef64d052, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3615627
+      value: 3.21
       objectReference: {fileID: 0}
     - target: {fileID: 6076214200692030489, guid: 6213438e0bad46b49bac42c0ef64d052, type: 3}
       propertyPath: m_LocalPosition.z
