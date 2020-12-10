@@ -8,7 +8,7 @@ public class CoinScript : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            ScoreText.gemAmount += 100;
+            ScoreText.gemAmount += 1;
             FindObjectOfType<AudioManager>().Play("Collect");
             Destroy(gameObject);
         }
