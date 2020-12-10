@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054d8e21413a2134382be7c47772958b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 1
   numOfHearts: 5
   knockbackSpeed: {x: 500, y: 1000}
   bodyParts:
