@@ -84,7 +84,8 @@ public class ScorpionAI : MonoBehaviour
     {
         groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
         wallDetected = Physics2D.Raycast(wallcheck.position, transform.right, wallCheckDistance, whatIsGround);
-        playerDetected = Physics2D.Raycast(playerCheck.position, transform.right, playerCheckDistance, whatIsPlayer);
+        playerDetected = Physics2D.Raycast(playerCheck.position, transform.up, playerCheckDistance, whatIsPlayer);
+
         if (playerDetected)
         {
             SwitchState(States.Attack);
@@ -189,6 +190,7 @@ public class ScorpionAI : MonoBehaviour
     {
         facingDirection *= -1;
         this.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        playerCheckDistance = -playerCheckDistance;
     }
 
     private void SwitchState(States state)
