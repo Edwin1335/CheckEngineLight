@@ -52,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
             //---------------------------------------------------------------------------
             //Attacking Begins Here
             //---------------------------------------------------------------------------
-            animator.SetTrigger("Attacked");
+            animator.SetTrigger("isAttack");
             float[] attackDetails = new float[2];
             attackDetails[0] = _finalDmg;
             attackDetails[1] = this.GetComponent<Transform>().transform.position.x;

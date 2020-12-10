@@ -14,16 +14,19 @@ public class PlayerGroundPound : MonoBehaviour
     private Rigidbody2D _rigidBody;
     private Collider2D _collider;
 
+    private Animator animator;
+
     private void Awake(){
         _rigidBody = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
 
-        // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate(){
         if ((_atkKey == true && _prevAtkKey == false) && _yInput < 0){
             _rigidBody.velocity = new Vector2(0, 0);
+            animator.SetTrigger("isGroundPound");
             _rigidBody.AddForce(new Vector2(0, (-1*_poundForce)));
         }
         _prevAtkKey = _atkKey;

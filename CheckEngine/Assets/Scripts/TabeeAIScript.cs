@@ -94,10 +94,10 @@ public class TabeeAIScript : MonoBehaviour
             }
         }
 
-        if (tabeeHealth <= 0)
-        {
-            Destroy(gameObject, 0.0f);
-        }
+        // if (tabeeHealth <= 0)
+        // {
+        //     Destroy(gameObject, 0.0f);
+        // }
     }
 
 
