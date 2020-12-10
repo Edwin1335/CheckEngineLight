@@ -188,7 +188,7 @@ public class ScorpionAI : MonoBehaviour
     private void Flip()
     {
         facingDirection *= -1;
-        this.transform.Rotate(0.0f, 180.0f, 0.0f);
+        this.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     private void SwitchState(States state)
