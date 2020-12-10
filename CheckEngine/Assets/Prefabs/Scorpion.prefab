@@ -24,11 +24,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586077727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.52, y: -0.8, z: -0}
+  m_LocalPosition: {x: -0.848, y: -0.74, z: 0.016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7276050657220212138}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1913287938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913287939}
+  m_Layer: 9
+  m_Name: AttackTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1913287939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913287938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.46, y: 0.68, z: 0.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7276050657220212138}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1960699390
 GameObject:
@@ -126,6 +156,7 @@ Transform:
   - {fileID: 1960699391}
   - {fileID: 2032732833}
   - {fileID: 1586077728}
+  - {fileID: 1913287939}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 2.041, z: 0}
@@ -261,14 +292,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.23037696, y: -1.0478044}
-      - {x: -0.11193083, y: -0.9519193}
-      - {x: -0.5619104, y: -0.61267877}
+    - - {x: 0.25893083, y: -0.9550624}
+      - {x: -0.033406578, y: -0.8449094}
+      - {x: -0.16929197, y: -0.53420496}
       - {x: 0.15177923, y: -0.20111418}
-      - {x: 1.434501, y: 0.02458471}
+      - {x: 0.7706184, y: -0.18943506}
       - {x: 1.0104711, y: -0.6032902}
       - {x: 0.91924965, y: -0.7229792}
-      - {x: 0.692985, y: -0.9733417}
+      - {x: 0.7001239, y: -0.92340374}
 --- !u!114 &404093107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,14 +314,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheckDistance: 0.5
   wallCheckDistance: 0.5
-  playerCheckDistance: 1
-  maxHealth: 5
+  playerCheckDistance: 9
+  maxHealth: 10
   knockbackDuration: 0.2
-  attackingDuration: 0.5
+  attackingDuration: 1
   movSpeed: 4
   groundCheck: {fileID: 1960699391}
   wallcheck: {fileID: 2032732833}
   playerCheck: {fileID: 1586077728}
+  attackTrigger: {fileID: 1913287939}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
@@ -300,3 +332,4 @@ MonoBehaviour:
   - {fileID: 7276050657220212141}
   hurtColor: {r: 0.21335769, g: 1, b: 0, a: 1}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  spit: {fileID: 0}

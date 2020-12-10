@@ -27,6 +27,7 @@ public class ProjectileSpit : MonoBehaviour
 
         if (coll.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Splash");
             DestroyProj();
             if (healthSysyFound)
             {
