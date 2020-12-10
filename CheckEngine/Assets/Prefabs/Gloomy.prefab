@@ -405,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startTimeBtwAtk: 0
   _atkPos: {fileID: 1247331687}
-  _atkRange: 1.28
+  _atkRange: 2
   _isEnemy:
     serializedVersion: 2
     m_Bits: 512
