@@ -1117,6 +1117,7 @@ MonoBehaviour:
   restPlace: {fileID: 0}
   pointA: {fileID: 0}
   pointB: {fileID: 0}
+  groundCheck: {fileID: 6439039074015889870}
   bodyParts:
   - {fileID: 1779091663753204584}
   - {fileID: 8147953852877861863}
@@ -1127,8 +1128,12 @@ MonoBehaviour:
   - {fileID: 7185260160829795990}
   hurtColor: {r: 1, g: 0.22771618, b: 0.2216981, a: 0.8156863}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  idleTimeDelay: 0
-  restTime: 0
+  groundCheckDistance: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  idleTimeDelay: 2
+  restTime: 2
 --- !u!1 &7699314380418057591
 GameObject:
   m_ObjectHideFlags: 0
