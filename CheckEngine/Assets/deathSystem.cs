@@ -27,7 +27,7 @@ public class deathSystem : MonoBehaviour
         pm = this.GetComponent<PlayerMovement>();
         HealthSystem hs = this.GetComponent<HealthSystem>();
 
-        if (hs.health == 0 && !respawning)
+        if (hs.health <= 0 && !respawning)
         {
             pm._moveSpeed = 0;
             top.gameObject.SetActive(false);
@@ -44,7 +44,7 @@ public class deathSystem : MonoBehaviour
     IEnumerator Respawn()
     {
         respawning = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         pm._moveSpeed = speed;
         top.gameObject.SetActive(true);
         left.gameObject.SetActive(true);

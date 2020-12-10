@@ -117,6 +117,7 @@ public class PlayerJump : MonoBehaviour
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", false);
             animator.ResetTrigger("isGroundPound");
+            animator.SetBool("Knockback", false);
         }
         //Detects if player is not on the ground and is sliding on a wall
         else if (_grounded == false && _wallSlide != false)
@@ -143,7 +144,7 @@ public class PlayerJump : MonoBehaviour
                 animator.SetBool("isFalling", false);
             }
         }
-        
+
         //slideLooped = false;
         if ((_grounded == true && _wallFlip == true) || (_wallSlide == true && _wallFlip == true))
         {
