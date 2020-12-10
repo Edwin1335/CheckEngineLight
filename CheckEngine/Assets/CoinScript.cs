@@ -7,6 +7,7 @@ public class CoinScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         ScoreText.gemAmount += 1;
+        FindObjectOfType<AudioManager>().Play("Collect");
         Destroy(gameObject);
     }
 }

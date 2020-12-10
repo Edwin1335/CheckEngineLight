@@ -718,7 +718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5150417994729798970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.94, y: -2.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6076214200692030489}
@@ -982,9 +982,9 @@ GameObject:
   - component: {fileID: 8659013255215923345}
   - component: {fileID: 6878057671028704219}
   - component: {fileID: 8133661582939711483}
-  - component: {fileID: 4058787619268299651}
+  - component: {fileID: 4791682325064967460}
   m_Layer: 9
-  m_Name: BossBeetle
+  m_Name: KITCAT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1023,7 +1023,7 @@ Animator:
   m_GameObject: {fileID: 6397576144411612470}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b6244cc8c6086c4ab2e18e87539cdc4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9a11f31c467157149a22ea1d08515715, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1099,7 +1099,7 @@ PolygonCollider2D:
       - {x: 3.2021508, y: -1.912879}
       - {x: 2.3448286, y: -0.76919365}
       - {x: 2.3264847, y: -0.6938992}
---- !u!114 &4058787619268299651
+--- !u!114 &4791682325064967460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1108,12 +1108,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 6397576144411612470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afe28e90f8c065747bce887b7aa7a595, type: 3}
+  m_Script: {fileID: 11500000, guid: 396fa282946297c4d9b03ef10b29f6ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.5
-  _lineOfSight: 10
-  _attackRange: 5
+  health: 4
+  speed: 3
+  deathParticlePrefab: {fileID: 2548129096922297821, guid: 4e28735135c1d804fbcf8919d4789c69, type: 3}
+  restPlace: {fileID: 0}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  bodyParts:
+  - {fileID: 1779091663753204584}
+  - {fileID: 8147953852877861863}
+  - {fileID: 7873888553830079437}
+  - {fileID: 8545278498379340156}
+  - {fileID: 1469301767268520708}
+  - {fileID: 4702173584691138012}
+  - {fileID: 7185260160829795990}
+  hurtColor: {r: 1, g: 0.22771618, b: 0.2216981, a: 0.8156863}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  idleTimeDelay: 0
+  restTime: 0
 --- !u!1 &7699314380418057591
 GameObject:
   m_ObjectHideFlags: 0
