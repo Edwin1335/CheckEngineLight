@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: 056686de26dd6427e8bde3ec3276b970
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4095662989918530702
+    second: LeverSprite_0
+  - first:
+      213: 512382301678816377
+    second: LeverSprite_1
+  - first:
+      213: -8557133252417162971
+    second: LeverSprite_2
+  - first:
+      213: -7224357991161909680
+    second: LeverSprite_3
+  - first:
+      213: -5794206453293415886
+    second: LeverSprite_4
+  - first:
+      213: -3898975880930145852
+    second: LeverSprite_5
+  - first:
+      213: -4142684571782370622
+    second: LeverSprite_6
+  - first:
+      213: -7843775600660805453
+    second: LeverSprite_7
+  - first:
+      213: 8336159745700908693
+    second: LeverSprite_8
+  - first:
+      213: 9024335383535554610
+    second: LeverSprite_9
+  - first:
+      213: 2627130847269138654
+    second: LeverSprite_10
+  - first:
+      213: 302227280537713812
+    second: LeverSprite_11
+  - first:
+      213: -4844497535509067386
+    second: LeverSprite_12
+  - first:
+      213: 7520841232830029737
+    second: LeverSprite_13
+  - first:
+      213: 740598667616407819
+    second: LeverSprite_14
+  - first:
+      213: -2684510704118594538
+    second: LeverSprite_15
+  - first:
+      213: -7729006171381429376
+    second: LeverSprite_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +83,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,7 +92,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +124,390 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: LeverSprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 157
+        height: 123
+      alignment: 9
+      pivot: {x: 0.601391, y: 0.24116376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273113ed5384927c0800000000000000
+      internalID: -4095662989918530702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 0
+        width: 152
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5954817, y: 0.1766617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c43c81df85c1700800000000000000
+      internalID: 512382301678816377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_2
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 147
+        height: 168
+      alignment: 9
+      pivot: {x: 0.57879514, y: 0.18430215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521fdf105a4fe3980800000000000000
+      internalID: -8557133252417162971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_3
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 137
+        height: 168
+      alignment: 9
+      pivot: {x: 0.55043864, y: 0.1786664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e2a8eeeacedbb90800000000000000
+      internalID: -7224357991161909680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_4
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 0
+        width: 133
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5389671, y: 0.18123706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2328b240ee7d69fa0800000000000000
+      internalID: -5794206453293415886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_5
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0
+        width: 125
+        height: 168
+      alignment: 9
+      pivot: {x: 0.50345606, y: 0.1786664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9c75d081e04e9c0800000000000000
+      internalID: -3898975880930145852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_6
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 0
+        width: 124
+        height: 168
+      alignment: 9
+      pivot: {x: 0.50348395, y: 0.1786664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2caab62b45a3286c0800000000000000
+      internalID: -4142684571782370622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_7
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 125
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5069121, y: 0.17609572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b88cb836af452390800000000000000
+      internalID: -7843775600660805453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_8
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 0
+        width: 124
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17606634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ec9613f1dffa370800000000000000
+      internalID: 8336159745700908693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_9
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 0
+        width: 124
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5028007, y: 0.1795511}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23010a5e731ec3d70800000000000000
+      internalID: 9024335383535554610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_10
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 0
+        width: 124
+        height: 168
+      alignment: 9
+      pivot: {x: 0.50448805, y: 0.18526614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0b2f12691757420800000000000000
+      internalID: 2627130847269138654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_11
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 0
+        width: 123
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5042516, y: 0.17801797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cf1e14c1ab13400800000000000000
+      internalID: 302227280537713812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_12
+      rect:
+        serializedVersion: 2
+        x: 2241
+        y: 0
+        width: 124
+        height: 168
+      alignment: 9
+      pivot: {x: 0.50431776, y: 0.18121473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6890ab0a823e4ccb0800000000000000
+      internalID: -4844497535509067386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_13
+      rect:
+        serializedVersion: 2
+        x: 2425
+        y: 0
+        width: 129
+        height: 168
+      alignment: 9
+      pivot: {x: 0.4780671, y: 0.18563235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afd1fe01456f5860800000000000000
+      internalID: 7520841232830029737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_14
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 0
+        width: 142
+        height: 168
+      alignment: 9
+      pivot: {x: 0.44354677, y: 0.1828255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0157687092274a00800000000000000
+      internalID: 740598667616407819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_15
+      rect:
+        serializedVersion: 2
+        x: 2793
+        y: 0
+        width: 146
+        height: 168
+      alignment: 9
+      pivot: {x: 0.42713907, y: 0.17967255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614074ddcb3bebad0800000000000000
+      internalID: -2684510704118594538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeverSprite_16
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 0
+        width: 152
+        height: 168
+      alignment: 9
+      pivot: {x: 0.41495553, y: 0.17920616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b020056dd0db490800000000000000
+      internalID: -7729006171381429376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -88,7 +520,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
