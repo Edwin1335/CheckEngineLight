@@ -93,11 +93,6 @@ public class TabeeAIScript : MonoBehaviour
 
             }
         }
-
-        // if (tabeeHealth <= 0)
-        // {
-        //     Destroy(gameObject, 0.0f);
-        // }
     }
 
 
@@ -105,7 +100,6 @@ public class TabeeAIScript : MonoBehaviour
     {
         if (other.collider.CompareTag("Player"))
         {
-            //TestingEd.instance.Knockback(1f, 100f, this.transform);
             StartCoroutine(Attack());
         }
     }
@@ -114,7 +108,7 @@ public class TabeeAIScript : MonoBehaviour
     {
         attacked = true;
         animator.SetBool("isAttacking", false);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         attacked = false;
     }
 

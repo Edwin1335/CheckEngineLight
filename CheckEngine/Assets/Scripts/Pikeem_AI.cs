@@ -116,7 +116,7 @@ public class Pikeem_AI : MonoBehaviour
     private void EnterDeathState()
     {
         Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-        CameraShake.Instance.ShakeCamera(8f, .2f);
+        CameraShake.Instance.ShakeCamera(3f, .1f);
         FindObjectOfType<AudioManager>().Play("PikeemDead");
         Destroy(this.gameObject, 0.0f);
     }

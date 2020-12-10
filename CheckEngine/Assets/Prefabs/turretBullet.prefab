@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 726089368883027368}
   - component: {fileID: 5776961514502191344}
   - component: {fileID: 7888235876371225816}
+  - component: {fileID: 8688593503842164496}
   m_Layer: 0
   m_Name: turretBullet
   m_TagString: Projectile
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4396451583378060574}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df50673752148b48a5ecc471e84b384, type: 3}
   m_Name: 
@@ -136,3 +137,17 @@ CircleCollider2D:
   m_Offset: {x: 0.065446384, y: 0}
   serializedVersion: 2
   m_Radius: 2.3052225
+--- !u!114 &8688593503842164496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396451583378060574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24929fe61cd661546bc44664bf74834d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  impactEffect: {fileID: 2548129096922297821, guid: dc7dea3be2703ae49bc8877bcaba9dc1, type: 3}

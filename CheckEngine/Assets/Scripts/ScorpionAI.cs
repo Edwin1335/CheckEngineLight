@@ -15,6 +15,7 @@ public class ScorpionAI : MonoBehaviour
         Death
     }
 
+    // Modifiable fileds.
     [SerializeField] private float groundCheckDistance = 0.5f, wallCheckDistance = 0.5f, playerCheckDistance = 1.0f;
     [SerializeField] private float maxHealth, knockbackDuration = 0.2f, attackingDuration = 0.08f, movSpeed = 4.0f;
     [SerializeField] private Transform groundCheck, wallcheck, playerCheck, attackTrigger;
@@ -29,16 +30,16 @@ public class ScorpionAI : MonoBehaviour
     [SerializeField] private GameObject spit;
 
 
-
+    // Private variables.
     private bool groundDetected, wallDetected, playerDetected;
     private int facingDirection;
     private int damageDirection;
     private int facingRight;
-
     private float currentHealth;
     private float knockbackStartTime;
     private float attackingStartTime;
 
+    // Need access to.
     private Animator animator;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -69,9 +70,6 @@ public class ScorpionAI : MonoBehaviour
                 break;
             case States.Attack:
                 UpdateAttackState();
-                break;
-            case States.Death:
-                UpdateDeathState();
                 break;
         }
     }
@@ -149,17 +147,9 @@ public class ScorpionAI : MonoBehaviour
     private void EnterDeathState()
     {
         Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-        CameraShake.Instance.ShakeCamera(8f, .2f);
+        CameraShake.Instance.ShakeCamera(3f, .1f);
         FindObjectOfType<AudioManager>().Play("ScorpionDies");
         Destroy(this.gameObject, 0.0f);
-    }
-    private void UpdateDeathState()
-    {
-
-    }
-    private void ExitDeathState()
-    {
-
     }
 
     //--------- Other Functions ----------------------------
@@ -210,9 +200,6 @@ public class ScorpionAI : MonoBehaviour
                 break;
             case States.Knockback:
                 ExitKnockbackState();
-                break;
-            case States.Death:
-                ExitDeathState();
                 break;
             case States.Attack:
                 ExitAttackState();
