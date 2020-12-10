@@ -9,48 +9,52 @@ public class deathSystem : MonoBehaviour
     public GameObject top;
     public GameObject left;
     public GameObject right;
+    private PlayerMovement pm;
     float speed;
+    private bool respawning = false;
 
     void Start()
     {
-        PlayerMovement pm = this.GetComponent<PlayerMovement>();
+        pm = this.GetComponent<PlayerMovement>();
         speed = pm._moveSpeed;
         playerSpawn = new Vector2(this.transform.position.x, this.transform.position.y);
     }
 
     void Update()
     {
-        PlayerMovement pm = this.GetComponent<PlayerMovement>();
+        pm = this.GetComponent<PlayerMovement>();
         HealthSystem hs = this.GetComponent<HealthSystem>();
 
-        IEnumerator Respawn()
-        {
-            yield return new WaitForSeconds(2f);
-            hs.health += 1;
-            pm._moveSpeed = speed;
-            top.gameObject.SetActive(true);
-            left.gameObject.SetActive(true);
-            right.gameObject.SetActive(true);
-            this.transform.position = playerSpawn;
-        }
-
-        if (hs.health <= 0)
+        if (hs.health == 0 && !respawning)
         {
             pm._moveSpeed = 0;
             top.gameObject.SetActive(false);
             left.gameObject.SetActive(false);
             right.gameObject.SetActive(false);
-            //Instantiate(deathEffect, transform.position, Quaternion.identity);
+            hs.health += 1;
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             StartCoroutine(Respawn());
         }
 
     }
 
+    IEnumerator Respawn()
+    {
+        respawning = true;
+        yield return new WaitForSeconds(2f);
+        pm._moveSpeed = speed;
+        top.gameObject.SetActive(true);
+        left.gameObject.SetActive(true);
+        right.gameObject.SetActive(true);
+        this.transform.position = playerSpawn;
+        respawning = false;
+    }
+
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.gameObject.tag == "HP")
+        if (coll.gameObject.tag == "HP")
         {
-            playerSpawn = new Vector2(coll.transform.position.x, coll.transform.position.y + 2.0f);
+            playerSpawn = new Vector2(coll.transform.position.x, coll.transform.position.y);
         }
     }
 
