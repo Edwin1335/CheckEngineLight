@@ -296,9 +296,9 @@ PolygonCollider2D:
       - {x: -0.033406578, y: -0.8449094}
       - {x: -0.16929197, y: -0.53420496}
       - {x: 0.15177923, y: -0.20111418}
-      - {x: 0.7706184, y: -0.18943506}
-      - {x: 1.0104711, y: -0.6032902}
-      - {x: 0.91924965, y: -0.7229792}
+      - {x: 1.290113, y: -0.08560091}
+      - {x: 1.5472801, y: -0.7590405}
+      - {x: 0.9971723, y: -0.8700758}
       - {x: 0.7001239, y: -0.92340374}
 --- !u!114 &404093107
 MonoBehaviour:
@@ -315,7 +315,7 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   wallCheckDistance: 0.5
   playerCheckDistance: 9
-  maxHealth: 10
+  maxHealth: 4
   knockbackDuration: 0.2
   attackingDuration: 1
   movSpeed: 4

@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - KnockBack
   - HP
+  - Projectile
   layers:
   - Default
   - TransparentFX

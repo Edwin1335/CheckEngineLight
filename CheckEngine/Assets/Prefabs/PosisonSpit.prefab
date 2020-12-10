@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1945812916437322191}
   m_Layer: 9
   m_Name: PosisonSpit
-  m_TagString: Enemy
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -74,7 +74,10 @@ public class PlayerAttack : MonoBehaviour
             {
                 Debug.Log("Attacking");
                 //Damage reduction is performed enemy side
-                _enemiesToDmg[i].SendMessageUpwards("Damage", attackDetails);
+                if (_enemiesToDmg[i].tag != "Projectile")
+                {
+                    _enemiesToDmg[i].SendMessageUpwards("Damage", attackDetails);
+                }
             }
 
             //Debug.Log(_isDashing);

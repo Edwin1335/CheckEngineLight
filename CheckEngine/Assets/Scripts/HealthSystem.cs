@@ -115,7 +115,7 @@ public class HealthSystem : MonoBehaviour
             damageDirection = 1;
         }
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile")
         {
             Damage(1);
         }
