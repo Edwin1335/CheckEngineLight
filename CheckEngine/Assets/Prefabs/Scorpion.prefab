@@ -332,4 +332,4 @@ MonoBehaviour:
   - {fileID: 7276050657220212141}
   hurtColor: {r: 0.21335769, g: 1, b: 0, a: 1}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  spit: {fileID: 0}
+  spit: {fileID: 6459496091807787549, guid: 6193485a622c3d943a687f365d0955ec, type: 3}

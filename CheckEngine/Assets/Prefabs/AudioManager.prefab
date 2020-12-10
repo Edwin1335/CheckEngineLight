@@ -93,3 +93,17 @@ MonoBehaviour:
     loop: 0
     spacial: 0
     source: {fileID: 0}
+  - name: GloomyDeath
+    clip: {fileID: 8300000, guid: 91946266adc24ff44b2fca7506ac438b, type: 3}
+    volume: 1
+    pitch: 1.25
+    loop: 0
+    spacial: 0
+    source: {fileID: 0}
+  - name: Campfire
+    clip: {fileID: 8300000, guid: b5f16cec03ab79b4bbe5425642fe30ee, type: 3}
+    volume: 1
+    pitch: 1.25
+    loop: 0
+    spacial: 0
+    source: {fileID: 0}

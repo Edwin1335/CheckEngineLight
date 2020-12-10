@@ -45,7 +45,8 @@ public class PlayerDash : MonoBehaviour
                 //Dashing Occurs Here
                 _rigidBody.AddForce(new Vector2(_direction * _dashSpeed, _rigidBody.velocity.y));
                 animator.SetBool("isDashing", true);
-            //---------------------------------------------------------------------------
+                
+                //---------------------------------------------------------------------------
                 _isDashing = true;
                 //_atkKey = Input.GetKey(KeyCode.X);
             }
@@ -59,6 +60,7 @@ public class PlayerDash : MonoBehaviour
         if (_currDashing == false && _dashTime <= 0){
             _dashTime = _startDashTime;
             _isDashing = false;
+            animator.SetBool("isDashing", false);
             //Debug.Log("Dash Time Reset");
         }
         _atk.Attack(_atkKey, _isDashing);

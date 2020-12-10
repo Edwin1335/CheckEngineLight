@@ -18,6 +18,8 @@ public class PlayerAttack : MonoBehaviour
     public float _dmg;
     [SerializeField]
     private float _dashDmg; //Dash damage multiplier
+    [SerializeField]
+    private GameObject attackPrefab;
     private float _finalDmg;
     private bool _currAtkState;
     private bool _prevAtkState; //Used to prevent holding attack to hit repeatedly
@@ -52,7 +54,16 @@ public class PlayerAttack : MonoBehaviour
             //---------------------------------------------------------------------------
             //Attacking Begins Here
             //---------------------------------------------------------------------------
-            animator.SetTrigger("isAttack");
+            if (this.transform.localScale.x > 0)
+            {
+                var inst = Instantiate(attackPrefab, _atkPos.position, _atkPos.rotation);
+                inst.transform.parent = gameObject.transform;
+            }
+            else
+            {
+                var inst = Instantiate(attackPrefab, _atkPos.position, _atkPos.rotation * Quaternion.Euler(0.0f, 180f, 0.0f));
+                inst.transform.parent = gameObject.transform;
+            }
             float[] attackDetails = new float[2];
             attackDetails[0] = _finalDmg;
             attackDetails[1] = this.GetComponent<Transform>().transform.position.x;

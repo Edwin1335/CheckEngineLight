@@ -116,6 +116,7 @@ public class PlayerJump : MonoBehaviour
             _isJumping = false;
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", false);
+            animator.ResetTrigger("isGroundPound");
         }
         //Detects if player is not on the ground and is sliding on a wall
         else if (_grounded == false && _wallSlide != false)

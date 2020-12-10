@@ -72,6 +72,5 @@ public class PlayerController : MonoBehaviour
 
         //PaintBomb
         _paintBomb.ThrowBomb(_specialKeyState, _dirInputY);
-
     }
 }

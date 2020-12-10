@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: e9d03778ee20c1f4ead2b0105a46b59e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4900618321422488391
+    second: Swords_swoosh_0
+  - first:
+      213: -9125197977914468623
+    second: Swords_swoosh_1
+  - first:
+      213: 3625881091571596679
+    second: Swords_swoosh_2
+  - first:
+      213: 7627803874483203547
+    second: Swords_swoosh_3
+  - first:
+      213: -405970813139281946
+    second: Swords_swoosh_4
+  - first:
+      213: -7804507236024569606
+    second: Swords_swoosh_5
+  - first:
+      213: -3728445027693880691
+    second: Swords_swoosh_6
+  - first:
+      213: 118756927038420371
+    second: Swords_swoosh_7
+  - first:
+      213: -7450115363583043861
+    second: Swords_swoosh_8
+  - first:
+      213: -6063544217195908668
+    second: Swords_swoosh_9
+  - first:
+      213: 609494325906453548
+    second: Swords_swoosh_10
+  - first:
+      213: -3795904348202571415
+    second: Swords_swoosh_11
+  - first:
+      213: 5151178410673540090
+    second: Swords_swoosh_12
+  - first:
+      213: -6635396342817338989
+    second: Swords_swoosh_13
+  - first:
+      213: -8452968613872161081
+    second: Swords_swoosh_14
+  - first:
+      213: 4138770527342671900
+    second: Swords_swoosh_15
+  - first:
+      213: -5183861559568087875
+    second: Swords_swoosh_16
+  - first:
+      213: -178915732548000857
+    second: Swords_swoosh_17
+  - first:
+      213: 2434062890027486331
+    second: Swords_swoosh_18
+  - first:
+      213: 5333797012429814945
+    second: Swords_swoosh_19
+  - first:
+      213: 6064322655656120279
+    second: Swords_swoosh_20
+  - first:
+      213: -4820830093395102367
+    second: Swords_swoosh_21
+  - first:
+      213: -267116819873341821
+    second: Swords_swoosh_22
+  - first:
+      213: 3713481245314301226
+    second: Swords_swoosh_23
+  - first:
+      213: -2413084051029157859
+    second: Swords_swoosh_24
+  - first:
+      213: -7043284596313290370
+    second: Swords_swoosh_25
+  - first:
+      213: 6787503699909400697
+    second: Swords_swoosh_26
+  - first:
+      213: 3983254587509732595
+    second: Swords_swoosh_27
+  - first:
+      213: 3457595505098972199
+    second: Swords_swoosh_28
+  - first:
+      213: 8950178630998609721
+    second: Swords_swoosh_29
+  - first:
+      213: 6273955733513624510
+    second: Swords_swoosh_30
+  - first:
+      213: 4413757019820884526
+    second: Swords_swoosh_31
+  - first:
+      213: 7933077744921335839
+    second: Swords_swoosh_32
+  - first:
+      213: 8038749334548741616
+    second: Swords_swoosh_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Swords_swoosh_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 450
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc67dbe9918dfbb0800000000000000
+      internalID: -4900618321422488391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 456
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f69b4559c8cc5180800000000000000
+      internalID: -9125197977914468623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 464
+        width: 31
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d3eec54a7b15230800000000000000
+      internalID: 3625881091571596679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 466
+        width: 26
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd6be2c5376bd960800000000000000
+      internalID: 7627803874483203547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 403
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e718a542b3bd5af0800000000000000
+      internalID: -405970813139281946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 413
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af03ac5d402d0b390800000000000000
+      internalID: -7804507236024569606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_6
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 426
+        width: 52
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a1cbf5007e14cc0800000000000000
+      internalID: -3728445027693880691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_7
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 403
+        width: 105
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395fdb2cbc8e5a100800000000000000
+      internalID: 118756927038420371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_8
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 403
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6d3f99c8fdb9890800000000000000
+      internalID: -7450115363583043861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_9
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 403
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1f92619a6f9dba0800000000000000
+      internalID: -6063544217195908668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 322
+        width: 37
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2435443cdb557800800000000000000
+      internalID: 609494325906453548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 340
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969660c5b1d325bc0800000000000000
+      internalID: -3795904348202571415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_12
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 369
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb8bdee879ac7740800000000000000
+      internalID: 5151178410673540090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 383
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399427a9e265ae3a0800000000000000
+      internalID: -6635396342817338989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 322
+        width: 37
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ceaf98d4d501ba80800000000000000
+      internalID: -8452968613872161081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_15
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 322
+        width: 37
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18bd11dddddf6930800000000000000
+      internalID: 4138770527342671900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 263
+        width: 117
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4442970693f08b0800000000000000
+      internalID: -5183861559568087875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_17
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 276
+        width: 83
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a36fb4d61d548df0800000000000000
+      internalID: -178915732548000857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_18
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 286
+        width: 83
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c8c016d4787c120800000000000000
+      internalID: 2434062890027486331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 296
+        width: 80
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac3be58f14750a40800000000000000
+      internalID: 5333797012429814945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_20
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 263
+        width: 117
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df8cbd335dc82450800000000000000
+      internalID: 6064322655656120279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_21
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 168
+        width: 95
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165fba86298f81db0800000000000000
+      internalID: -4820830093395102367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_22
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 184
+        width: 95
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38edae5eaa20b4cf0800000000000000
+      internalID: -267116819873341821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_23
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 209
+        width: 95
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2db80b848fe88330800000000000000
+      internalID: 3713481245314301226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_24
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 228
+        width: 83
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d181f3537d0038ed0800000000000000
+      internalID: -2413084051029157859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_25
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7904c00af9314e90800000000000000
+      internalID: -7043284596313290370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_26
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 95
+        width: 79
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978dfb047ae023e50800000000000000
+      internalID: 6787503699909400697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 138
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4767271fc574730800000000000000
+      internalID: 3983254587509732595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_28
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 148
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c5962fac8dbff20800000000000000
+      internalID: 3457595505098972199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_29
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 101
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fc6f87b0c653c70800000000000000
+      internalID: 8950178630998609721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_30
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 49
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbda90bf71911750800000000000000
+      internalID: 6273955733513624510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_31
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 12
+        width: 30
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e228f4bdf90d04d30800000000000000
+      internalID: 4413757019820884526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_32
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 7
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18d7918d24f71e60800000000000000
+      internalID: 7933077744921335839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swords_swoosh_33
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 5
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd7f2cbdef5f8f60800000000000000
+      internalID: 8038749334548741616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
