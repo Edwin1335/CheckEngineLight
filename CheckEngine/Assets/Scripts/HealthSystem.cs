@@ -46,7 +46,7 @@ public class HealthSystem : MonoBehaviour
 
         if (health <= 0){
             animator.SetBool("isDead", true);
-            Destroy(gameObject, 0.0f);
+            //Destroy(gameObject, 0.0f);
         }
 
     }
