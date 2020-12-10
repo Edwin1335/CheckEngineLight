@@ -35,6 +35,10 @@ public class PlayerDash : MonoBehaviour
 
         //When current dash time goes below zero, indicating that the timeer has en1d.
         //Resets player movement direction and velocity to zero and sets current dash time back to full dash time length.
+        if(!_currDashing)
+        {
+            animator.SetBool("isDashing", false);
+        }
         if (_currDashing == true && _dashTime > 0){
             //Performs dash when a direction is being pressed
             if (_direction != 0){
