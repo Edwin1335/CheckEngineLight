@@ -26,6 +26,7 @@ public class deathSystem : MonoBehaviour
         IEnumerator Respawn()
         {
             yield return new WaitForSeconds(2f);
+            hs.health += 1;
             pm._moveSpeed = speed;
             top.gameObject.SetActive(true);
             left.gameObject.SetActive(true);
@@ -33,14 +34,13 @@ public class deathSystem : MonoBehaviour
             this.transform.position = playerSpawn;
         }
 
-        if (hs.health == 0)
+        if (hs.health <= 0)
         {
             pm._moveSpeed = 0;
             top.gameObject.SetActive(false);
             left.gameObject.SetActive(false);
             right.gameObject.SetActive(false);
-            hs.health += 1;
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            //Instantiate(deathEffect, transform.position, Quaternion.identity);
             StartCoroutine(Respawn());
         }
 
@@ -50,7 +50,7 @@ public class deathSystem : MonoBehaviour
     {
         if(coll.gameObject.tag == "HP")
         {
-            playerSpawn = new Vector2(coll.transform.position.x, coll.transform.position.y);
+            playerSpawn = new Vector2(coll.transform.position.x, coll.transform.position.y + 2.0f);
         }
     }
 
