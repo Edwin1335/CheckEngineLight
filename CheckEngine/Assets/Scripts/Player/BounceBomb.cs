@@ -22,7 +22,8 @@ public class BounceBomb : MonoBehaviour
     private Rigidbody2D _rigidBody;
     private Collider2D _collider;
 
-    private void Awake(){
+    private void Awake()
+    {
         _rigidBody = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
 
@@ -32,19 +33,24 @@ public class BounceBomb : MonoBehaviour
         // animator = GetComponent<Animator>();
     }
 
-    private void FixedUpdate(){
+    private void FixedUpdate()
+    {
 
-        if (_bombRun == true){
+        if (_bombRun == true)
+        {
             _yInput = Input.GetAxisRaw("Vertical");
-            if (_yInput < 0){
+            if (_yInput < 0)
+            {
                 _rigidBody.AddForce(new Vector2(0, -1), ForceMode2D.Impulse);
                 _bombRun = false;
             }
-            else if (_yInput > 0){
+            else if (_yInput > 0)
+            {
                 _rigidBody.AddForce(new Vector2(0, _throwForce * 1.5f), ForceMode2D.Impulse);
                 _bombRun = false;
             }
-            else {
+            else
+            {
                 _playerDir = GameObject.Find("Gloomy").transform.localScale.x;
                 // _playerDir = _player.transform.localScale.x;
                 _rigidBody.AddForce(new Vector2(_playerDir * _throwForce, _throwForce), ForceMode2D.Impulse);
@@ -64,35 +70,54 @@ public class BounceBomb : MonoBehaviour
         RaycastHit2D _groundHitDir = _yHitDown;
 
         Vector2 _currentPos = transform.position;
-        if (_collider.IsTouchingLayers(LayerMask.GetMask("Ground"))){
-            if (_yHitUp.collider != null){
+        if (_collider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            if (_yHitUp.collider != null)
+            {
                 _groundHitDir = _yHitUp;
                 _groundDeltaY = _currentPos.y - _yHitUp.point.y;
                 _yOffset = _currentPos.y - _groundDeltaY;
             }
-            else if (_yHitDown.collider != null){
+            else if (_yHitDown.collider != null)
+            {
                 _groundHitDir = _yHitDown;
                 _groundDeltaY = _currentPos.y - _yHitDown.point.y;
                 _yOffset = _currentPos.y - _groundDeltaY;
             }
-            if (_xHitLeft.collider != null){
+            if (_xHitLeft.collider != null)
+            {
                 _groundHitDir = _xHitLeft;
                 _groundDeltaX = _currentPos.x - _xHitLeft.point.x;
                 _xOffset = _currentPos.x - _groundDeltaX;
             }
-            else if (_xHitRight.collider != null){
+            else if (_xHitRight.collider != null)
+            {
                 _groundHitDir = _xHitRight;
                 _groundDeltaX = _currentPos.x - _xHitRight.point.x;
                 _xOffset = _currentPos.x - _groundDeltaX;
             }
 
             Destroy(gameObject);
-            if (_yHitUp.collider != null || _yHitDown.collider != null){
-                pfCloneSplash = Instantiate(pfBombSplash, new Vector2(_currentPos.x, _yOffset), Quaternion.FromToRotation(up, _groundHitDir.normal));    
+            if (_yHitUp.collider != null || _yHitDown.collider != null)
+            {
+                pfCloneSplash = Instantiate(pfBombSplash, new Vector2(_currentPos.x, _yOffset), Quaternion.FromToRotation(up, _groundHitDir.normal));
             }
-            else if (_xHitLeft.collider != null || _xHitRight.collider != null){
+            else if (_xHitLeft.collider != null || _xHitRight.collider != null)
+            {
                 pfCloneSplash = Instantiate(pfBombSplash, new Vector2(_xOffset, _currentPos.y), Quaternion.FromToRotation(up, _groundHitDir.normal));
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Ball Here");
+        if (other.collider.tag == "Enemy")
+        {
+            float[] attackDetails = new float[2];
+            attackDetails[0] = 1;
+            attackDetails[1] = this.GetComponent<Transform>().transform.position.x;
+            other.collider.SendMessageUpwards("Damage", attackDetails);
         }
     }
 }

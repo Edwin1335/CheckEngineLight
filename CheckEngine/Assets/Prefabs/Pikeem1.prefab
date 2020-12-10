@@ -664,7 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheckDistance: 0.5
   wallCheckDistance: 0.5
-  maxHealth: 5
+  maxHealth: 3
   knockbackDuration: 0.3
   movSpeed: 4
   groundCheck: {fileID: 53351405}

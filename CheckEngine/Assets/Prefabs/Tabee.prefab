@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcd39d1488573a448efe769a0c6a167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 2
   speed: 3
   lineOfSight: 11.1
   attackRange: 3.21
