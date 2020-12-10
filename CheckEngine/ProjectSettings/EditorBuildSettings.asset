@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 5b7d6d0b3adf84649b841dff81634057
-  - enabled: 0
-    path: Assets/Scenes/Demo.unity
-    guid: 9a388370fd15c8a4ab95852db2cd3292
   - enabled: 1
     path: Assets/Scenes/Aakartion Test/Credit.unity
     guid: ecaded0302b4ff9428778c198b72731c
