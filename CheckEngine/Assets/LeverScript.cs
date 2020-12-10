@@ -6,6 +6,7 @@ public class LeverScript : MonoBehaviour
 {
     public GameObject platform;
     public Animator anim;
+    public GameObject pressE;
 
     void OnTriggerStay2D(Collider2D collision)
     {
@@ -13,8 +14,7 @@ public class LeverScript : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-
-            if (Input.GetKeyDown("e"))
+            if (Input.GetKeyDown("e") && ScoreText.gemAmount >= 50)
             {
                 lp.on = true;
                 anim.enabled = !anim.enabled;
@@ -24,5 +24,7 @@ public class LeverScript : MonoBehaviour
                 lp.on = false;
             }
         }
+
     }
+
 }
