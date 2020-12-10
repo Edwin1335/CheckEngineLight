@@ -17,7 +17,7 @@ public class ScorpionAI : MonoBehaviour
 
     // Modifiable fileds.
     [SerializeField] private float groundCheckDistance = 0.5f, wallCheckDistance = 0.5f, playerCheckDistance = 1.0f;
-    [SerializeField] private float maxHealth, knockbackDuration = 0.2f, attackingDuration = 0.2f, movSpeed = 4.0f;
+    [SerializeField] private float maxHealth, knockbackDuration = 0.2f, attackingDuration = 0.5f, movSpeed = 4.0f;
     [SerializeField] private Transform groundCheck, wallcheck, playerCheck, attackTrigger;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private Vector2 knockbackSpeed;
@@ -188,7 +188,7 @@ public class ScorpionAI : MonoBehaviour
     private void Flip()
     {
         facingDirection *= -1;
-        this.transform.Rotate(0.0f, 180.0f, 0.0f);
+        this.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     private void SwitchState(States state)
