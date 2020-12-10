@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class BossAI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Different stets the enemy can be in.
+    private States currentState;
+    enum States
     {
+        Flying,
+        Recharging,
+        Lighting,
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Death
     }
 }
