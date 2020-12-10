@@ -12,9 +12,11 @@ public class deathSystem : MonoBehaviour
     private PlayerMovement pm;
     float speed;
     private bool respawning = false;
+    private float currentSpawnPosition;
 
     void Start()
     {
+        currentSpawnPosition = 0;
         pm = this.GetComponent<PlayerMovement>();
         speed = pm._moveSpeed;
         playerSpawn = new Vector2(this.transform.position.x, this.transform.position.y);
@@ -33,6 +35,7 @@ public class deathSystem : MonoBehaviour
             right.gameObject.SetActive(false);
             hs.health += 1;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("GloomyDeath");
             StartCoroutine(Respawn());
         }
 
@@ -54,7 +57,13 @@ public class deathSystem : MonoBehaviour
     {
         if (coll.gameObject.tag == "HP")
         {
+            // If we find  adifferent/new campfire. Play sound.
+            if (currentSpawnPosition != coll.transform.position.x)
+            {
+                FindObjectOfType<AudioManager>().Play("Campfire");
+            }
             playerSpawn = new Vector2(coll.transform.position.x, coll.transform.position.y);
+            currentSpawnPosition = coll.transform.position.x;
         }
     }
 
