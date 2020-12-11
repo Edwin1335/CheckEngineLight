@@ -20,6 +20,8 @@ public class idleBehavior : StateMachineBehaviour
     {
        if (timer <= 0){
            animator.SetTrigger("flying");
+           animator.SetBool("isFlying", true);
+           animator.SetBool("isLanded", false);
        }
        else {
            timer -= Time.deltaTime;

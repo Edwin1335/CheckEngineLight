@@ -23,6 +23,8 @@ public class flyingBehavior : StateMachineBehaviour
     {
        if (timer <= 0){
            animator.SetTrigger("landing");
+           animator.SetBool("isLanded", true);
+           animator.SetBool("isFlying", false);
        }
        else {
            timer -= Time.deltaTime;

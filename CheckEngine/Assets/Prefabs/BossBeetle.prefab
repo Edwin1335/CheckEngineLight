@@ -1040,7 +1040,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6397576144411612470}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1052,7 +1052,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!60 &8133661582939711483
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1111,9 +1111,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe28e90f8c065747bce887b7aa7a595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.5
-  _lineOfSight: 10
-  _attackRange: 5
+  timer: 0
+  standingMinTime: 3
+  standingMaxTime: 6
+  flyingMinTime: 5
+  flyingMaxTime: 8
+  sleepTime: 3
+  minDistance: 3
+  maxDistance: 0
+  speed: 7
+  _player: {fileID: 0}
 --- !u!1 &7699314380418057591
 GameObject:
   m_ObjectHideFlags: 0
