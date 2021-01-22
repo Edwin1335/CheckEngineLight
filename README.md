@@ -1,6 +1,6 @@
 # CheckEngineLight
 
-<p>This repository helds a 2d platforming game created with Unity.</p>
+<p>A 2d platforming game created with Unity.</p>
 <p>Contributors: </p>
 <div><b>Edwin Campuzano</b> (<i>Kit_Cat</i>) - Team Leader, Programmer</div>
 <div><b>Akkarshan Simkhada</b> (<i>Don't Call</i>) - Background Designer, Sound Engineer</div>
