@@ -1,5 +1,4 @@
 # CheckEngineLight
-
 <p>A 2d platforming game created with Unity.</p>
 <p>Contributors: </p>
 <div><b>Edwin Campuzano</b> (<i>Kit_Cat</i>) - Team Leader, Programmer</div>
